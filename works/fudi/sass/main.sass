@@ -1,0 +1,290 @@
+@import "bourbon/bourbon"
+
+$w: 20px
+$h: 2px
+
+.preloader
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	z-index: 977
+	background-color: #fff
+	background-image: url("../img/preloader.gif")
+	background-repeat: no-repeat
+	background-position: center
+
+
+//section get_items start _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+.get_items
+	background-color: #fff
+	padding: 100px 0 80px
+	.get_item
+		background-color: #fff
+		text-align: center
+		.img_wrap
+			border: 2px #000 solid
+			border-radius: 10em
+			height: 107px
+			line-height: 100px
+			width: 107px
+			display: inline-block
+			img
+				max-width: 100%
+				vertical-align: middle
+		p
+			line-height: 24px
+			text-shadow: -0.9px 0.5px 40px rgba(1, 1, 1, 0.7)
+			opacity: 0.5
+			margin-top: 20px
+//section get_items end _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+
+//section appstore start _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+.appstore
+	background-color: #f7f7f7
+	padding-top: 100px
+	.iphone_wrap
+		max-width: 100%
+		position: relative
+		display: inline-block
+		&::after
+			content: ''
+			position: absolute
+			bottom: 0
+			right: 0px
+			width: 99%
+			height: 100px
+			box-shadow: inset 0 -90px 30px -15px rgba(90, 90, 90, 0.2)
+			opacity: 1
+		.iphone
+			max-width: 100%
+			height: auto
+			vertical-align: bottom
+			box-shadow: -17px 12px 1.5px 0px rgba(90, 90, 90, 0.07), inset 15px -14px 0px 0px rgba(90, 90, 90, 0.07)
+			border-radius: 95px 0 0
+			position: relative
+			margin-bottom: -2px
+	.fudi_app
+		padding-top: 100px
+		.h3
+			&::after
+				left: 0
+				transform: none
+		p
+			text-shadow: -0.9px 0.5px 40px rgba(1, 1, 1, 0.55)
+			opacity: 0.65
+		a
+			display: inline-block
+			margin: 10px 10px 10px 0
+			img
+				display: inline-block
+				
+//section appstore end _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+
+//section reviews start _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+.reviews
+	position: relative
+	padding: 75px 0
+	&::before
+		content: ''
+		background-color: #4a3949
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		position: absolute
+		opacity: 1
+	&_bg
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		width: 100%
+		background-position: top center
+		background-repeat: no-repeat
+		opacity: 0.13
+
+	.owl-controls
+		text-align: center
+		.owl-dot
+			height: 10px
+			width: 10px
+			margin: 0 5px
+			display: inline-block
+			background-color: #796d79
+			z-index: 50
+			border-radius: 50%
+			&.active
+				background-color: #fff
+
+.slide
+	position: relative
+	text-align: center
+	color: #fff
+	font-family: "Lato-Hai", sans-serif
+	font-size: 30px
+	line-height: 36px
+	margin-bottom: 40px
+	.img-wrap
+		width: 105px
+		height: 105px
+		display: inline-block
+		border-radius: 10em
+		overflow: hidden
+		box-shadow: 0 0 0 6px #948B94
+		margin: 7px
+		img
+			display: block
+			width: 100%
+			border-radius: 10em
+	p
+		margin: 18px 0 8px
+	.slide_descr
+		font-size: 18px
+		font-family: "Lato-HaiIta", sans-serif
+
+.slider
+	.owl-item
+		.img-wrap, p, .slide_descr
+			transition: all 1s ease
+			transform: translate3d(200px, 0, 0)
+			opacity: 0
+			transition-delay: 0.4s
+		p
+			transition-delay: 0.7s
+		.slide_descr
+			transition-delay: 0.9s
+	.owl-item.active
+		.img-wrap, p, .slide_descr
+			opacity: 1
+			transform: translate3d(0, 0, 0)
+//section reviews end _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+
+//section cuisines start _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+.cuisines
+	text-align: center
+	padding: 60px 0 0
+	h3
+		margin-bottom: 70px 
+	.col-md-4,
+	.col-lg-3,
+	.col-sm-6
+		padding: 0
+		line-height: 0
+
+.cuisines_item
+	width: 100%
+	min-height: 225px
+	float: left
+	padding-top: 75px
+	overflow: hidden
+	line-height: 0
+	display: block
+	position: relative
+	background-color: #444
+	z-index: 0
+	transition: all 0.3s ease
+	&:hover
+		box-shadow: rgba(0,0,0,.3) 0 0 32px
+		img
+			transform: scale(1.065)translateZ(0)
+			opacity: 1
+	img
+		width: 100%
+		min-height: 225px
+		display: inline-block
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		margin: 0
+		z-index: -1
+		opacity: 0.65
+		transition: all 0.3s ease
+	a
+		font-size: 36px
+		font-family: "Lato-Bol", sans-serif
+		text-transform: uppercase
+		color: #fff
+		display: flex
+		margin: 0
+		align-items: center
+		justify-content: center
+		letter-spacing: 2px
+		display: inline-block
+		text-decoration: none
+		&:hover,
+		&:focus
+			text-decoration: none
+			color: #fff
+		&:hover
+			text-shadow: -0.9px 0.5px 60px rgba(1,1,1,0.25)
+		
+.cuisines_item_content
+	color: #fff	
+	line-height: 40px	
+	overflow: hidden
+	span
+		font: bold 16px "Times New Roman", serif
+		font-style: italic
+		display: block
+		opacity: 0.9
+		text-transform: none
+		&:hover
+			text-shadow: -0.9px 0.5px 60px rgba(1,1,1,0.25)
+//section cuisines end _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+
+//section statistic start _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+.statistic
+	padding: 50px 0
+	text-align: center
+	.col-md-2
+		width: 20%
+	ul
+		list-style-type: none
+		width: 100%
+		float: none
+		margin: 0
+		display: inline-block
+		padding: 0
+	li
+		display: inline-block
+		padding: 5px 45px
+	h2
+		color: #000
+		line-height: 30px
+		letter-spacing: 2px
+		font-weight: normal
+		margin: 0 0 5px
+	p
+		text-transform: capitalize
+		margin: 0
+		opacity: 0.75
+//section statistic end _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+//section main_footer start _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+.main_footer
+	background-color: #f7f7f7
+	padding: 20px 0
+	.copyright
+		float: left
+		color: #8b8b8b
+		text-transform: capitalize
+		padding: 10px 15px
+	.developer
+		float: right
+		text-transform: uppercase
+		font-family: "Lato-Reg", sans-serif
+		padding: 10px 15px
+		letter-spacing: 2px
+		span
+			color: #8b8b8b
+			font-family: "Lato-Lig", sans-serif
+//section main_footer end _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _

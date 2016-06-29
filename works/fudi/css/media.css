@@ -1,0 +1,171 @@
+/*==========  Desktop First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+	.statistic li {
+		padding: 5px 25px;
+	}
+	.appstore .iphone_wrap .iphone {
+		border-radius: 85px 0 0
+	}
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+	.statistic li {
+		padding: 5px 18px;
+	}
+	.statistic h2 {
+		font-size: 26px;
+	}
+	.statistic p {
+		font-size: 14px;
+	}
+	.cuisines {
+		padding: 60px 0 0;
+	}
+	.get_items {
+		padding-bottom: 40px;
+	}
+	.appstore .fudi_app {
+		padding-top: 0;
+		margin-bottom: 40px;
+	}
+	.appstore {
+		text-align: center;
+		padding-top: 60px;
+	}
+	.appstore .fudi_app .h3::after {
+		transform: translate(-50%, 0);
+		left: 50%;
+	}
+	.appstore .iphone_wrap .iphone {
+		max-width: 480px;
+		border-radius: 86px 0 0;
+		box-shadow: -15px 12px 1.5px 0px rgba(90, 90, 90, 0.07), inset 15px -17px 0px 0px rgba(90, 90, 90, 0.07);
+	}
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+
+	/*Disable Animation on Mobile Devices*/
+	.animated {
+		/*CSS transitions*/
+		-o-transition-property: none !important;
+		-moz-transition-property: none !important;
+		-ms-transition-property: none !important;
+		-webkit-transition-property: none !important;
+		transition-property: none !important;
+		/*CSS transforms*/
+		-o-transform: none !important;
+		-moz-transform: none !important;
+		-ms-transform: none !important;
+		-webkit-transform: none !important;
+		transform: none !important;
+		/*CSS animations*/
+		-webkit-animation: none !important;
+		-moz-animation: none !important;
+		-o-animation: none !important;
+		-ms-animation: none !important;
+		animation: none !important;
+	}
+
+	.reviews {
+		padding: 50px 0;
+	}
+	.slide {
+		margin-bottom: 25px;
+	}
+	.statistic h2 {
+		font-size: 27px;
+	}
+	.statistic p {
+		font-size: 16px;
+	}
+	.statistic li {
+		padding: 5px 30px;
+	}
+	.main_footer .copyright, .main_footer .developer {
+		text-align: center;
+		float: none;
+	}	
+	.appstore .iphone_wrap .iphone {
+		max-width: 400px;
+		border-radius: 70px 0 0;
+		box-shadow: -13px 12px 1.5px 0px rgba(90, 90, 90, 0.07), inset 15px -17px 0px 0px rgba(90, 90, 90, 0.07);
+	}
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+	.main_head_content .top_text span {
+		font-size: 75px;
+	}
+	.main_head_content .top_text h1 {
+		font-size: 30px;
+	}
+	.main_head_content .top_text .start {
+		padding: 12px 45px;
+	}
+	.reviews {
+		padding-bottom: 40px;
+	}
+	.cuisines .container-fluid .col-xs-6 {
+		width: 100%;
+	}
+	.statistic li {
+		padding: 5px 30px;
+	}
+	.statistic p {
+		font-size: 16px;
+	}
+	.statistic h2 {
+		font-size: 28px;
+	}
+	.appstore .iphone_wrap .iphone {
+		max-width: 290px;
+		border-radius: 52px 0 0;
+		box-shadow: -10px 12px 1.5px 0px rgba(90, 90, 90, 0.07), inset 15px -17px 0px 0px rgba(90, 90, 90, 0.07);
+	}
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+
+}
+
+
+/*==========  Mobile First Method  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px) {
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px) {
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+
+}
+
+ /* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+	
+}
+
+ /* Large Devices, Wide Screens */
+@media only screen and (min-width : 1430px) {
+	.cuisines .row .col-lg-3{
+		width: 20%;
+	}
+}
