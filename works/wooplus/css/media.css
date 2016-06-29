@@ -1,0 +1,325 @@
+/*==========  Desktop First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+	.top-slide-item-content h3 {
+		font-size: 50px;
+	}
+	.newsletter-subscription {
+		width: 340px;
+	}
+	.newsletter-subscription input.newsletter-email {
+		width: 236px;
+	}
+	.bb-bookblock {
+		height: 472px;
+	}
+	.bb-bookblock .entry-title {
+		line-height: 1.2;
+		font-size: 40px;
+	}
+	.featured-latest-products .add-to-cart {
+		font-size: 10px;
+		line-height: 1.5;
+		padding: 10px;
+		text-align: center;
+	}
+	.sale-item .p-info .price {
+		font-size: 14px;
+	}
+	.featured-latest-products .product-item .p-image img {
+		width: 100%;
+	}
+	.name-sale-item h4 {
+		font-size: 31px;
+	}
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+	.social-subscribe-line .custom-text {
+		display: none;
+	}
+	.top-slide-item-content.first-item-content {
+		padding-right: 0;
+	}
+	.top-slide-item-content.first-item-content p {
+		color: #f54b31;
+	}
+	.header-bot-right-nav {
+		display: none;
+	}
+	a.content-column-item {
+		font-size: 30px;
+		line-height: 35px;
+	}
+	a.content-column-item span {
+		font-size: 20px;
+	}
+	.product-item .p-image img {
+		width: 59%;
+	}
+	.bb-bookblock {
+		height: 362px;
+	}
+	.bb-bookblock .entry-title {
+		line-height: 45px;
+		font-size: 35px;
+	}
+	.featured-products {
+		margin-bottom: 50px;
+	}
+	.name-sale-item h4 {
+		font-size: 48px;
+		line-height: 1.1;
+	}
+	.sale-item .p-info .price {
+		font-size: 16px;
+	}
+	.products .p-image {
+		margin-top: 5px;
+	}
+	.site-footer .widget {
+		margin-bottom: 30px;
+	}
+	.site-footer .widget .h6 {
+		margin-bottom: 20px;
+	}
+	
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+
+	/*Disable Animation on Mobile Devices*/
+	.animated {
+		/*CSS transitions*/
+		-o-transition-property: none !important;
+		-moz-transition-property: none !important;
+		-ms-transition-property: none !important;
+		-webkit-transition-property: none !important;
+		transition-property: none !important;
+		/*CSS transforms*/
+		-o-transform: none !important;
+		-moz-transform: none !important;
+		-ms-transform: none !important;
+		-webkit-transform: none !important;
+		transform: none !important;
+		/*CSS animations*/
+		-webkit-animation: none !important;
+		-moz-animation: none !important;
+		-o-animation: none !important;
+		-ms-animation: none !important;
+		animation: none !important;
+	}
+	.clearfix768 {
+		clear: both;
+	}
+	.yith-ajaxsearchform-container form {
+		margin-top: 25px;
+		display: inline-block;
+		width: 100%;
+	}
+	.top-info {
+		float: none;
+		display: block;
+		width: 100%;
+		clear: left;
+		padding-top: 0;
+	}
+	.social-subscribe-line .social-icons, .newsletter-subscription {
+		float: none;
+		text-align: center;
+		margin: 0 auto;
+	}
+	.newsletter-subscription {
+		margin-top: 30px;
+	}
+	.top-slide-item-content {
+		float: none;
+		text-align: left;
+		margin-left: 50px;
+		white-space: normal;
+	}
+	.top-slide-item-content span.slide-top-descr::after {
+		left: 0;
+	}
+	.top-slide-item-content h3 {
+		font-size: 40px;
+	}
+	.top-slide-item-content p {
+		white-space: pre-line;
+	}
+	a.content-column-item {
+		margin-top: 20px;
+	}
+	.name-sale-item::after {
+		display: none;
+	}
+	.product-item .p-image img {
+		width: 35%;
+	}
+	.tab-cont .product-item .p-image img {
+		width: 40%;
+	}
+	.tab-block .h4 {
+		width: 100%;
+		text-align: center;
+	}
+	.tab-block .tab-mnu {
+		text-align: center;
+		padding-top: 50px;
+	}
+	.tab-block .tab-mnu::before {
+		display: block;
+	}
+	.tab-block .tab-mnu li {
+		border-left: none;
+	}
+	.bb-bookblock {
+		height: 300px;
+	}
+	.bb-bookblock .entry-title {
+		line-height: 35px;
+		font-size: 25px;
+	}
+	.bb-bookblock .cat-links {
+		font-size: 16px;
+	}
+	.bb-bookblock .left-side-content-wrap a {
+		padding: 12px 20px;
+		font-size: 13px;
+		margin-top: 0;
+	}
+	.book-right-side img {
+		max-height: 100%
+	}
+	.advantage-item .h4 {
+		font-size: 15px;
+		margin-top: 0;
+	}
+	.advantage-item .img-wrap {
+		font-size: 34px;
+		margin: 7px 10px 0 0;
+	}
+	.advantage-item .h4 span {
+		display: block;
+	}
+
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+	.header-top-small-menu ul.wr-top-small-menu li a.menu-item-link {
+		padding: 18px 8px;
+	}
+	.site-branding .site-logo {
+		font-size: 22px;
+		margin-top: 8px;
+	}
+	.site-branding .site-logo sup {
+		font-size: 24px;
+	}
+	.shop-cart .cart-control {
+		width: 155px;
+	}
+	.social-subscribe-line .newsletter-subscription {
+		width: 300px;
+	}
+	.social-subscribe-line .newsletter-subscription input.newsletter-email {
+		width: 196px;
+	}
+	.top-slide-item-content {
+		margin-left: 20px;
+	}
+	.top-slide-item-content h3 {
+		font-size: 36px;
+		line-height: 40px;
+	}
+	.left-navigation {
+		width: 250px;
+	}
+	.left-navigation ul.sf-vertical {
+		width: 250px;
+	}
+	.left-navigation ul.sf-vertical li.menu-item ul.sub-menu {
+		left: 16%;
+	}
+	.slider-container .owl-nav .owl-prev {
+		left: 5px;
+	}
+	.slider-container .owl-nav .owl-next {
+		right: 5px;
+	}
+	.product-item .p-image img {
+		width: 50%;
+	}
+	.tab-block .tab-mnu li {
+		font-size: 13px;
+	}
+	.bb-bookblock {
+		max-height: 200px;
+	}
+	.bb-bookblock .entry-title {
+		line-height: 20px;
+		font-size: 14px;
+		margin: 5px 0;
+		font-weight: 300;
+	}
+	.bb-bookblock .cat-links {
+		font-size: 11px;
+	}
+	.bb-bookblock .left-side-content-wrap a {
+		padding: 8px 15px;
+		font-size: 11px;
+	}
+	.products .product-item {
+		width: 100%;
+		text-align: center;
+	}
+	.advantage-item {
+		text-align: left;
+	}
+	.advantages .col-xs-6 {
+		width: 100%;
+	}
+	.footer-top-right .col-xs-4 {
+		width: 100%;
+	}
+	
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+
+}
+
+
+/*==========  Mobile First Method  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px) {
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px) {
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+
+}
+
+ /* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+
+}

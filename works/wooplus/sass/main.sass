@@ -1,0 +1,1321 @@
+@import "bourbon/bourbon"
+
+$accent-color: #f54b31
+
+html.js .loader
+	background: none repeat scroll 0 0 #ffffff
+	bottom: 0
+	height: 100%
+	left: 0
+	position: fixed
+	right: 0
+	top: 0
+	width: 100%
+	z-index: 999999
+	.loader_inner
+		background-image: url("../img/preloader.gif")
+		background-size: cover
+		background-repeat: no-repeat
+		background-position: center center
+		background-color: #fff
+		height: 35px
+		width: 35px
+		margin-top: -30px
+		margin-left: -30px
+		left: 50%
+		top: 50%
+		position: absolute
+
+body
+	font-family: "OpenSansRegular", sans-serif
+	font-weight: normal
+	font-size: 14px
+	min-width: 320px
+	position: relative
+	line-height: 1.6
+	-webkit-font-smoothing: antialiased
+	overflow-x: hidden
+	background-color: #fff
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #333
+body input:required:valid,
+body textarea:required:valid
+	color: green
+
+.hidden
+	display: none
+button,
+input,
+select
+	&:focus
+		outline: none
+a, a:active, a:hover, a:focus
+	outline: none
+	transition: all 0.2s ease
+	text-decoration: none!important
+a:active, a:hover, a:focus
+	color: $accent-color
+img 
+	height: auto
+	max-width: 100%
+	vertical-align: middle
+select 
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+select::-ms-expand
+	display: none;
+
+h2, .h2
+	font-size: 60px
+	font-family: "OpenSansSemiBold", sans-serif
+h3, .h3
+	font-size: 64px
+	font-family: "OpenSansSemiBold", sans-serif
+h4, .h4
+	font-size: 50px
+	font-family: "OpenSansSemiBold", sans-serif
+h5, .h5
+	font-size: 27px
+	font-family: "OpenSansLight", sans-serif
+h6, .h6
+	font-size: 14px
+.clearfix
+	clear: both
+// site-header = start ===================================================
+
+//	header-top
+.header-top
+	color: #71757d
+	background: #3c3e43
+	font-size: 11px
+	text-transform: uppercase
+.header-top-small-menu
+	float: left
+	width: auto
+	text-align: left
+	ul.wr-top-small-menu
+		padding: 0
+		margin: 0
+		width: 100%
+		li
+			padding: 0
+			margin: 0
+			list-style-type: none
+			display: inline-block
+			&:first-child(1)
+				padding-left: 0
+			a.menu-item-link
+				padding: 18px
+				color: #7A7E86
+				display: block
+				position: relative
+				&:hover
+					color: #fff
+			.fa 
+				margin-right: 10px
+.top-info
+	float: right
+	padding: 18px 15px 18px 0
+	display: inline-block
+	a 
+		color: #7A7E86
+		margin-left: 20px
+		&:hover
+			color: $accent-color
+		.fa 
+			margin-right: 5px
+			font-size:12px
+
+//header-mid
+.header-mid
+	padding: 20px 0
+.site-branding 
+	float: left
+	margin: 0
+	position: relative
+	display: inline-block
+.site-logo
+	color: $accent-color
+	text-transform: uppercase
+	font-size: 30px
+	line-height: 1.4
+	font-family: "OpenSansBold", sans-serif
+	display: inline-block
+	letter-spacing: -1px
+	&:hover
+		span 
+			color: #333
+	span 
+		font-family: "OpenSansLight", sans-serif
+		color: #333
+	sup 
+		font-size: 35px
+		top: -0.3em
+.yith-ajaxsearchform-container
+	form
+		border: 1px solid #e8e6e2
+		overflow: hidden
+		height: 48px
+		border-radius: 3px
+		> div
+			float: left
+			width: auto
+			clear: none
+			margin: 0
+			top: 1px
+	.search-cat
+		position: relative
+		select
+			border: 0
+			color: #747880
+			font-family: "OpenSansSemiBold", sans-serif
+			width: 150px
+			padding: 12px !important
+			background: none
+			text-transform: uppercase
+			appearance: none
+	.search-cat::before
+		content: ""
+		position: absolute
+		width: 1px
+		height: 31px
+		background: #dee5ef
+		right: -18px
+		top: 7px
+	.search-cat::after
+		content: "\f0d7"
+		position: absolute
+		font-family: "FontAwesome"
+		color: #a3a29e
+		top: 12px
+		right: -4px
+
+	.yith-ajaxsearchform-inner 
+		width: calc(100% - 150px)
+		position: relative
+		height: 30px
+	input.yith-s 
+		padding: 14px 20px 0
+		color: #a8a8a8
+		width: calc(100% - 100px)
+		line-height: 1.2
+		border: 0
+		margin-left: 20px
+		vertical-align: middle
+		background-position: right center !important
+	.search-sicon
+		position: absolute
+		right: 1px
+		top: 0px
+		#yith-searchsubmit 
+			background: none
+			font-size: 16px
+			padding: 0 15px
+			height: 45px
+			border: 0
+.shop-cart 
+	float: right
+	margin: 0
+	display: inline-block
+	a
+		color: #3c3e43
+		&:hover
+			span.p-count
+				background: $accent-color
+	.cart-control 
+		display: block
+		width: 170px
+		border: 1px dashed #d9dfe4
+		text-align: center
+		line-height: 3
+		font-size: 16px
+		font-family: "OpenSansSemiBold", sans-serif
+		.p-cart-number 
+			position: relative
+			top: 0
+			margin-right: 12px
+		span.p-count
+			background: #3c3e43
+			text-align: center
+			color: #fff
+			font-size: 10px
+			height: 17px
+			line-height: 1.6
+			position: absolute
+			width: 17px
+			font-weight: 300
+			right: -5px
+			top: -4px
+			border-radius: 50%
+			transition: all 0.2s ease
+
+//	header-bot
+.header-bot
+	background: #eff3f6
+	border-width: 1px 0
+	border-style: solid
+	border-color: #d9dfe4
+	font-family: "OpenSansSemiBold", sans-serif
+	z-index: 10!important
+.left-navigation
+	position: relative
+	background: #fff
+	width: 270px
+	border-width: 0 1px
+	border-style: solid
+	border-color: #d9dfe4
+	display: inline-block
+	float: left
+	button 
+		text-transform: uppercase
+		color: $accent-color
+		background-color: transparent
+		width: 100%
+		text-align: left
+		position: relative
+		padding: 15px 20px 15px 50px
+		border: 0
+		margin-bottom: 1px
+		transition: all .2s ease
+		vertical-align: middle
+		&:hover 	
+			color: #747880
+		&::before 
+			content: "\f0c9"
+			font-family: "FontAwesome"
+			font-size: 17px
+			line-height: 1.4
+			left: 23px
+			position: absolute
+		
+	ul.sf-vertical
+		margin: 0 0
+		width: 270px
+		border-width: 1px
+		border-style: solid
+		border-color: #d9dfe4
+		background-color: #fff
+		display: none
+		z-index: 9
+		position: absolute
+		left: -1px
+		top: 100%
+		li.menu-item
+			line-height: 46px
+			border: 0
+			padding: 0 20px
+			margin: 0
+			background: #fff
+			display: block
+			width: 100%
+			list-style-type: none
+			float: none
+			a.menu-item-link 
+				color: #747880
+				transition: color 0.3s ease
+				border-bottom: 1px solid #e8e6e2
+				padding: 0
+				text-transform: uppercase
+				font-size: 11px
+				position: relative
+				.fa 
+					font-size: 14px
+					margin-right: 10px
+			.menu-item-link.sf-with-ul::after
+				content: ''
+				position: absolute
+				right: 0
+				top: 20px
+				width: 5px
+				height: 5px
+				border: 5px solid transparent
+				border-left-color: #747880
+			ul.sub-menu
+				display: block
+				left: 100%
+				top: 0
+				box-shadow: none
+				border-color: #ddd
+				border-style: solid
+				border-width: 1px
+				margin-top: -1px
+				min-width: 220px
+				z-index: 99	
+				li.menu-item
+					&:nth-last-child(1)
+						a.menu-item-link
+							border-bottom: none	
+					a.menu-item-link
+						text-transform: capitalize
+						font-size: 13px
+						font-family: "OpenSansRegular", sans-serif
+					ul.sub-menu 
+						a.menu-item-link 
+							color: #747880
+							&:hover
+								color: $accent-color
+		li.level-0:hover
+			> .menu-item-link
+				color: $accent-color
+		li.level-1:hover
+			.menu-item-link
+				color: $accent-color
+		
+
+ul.sf-menu.right-nav-menu
+	padding: 0
+	margin: 0
+	float: right
+	width: auto
+	display: block
+	li.right-nav-menu-item
+		display: inline-block
+		margin: 13px 2px
+		padding: 0
+		list-style-type: none
+		float: left
+		line-height: 3.6
+		background: transparent
+		border: none
+		position: relative
+		&:hover
+			a.right-nav-link 
+				background: $accent-color
+				color: #fff
+				border-radius: 2px
+			.nav-link-with-arrow::after
+				border-top-color: #fff
+		a.right-nav-link 
+			color: #747880
+			line-height: 1.4
+			padding: 5px 15px
+			text-transform: uppercase
+			font-size: 12px
+			background: transparent
+			border: none
+			transition: background 0.2s ease-in-out
+			.fa
+				font-size: 16px
+				display: inline-block
+				margin-right: 5px
+		.right-nav-link.nav-link-with-arrow
+			padding: 5px 30px 5px 15px
+		.nav-link-with-arrow
+			&::after 
+				content: ''
+				position: absolute
+				top: 50%
+				right: 13px
+				margin-top: -3px
+				height: 0
+				width: 0
+				border: 5px solid transparent
+				border-top-color: #747880
+	ul.sub-menu
+		display: block
+		box-shadow: none
+		border: 1px solid #ddd
+		margin: 2px 0 0
+		min-width: 220px
+		margin-top: 1px
+		z-index: 99
+		background-color: #fff	
+		padding: 0 20px
+		li.menu-item
+			line-height: inherit
+			border: 0
+			padding: 0
+			margin: 0
+			background: transparent
+			display: block
+			width: 100%
+			list-style-type: none
+			height: auto
+			position: relative
+			float: none
+			&:hover
+				.menu-item-link
+					color: $accent-color
+			a.menu-item-link 
+				color: #747880
+				transition: color 0.3s ease
+				border-bottom: 1px solid #e8e6e2
+				padding: 0
+				text-transform: none
+				font-size: 13px
+				font-family: "OpenSansRegular", sans-serif
+			ul.sub-menu
+				left: -135%
+				top: 0
+				a.menu-item-link 
+					color: #747880
+					&:hover
+						color: $accent-color
+		li.menu-item:nth-last-child(1)
+			a.menu-item-link
+				border-bottom: none
+
+// Moile Navigation Menu
+.toggle-mnu
+	display: inline-block
+	width: 28px
+	height: 28px
+	float: right
+	margin: 15px 0 0
+	span:after, span:before
+		content: ''
+		position: absolute
+		left: 0
+		top: 9px 
+	span:after
+		top: 18px
+	span
+		position: relative
+		display: block
+	span, span:after, span:before
+		width: 100%
+		height: 2px
+		background-color: $accent-color
+		transition: all 0.3s
+		backface-visibility: hidden
+		border-radius: 2px
+	&.on span
+		background-color: transparent
+	&.on span:before
+		transform: rotate(45deg) translate(-1px, 0px)
+	&.on span:after
+		transform: rotate(-45deg) translate(6px, -7px)
+
+.mm-menu
+	background: #fff
+.mm-menu.mm-offcanvas
+	z-index: 15
+
+.mm-listview > li > span.li-content
+	display: inline-block
+
+.mm-menu.mm-theme-white .mm-listview
+	text-align: left
+	li 
+		&:hover	
+			a			
+				background: $accent-color
+				color: #fff
+				border-bottom: none
+			.mm-next::after
+				border-color: #fff
+		a 
+			color: #747880
+			transition: all 0.3s ease
+			padding: 12px 25px
+			font-size: 14px
+// header-top = end =====================================================
+
+// top-slider = start ======================================================
+.top-slider
+	position: relative
+	height: auto
+	width: 100%
+.top-slide-item 
+	display: block
+	float: left
+	width: 100%
+	position: relative
+.top-slide-item-bg
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 600px
+	background-size: cover
+	background-position: center top
+	background-repeat: no-repeat
+	z-index: -1
+	display: block
+.top-slide-item-content.first-item-content
+	padding-right: 100px
+.top-slide-item-content.top-slide-item-white
+	color: #fff
+	.slide-top-descr
+		&:after
+			background-color: #fff
+	h3
+		color: #fff
+	p 
+		color: #fff
+.top-slide-item-content
+	z-index: 100
+	float: right
+	z-index: 10
+	position: relative
+	text-align: right
+	width: 100%
+	padding: 130px 0 0
+	height: 600px
+	span.slide-top-descr
+		display: block
+		font-size: 22px
+		line-height: 1.2
+		text-transform: uppercase
+		position: relative
+		letter-spacing: 0.5px
+		margin-bottom: 30px
+		font-family: "OpenSansSemiBold", sans-serif
+		&:after
+			content: ''
+			position: absolute
+			right: 0
+			bottom: -10px
+			height: 1px
+			width: 70px
+			background-color: #000
+	h3
+		line-height: 1.1
+		margin: 0 
+		padding: 0 
+		text-transform: uppercase
+		display: block
+		color: #333
+		span
+			display: block
+			color: $accent-color
+	p 
+		color: #747880
+		font-size: 13px
+		margin: 15px 0 20px
+		padding: 0
+	a
+		padding: 19px 15px
+		border-radius: 2px
+		line-height: 1
+		font-size: 12px
+		display: inline-block
+		text-transform: uppercase
+		font-family: "OpenSansSemiBold", sans-serif
+		transition: all 0.2s ease
+	a.a-tomato
+		background-color: $accent-color
+		color: #fff
+		&:hover
+			background-color: #e1371d
+	a.a-white
+		background-color: #fff
+		color: #333
+		&:hover
+			background-color: $accent-color
+			color: #fff
+.slider-container
+	top: 0
+	width: 100%
+	overflow-x: hidden
+	.owl-nav
+		position: relative
+		.owl-prev,
+		.owl-next
+			position: absolute
+			z-index: 5
+			height: 40px
+			width: 40px
+			background-color: rgba(0,0,0,0.5)
+			border-radius: 50%
+			display: block
+			color: #fff
+			font-size: 17px
+			text-align: center
+			line-height: 40px
+			top: 270px
+			cursor: pointer
+			&:hover
+				background-color: rgba(0,0,0,1)
+			&:before 
+				font-family: "FontAwesome"
+				position: relative
+		.owl-prev
+			left: 20px
+			&:before 
+				content: "\f053"
+				margin-right: 3px
+		.owl-next
+			right: 20px
+			&:before 
+				content: "\f054"
+				margin-right: -3px
+
+	.owl-dots
+		position: absolute
+		bottom: 30px
+		width: 100%
+		text-align: center
+		.owl-dot
+			background: linear-gradient(to bottom, #999999 0%,#e1e1e1 100%)
+			width: 17px
+			height: 17px
+			margin-right: 2px
+			cursor: pointer
+			border: 3px solid #e5e5e5
+			border-radius: 50%
+			display: inline-block
+			&.active
+				background: $accent-color
+// top-slider = end =====================================================
+
+// social-subscribe-line = start =======================================
+.social-subscribe-line
+	width: 100%
+	position: relative
+	padding: 30px 0 
+	background-color: #3c3e43
+	.custom-text 
+		float: left
+		color: #747880
+		margin: 5px 0 0
+		padding: 0
+		line-height: 1.825
+	.social-icons
+		margin: 0
+		padding: 0
+		float: left
+		li 
+			margin-left: 5px
+			display: inline-block
+			list-style-type: none
+			a 
+				color: #747880
+				background: #fff
+				width: 36px
+				height: 36px
+				border: 1px solid #e8e6e2
+				color: #aaa297
+				display: block
+				text-align: center
+				line-height: 36px
+				border-radius: 2px
+				font-size: 15px
+				transition: all 0.2s ease
+				&:hover
+					color: $accent-color
+	.custom-text.alignright
+		float: right
+		margin: 6px 10px 0 0
+
+.newsletter-subscription 
+	position: relative
+	width: 370px
+	float: right
+	&:after
+		position: absolute
+		left: 11px
+		top: 3px
+		content: "\f003"
+		width: 18px
+		font-size: 18px
+		font-family: "FontAwesome"
+		color: #aaa297
+	table
+		border: 0
+		padding: 0
+		margin: 0
+		max-width: 100%
+		background-color: transparent
+		th 
+			display: none
+		td 
+			border: 0
+			padding: 0
+			margin: 0
+	input.newsletter-email 
+		width: 266px
+		padding: 10px 20px 10px 35px
+		color: #d0ccc7
+		line-height: 1.1
+		font-size: 14px
+		border: 1px solid #e8e6e2
+		border-radius: 2px
+		transition: all 0.2s ease
+	.newsletter-submit 
+		background: $accent-color
+		position: absolute
+		right: 0
+		top: 0
+		font-size: 11px
+		color: #fff
+		text-transform: uppercase
+		border: 0
+		padding: 10px 20px
+		border-radius: 2px
+		transition: all 0.2s ease
+		display: inline-block
+		&:hover
+			background: #e0361c
+// social-subscribe-line = end ========================================
+
+// content-column = start ============================================
+.content-column
+	padding: 30px 0 50px
+	position: relative
+
+a.content-column-item
+	width: 100%
+	height: 280px
+	text-align: center
+	display: block
+	padding-top: 160px
+	color: #fff
+	font-size: 45px
+	text-transform: uppercase
+	font-family: "OpenSansBold", sans-serif
+	line-height: 1.2
+	position: relative
+	transition: all 0.35s ease
+	&:hover
+		color: #fff
+		padding-top: 110px
+		.content-column-item-bg
+			&::before
+				background-color: rgba(0,0,0,0.35)
+	span
+		font-size: 25px
+		display: block
+a.content-column-item:focus
+	color: #fff
+.content-column-item-bg
+	background-size: cover
+	background-repeat: no-repeat
+	background-position: top center
+	position: absolute
+	width: 100%
+	height: 100%
+	left: 0
+	top: 0
+	z-index: -1
+	&::before
+		content: ''
+		position: absolute
+		left: 0
+		bottom: 0
+		top: 0
+		right: 0
+		width: 100%
+		height: 100%
+		background-color: rgba(0,0,0,0.6)
+		transition: all 0.5s ease
+// content-column = end =====================================================
+
+// summer-sale = start =====================================================
+.summer-sale
+	position: relative
+	.col-md-3, 
+	.col-sm-6
+		padding-left: 0
+		padding-right: 0
+	.row:first-child
+		padding-left: 15px
+	.row:nth-last-child(1)
+		padding-right: 15px	
+
+.name-sale-item
+	background: $accent-color
+	padding: 40px 25px 25px
+	color: #fff
+	text-align: left
+	width: 100%
+	display: block
+	position: relative
+	&::after 
+		content: ""
+		position: absolute
+		border: 20px solid transparent
+		border-left: 20px solid $accent-color
+		right: -35px
+		top: 70px
+		z-index: 10
+	h5
+		text-transform: uppercase
+		margin: 0 0 5px 0
+	h4
+		margin: 0
+		line-height: 1.12
+		text-transform: capitalize
+		margin-bottom: 15px
+	p 
+		font-style: italic
+		margin: 0
+		line-height: 1.82
+		span
+			text-transform: uppercase
+	a 
+		border: 1px dashed #fff
+		color: #fff
+		background: none
+		font-size: 11px
+		padding: 10px 16px
+		line-height: 1.3
+		text-transform: uppercase
+		font-family: "OpenSansSemiBold"
+		margin-top: 24px
+		display: inline-block
+		border-radius: 2px
+		transition: all 0.3s ease
+		&:hover
+			background-color: #fff
+			color: $accent-color
+
+.product-item
+	padding: 15px 10px 21px
+	text-align: center
+	border: 1px solid #d9dfe4
+	margin: 0px -1px -1px 0 !important
+	.p-image
+		position: relative
+		display: block
+		overflow: hidden
+		&:hover
+			img 
+				opacity: .5
+			a
+				opacity: 1
+				transform: translate3d(0px, 10px, 0px)
+		img 
+			width: 75%	
+			height: 100%
+			vertical-align: middle
+			transition: opacity .35s ease-in-out
+		.onsale
+			position: absolute
+			background: $accent-color
+			color: #fff
+			font-size: 12px
+			right: 10px
+			top: 10px
+			padding: 2px 10px
+	.p-mask
+		position: absolute
+		bottom: 30px
+		top: 30%
+		width: 100%
+		z-index: 20
+		display: block
+		a 
+			display: inline-block
+			height: 40px
+			width: 40px
+			color: #515151
+			background: #fff
+			border: 1px dashed #b2b2b2
+			padding: 0 10px
+			line-height: 38px
+			opacity: 0
+			transform: translate3d(0px, -40px, 0px)
+			transition: all .3s ease 0s
+			margin: 0 5px
+			border-radius: 2px
+			&:hover
+				color: $accent-color
+				border-color: $accent-color
+		.add-to-wishlist
+			transition-delay: .08s
+		.p-quickview
+			transition-delay: .16s
+.p-info
+	a.h6
+		overflow: hidden
+		white-space: nowrap
+		padding: 0
+		display: block
+		margin: 10px 0 5px
+		text-transform: capitalize
+		color: #3c3e43
+		&:hover
+			color: $accent-color
+	.price
+		display: block
+		color: $accent-color
+		font-family: "OpenSansSemiBold", sans-serif
+		font-size: 16px
+		margin-bottom: 14px
+		del 
+			color: #b2b2b2
+			font-size: 14px
+			display: inline-block
+			margin-right: 10px
+			font-family: "OpenSansRegular", sans-serif
+.add-to-cart
+	padding: 12px
+	background: none
+	color: #515151
+	border: #d1d1d1 dashed 1px
+	font-size: 11px
+	text-transform: uppercase
+	line-height: 1
+	display: inline-block
+	font-family: "OpenSansSemiBold", sans-serif
+	border-radius: 2px
+	&:hover
+		color: $accent-color
+		border-color: $accent-color
+	i 
+		margin-right: 8px
+		font-size: 12px
+// summer-sale = start ===============================================
+
+// new-arrivals = start ==============================================
+.new-arrivals
+	margin: 50px 0 25px
+	position: relative
+.tab-block
+	position: relative
+	padding: 0 15px
+	.h4
+		display: inline-block
+		float: left
+		font-size: 20px
+		text-transform: uppercase
+		margin: 0
+		position: absolute
+		left: 35px
+		top: 8px
+	.tab-mnu
+		display: block
+		list-style:none
+		margin: 0 -1px -1px 0
+		padding: 0
+		text-align: right
+		border: 1px solid #d9dfe4
+		position: relative
+		&::before 
+			position: absolute
+			content: ''
+			width: 100%
+			height: 1px
+			background-color: #d9dfe4
+			top: 50px
+			left: 0
+			display: none
+		li
+			box-sizing: border-box
+			background-color: transparent
+			text-align: center
+			padding: 15px 30px
+			cursor: pointer
+			display: inline-block
+			margin: 0 -4px 0 0
+			color: #696D75
+			font-size: 14px
+			letter-spacing: 0.5px
+			text-transform: uppercase
+			border-left: 1px solid #d9dfe4
+			transition: all .2s ease
+			&:hover
+				color: #fff
+				background-color: $accent-color
+		li:nth-last-child(1)
+			margin:  0 -1px 0 0
+		.active
+			color: #fff
+			background-color: $accent-color
+.tab-cont	
+	box-sizing: border-box
+	.tab-pane
+		.col-md-3, 
+		.col-sm-6
+			padding: 0
+	.product-item 
+		.p-image 
+			img
+				width: 100%
+// new-arrivals = end =============================================
+
+// book-slider = start ============================================
+.book-slider
+	padding: 25px 0
+.bb-bookblock
+	height: 573px
+	width: 100%
+	z-index: 5
+	.bb-item
+		display: block
+	.book-left-side,
+	.book-right-side
+		float: left
+		width: 50%
+		height: 100%
+		position: relative
+		background-color: #eff3f6
+	.left-side-content-wrap
+		position: relative
+		width: 100%
+		text-align: center
+		top: 50%
+		transform: translateY(-50%)
+		a 
+			border-color: #3c3e43
+			color: #3c3e43
+			margin-top: 10px
+			padding: 18px 35px
+			font-size: 14px
+			&:hover
+				color: #fff
+				border-color: $accent-color
+				background-color: $accent-color
+	.cat-links 
+		display: block
+		font-size: 20px
+		color: #3c3e43
+		text-transform: uppercase
+		letter-spacing: 7px
+	.entry-title 
+		color: #3c3e43
+		text-transform: uppercase
+		padding: 0 20px
+		margin: 20px 0
+		line-height: 1.2
+.book-navigation
+	z-index: 8
+	a 
+		position: absolute
+		top: 50%
+		transform: translateY(-50%)
+		cursor: pointer
+	i 
+		padding: 34px 10px
+		background-color: $accent-color
+		color: #fff
+	.book-arrow-left 
+		left: -10px
+	.book-arrow-right 
+		right: -10px
+// book-slider = end =================================================
+
+// featured-latest-products = start ==================================
+.featured-latest-products
+	position: relative
+	padding: 25px 0
+	.h6
+		border-width: 1px 1px 0
+		border-style: solid
+		border-color: #d9dfe4
+		text-transform: uppercase
+		font-size: 18px
+		font-family: "OpenSansSemiBold", sans-serif
+		padding: 10px 20px
+		margin: 0 1px 0 0
+.products
+	overflow: hidden
+	display: block
+	margin: 0
+	width: 100%
+	padding-bottom: 1px
+	.product-item
+		width: 50%
+		padding: 20px
+		text-align: left
+		display: inline-block
+		position: relative
+		float: left
+		border: 1px solid #d9dfe4
+		margin: 0px -1px -1px 0 !important
+		font-size: 13px
+	.p-image
+		padding: 5px 0
+		float: left
+		width: 30%
+		border: 1px solid #dae0e5
+		text-align: center
+		margin-top: 10px
+		img 
+			width: 100%
+			height: auto
+	.p-info
+		float: right
+		width: 63%
+		position: relative
+		.p-title
+			line-height: 1
+			color: #39342e
+			&:hover
+				color: $accent-color
+		.price
+			margin: 3px 0 10px 
+		.onsale
+			position: absolute
+			top: -20px
+			right: -20px
+			font-size: 11px
+			color: #fff
+			padding: 3px 12px
+			background-color: $accent-color
+// featured-latest-products = end ============================================
+
+// advantages = start =======================================================
+.advantages
+	position: relative
+	border-top: 1px solid #dae0e5
+	border-bottom: 1px solid #dae0e5
+	padding: 15px 0
+	margin: 25px 0 
+	display: block
+	background-color: #eff3f6
+.advantage-item
+	background-color: transparent
+	color: #71757d
+	display: block
+	width: 100%
+	text-align: center
+	padding: 10px 0
+	.img-wrap
+		margin: 0 15px 0 0
+		text-align: left
+		display: inline-block
+		line-height: 1
+		font-size: 46px
+	.h4
+		font-size: 16px
+		display: inline-block
+		text-transform: uppercase
+		margin: 12px 0 0
+		font-family: "OpenSansBold", sans-serif
+		vertical-align: top
+		span
+			font-family: "OpenSansRegular", sans-serif
+			letter-spacing: normal
+
+
+[class^="icon-"], [class*=" icon-"] 
+	font-family: 'IcoMoon-Free'
+	speak: none
+	font-style: normal
+	font-weight: normal
+	font-variant: normal
+	text-transform: none
+	line-height: 1
+	/* Better Font Rendering  */
+	-webkit-font-smoothing: antialiased
+	-moz-osx-font-smoothing: grayscale
+[class^="icon-"]::before, 
+[class*=" icon-"]::before 
+	font-family: 'IcoMoon-Free'
+	font-style: normal
+	speak: none
+.icon-lightning::before 
+	content: "\e9b5"
+.icon-mobile::before 
+	content: "\e959"
+.icon-star-2::before 
+	content: "\e9d8"
+/* advantages = end =================================================  */
+
+/*  site-footer = start =============================================  */
+.site-footer
+	padding: 25px 0
+	.widget
+		text-align: left
+		width: 100%
+		color: #71757d
+		font-size: 13px
+		img 
+			display: block
+			height: 100%
+			width: auto
+			margin-bottom: 25px
+		p 
+			margin: 15px 0
+			display: block
+		.h6
+			text-transform: uppercase
+			font-size: 16px
+			font-family: "OpenSansSemiBold", sans-serif
+			padding: 0
+			margin: 0 0 25px
+			color: #3c3e43
+		.widget-text
+			margin: 0
+			padding: 0
+			li 
+				list-style-type: none
+				margin: 15px 0
+				vertical-align: top
+			i
+				float: left
+				margin-right: 20px
+				font-size: 24px
+				margin-top: 6px
+				width: 22px
+				text-align: center
+			a
+				color: #71757d
+				display: inline-block
+				&:hover
+					color: $accent-color
+			.fa-envelope-o
+				margin-top: 0
+
+.footer-mid
+	position: relative
+	width: 100%
+	background: #eff3f6
+	padding: 20px 0
+	text-align: center
+	margin-top: 20px
+	img 
+		display: block
+		margin: 0 auto
+
+.footer-bot
+	background: #39342e
+	color: #a0978d
+	width: 100%
+	padding: 25px 0
+	font-size: 11px
+	text-align: center
+	a 
+		color: #71757d
+		&:hover
+			color: $accent-color
+	.site-info
+		line-height: 2
+.footer-menu
+	margin: 0 0 20px
+	padding: 0
+	li 
+		list-style-type: none
+		text-transform: uppercase
+		margin: 0 
+		padding: 0 10px
+		font-size: 10px
+		line-height: 1
+		position: relative
+		display: inline-block
+		border-right: 1px solid #71757d
+		&:nth-last-child(1)
+			border: none
+/*  site-footer = end ============================================  */
+
+/*  btn-up = start ============================================  */
+.btn-up
+	display: none
+	font-size: 25px
+	background-color: transparent
+	position: fixed 
+	right: 20px
+	bottom: 25px
+	z-index: 1000
+	color: #747880
+	height: 32px
+	width: 32px
+	line-height: 1
+	border: 1px solid #c5cbd0
+	cursor: pointer
+	transition: all 0.2s ease
+	&:hover
+		border-color: $accent-color
+		color: $accent-color
+	.fa 
+		display: inline-block
+		position: fixed 
+		width: 30px
+		height: 32px
+		text-align: center
+

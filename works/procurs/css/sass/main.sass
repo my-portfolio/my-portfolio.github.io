@@ -1,0 +1,415 @@
+@import "bourbon/bourbon"
+
+$text-color: #333
+$dark-color: #000
+$red-color: #9b1818
+$blue-color: #003469
+$green-color: #67bc5c
+
+h1 
+	color: #fff
+	font: bold 60px "CleanvertisingLight", sans-serif
+	margin: 0
+
+section,
+	padding: 58px 0 68px
+	&.s_dark
+		h2, h3, p
+			color: #fff
+	h2
+		color: $blue-color
+		line-height: 56px
+		margin-bottom: 40px
+		margin-top: 0
+		text-align: center
+		font: 50px "CleanvertisingLight", sans-serif
+p strong
+	font-weight: normal
+	font-family: "RobotoBold", sans-serif
+body
+	font-family: "RobotoRegular", sans-serif
+	color: $text-color
+	font-weight: normal
+	font-size: 14px
+	min-width: 320px
+	position: relative
+	line-height: 1.6
+	-webkit-font-smoothing: antialised
+	overflow-x: hidden
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: red
+	border-color: $red-color
+	box-shadow: $red-color 0 0 0 1px
+body input:required:valid,
+body textarea:required:valid
+	color: green
+
+.hidden
+	display: none
+
+// header = start
+header 
+	min-height: 640px
+	background-image: url("../img/top_bg.jpg")
+	background-position: top center 
+	background-size: cover
+	color: #fff
+	padding-top: 32px
+	padding-bottom: 40px
+.logo
+	font: bold 40px "RobotoBold", sans-serif
+	text-align: left
+.top_line 
+	text-align: right
+.top_phone,
+.bottom_phone
+	.wrapper .active  
+		text-decoration: underline
+.top_phone,
+.bottom_phone
+	.wrapper .tab
+		text-transform: uppercase
+		font: 16px "RobotoRegular", sans-serif
+		cursor: pointer
+.top_phone,
+.bottom_phone
+	.tab_item
+		font: 34px "RobotoBold", sans-serif
+.top_header 
+	margin-top: 70px
+	h2
+		margin: 10px 0 0
+		font: 37px "CleanvertisingLight", sans-serif
+.tabs_header
+	margin-top: 50px
+	text-transform: uppercase
+	font: 18px "RobotoBold", sans-serif
+	ul, li
+		list-style-type: none;
+		margin:0
+		padding: 0
+	li
+		padding-left: 40px
+		position: relative
+		margin-bottom: 12px
+	i 
+		position: absolute
+		left: 0
+		top: 0
+		line-height: 26px
+		color: #6F6A67
+	.tabs
+		.tab
+			display: inline-block
+			background-color: rgba(255,255,255,.25)
+			padding: 15px 18px
+			text-transform: uppercase
+			cursor: pointer
+			float: left
+			font: 16px "RobotoBold", sans-serif
+			+transition(all 0.25s ease)
+			&.active
+				background-color: rgba(255,255,255,.6)
+				color: #000
+	.tab_content
+		background-color: rgba(255,255,255,.6)
+		padding: 12px 18px 18px
+		color: #000
+.button
+	border: none
+	cursor: pointer
+	display: inline-block
+	line-height: 46px
+	height: 46px
+	padding: 0 32px
+	background-color: #000
+	text-transform:uppercase
+	text-align: center
+	color: #fff
+	border-radius: 3px
+	font: 16px "RobotoBold", sans-serif
+	&.btn_red
+		background-color: $red-color
+	&.btn_green
+		background-color: $green-color
+	&.btn_white
+		background-color: #fff
+		color: #000
+.tabs_header .button_wrap
+	text-align: right
+a.button
+	color: #fff
+	text-decoration: none
+	height: 46px
+	line-height: 46px
+// header = end
+
+// s_tizers  = start
+.s_tizers 
+	+linear-gradient(#c6d8ee, #e8eff7)
+	color: $blue-color
+	font-family: "CleanvertisingLight", sans-serif
+	text-transform: uppercase
+	padding: 35px 0 0
+	span
+		font-size: 14px
+		display: block
+	strong
+		font-weight: normal
+		font-size: 23px
+		display: block
+	.row
+		> div
+			margin-bottom: 35px
+.tiz_img, 
+.tiz_descr
+	display: inline-block
+	vertical-align: bottom
+.tiz_img i
+	font-size: 70px
+	line-height: 48px
+	margin-right: 5px
+.s_tizers .row
+	> div:nth-child(1)
+		i 
+			font-family: "RobotoRegular", sans-serif
+			letter-spacing: -12px
+			margin-right: 18px
+		span
+			font-size: 19px
+			line-height: 21px
+		strong
+			font-size: 25px
+			line-height: 31px
+	> div:nth-child(2)
+		i 
+			color: $dark-color
+		span
+			line-height: 10px
+		strong
+			font-size: 25px
+			line-height: 42px
+	> div:nth-child(3)
+		i 
+			color: $dark-color
+		span
+			line-height: 17px
+		strong
+			line-height: 38px
+	> div:nth-child(4)
+		span
+			font-size: 13px
+			line-height: 16px
+		strong
+			font-size: 23px
+			line-height: 38px
+// s_tizers  = end
+
+// profi_item  = start
+.profi_item
+	margin-bottom: 25px
+.profi_left
+	color: $red-color
+	i
+		font-size: 100px
+		line-height: 115px
+.profi_right
+	h3
+		display: inline-block
+		color: $red-color
+		font: 30px "CleanvertisingBold", sans-serif
+		margin: 6px 0 5px
+	p 
+		font-size: 16px
+		margin: 0
+form 
+	border: $green-color 5px solid
+	border-radius: 5px
+	background-color: #f7f7f7
+	padding: 25px 30px
+	h2
+		font: 22px "RobotoBold", sans-serif
+		color: $text-color
+		line-height: 22px
+		text-transform: uppercase
+		margin-top: 0
+		margin-bottom: 30px
+	label
+		display: block
+		margin-bottom: 15px
+		font-size: 14px
+		color: #666
+	/* select
+		background-image: url("../img/arrow.png")
+		background-repeat: no-repeat
+		background-position: right center */
+	input,
+	select
+		display: block
+		height: 40px
+		line-height: 40px
+		border: #D9D9D9 1px solid
+		box-shadow: 0 0 20px rgba(0,0,0,.06) inset
+		text-indent: 10px
+		width: 100%
+		font-size: 20px
+		margin-top: 3px
+		&:focus
+			box-shadow: $green-color 0 0 0 2px
+			border-radius: 3px
+			border-color: $green-color
+	.button_wrap
+		text-align: center
+		margin: 30px 0 10px	
+// profi_item  = end
+
+// s_review  = start
+.s_review
+	background-image: url("../img/middle_bg.jpg")
+	background-repeat: repeat-x
+	background-attachment: fixed
+	min-height: 600px
+	background-position: top center
+	background-size: cover
+	background-color: #111c28
+.review_item
+ 	color: #fff
+ 	text-align: center
+ 	.img_wrap
+ 		text-align: center
+ 		img
+	 		height: 165px
+	 		width: 165px
+	 		border: #6b6c6b 10px solid
+	 		border-radius: 50%
+	 		display: inline-block
+.hr
+	border-bottom: #cea380 1px solid
+	width: 80px
+	text-align: center
+	display: inline-block
+.review_item h4
+		font: 22px "Times New Roman", serif 
+		margin-bottom: 8px
+		font-style: italic
+		margin-top: 30px
+.review_item	p
+		font-size: 15px
+		display: inline-block
+		float: none
+		margin: 17px auto 0	
+.owl-nav
+	div
+		width: 34px
+		height: 140px
+		background-image: url("../img/s_arrows.png")
+		background-repeat: no-repeat
+		position: absolute
+		top: 20px
+		opacity: 0.6
+		&:hover
+			opacity: 1
+		&.owl-next
+			right: 0
+			background-position: top right
+.owl-dots
+	width: 100%
+	text-align: center
+	margin-top: 20px
+	.owl-dot
+		width: 14px
+		height: 14px
+		background-color: #fff
+		display: inline-block
+		border-radius: 50%
+		margin: 0 4px
+		opacity: 0.6
+		&.active
+			opacity: 0.9
+// s_review  = end
+
+// s_back  = start
+.s_back
+	background-image: url("../img/red_bg.jpg")
+	background-position: top center
+	background-repeat: repeat-x
+	text-align: center
+	padding: 40px 0
+	h3 
+		font-size: 26px 
+		font-weight: normal
+		text-transform: uppercase
+		text-align: center
+		margin-top: 0px 
+		margin-bottom: 35px
+		background-color: rgba(255,255,255,.13)
+		padding: 14px 0
+// s_back  = end
+
+// s_contacts  = start
+.s_contacts
+	padding-bottom: 0
+	.wrapper
+		font-size: 18px
+		margin-top: 15px
+	.contacts_top
+	text-align: center
+	h2
+		color: #000
+		display: inline-block
+		margin-bottom: 0
+		vertical-align: middle
+		height: 45px
+		line-height: 45px
+	.tabs
+		display: inline-block	
+		vertical-align: middle
+		height: 45px
+		line-height: 45px
+		margin-left: 20px
+		.tab
+			float: left
+			padding: 0px 60px
+			border: $red-color 5px solid
+			line-height: 38px
+			color: $red-color
+			&:first-child
+				border-radius: 3px 0 0 3px
+			&:last-child
+				border-radius: 0 3px 3px 0
+			&.active
+				background-color: $red-color
+				color: #fff
+.map
+	background-color: #e1d6b0
+	min-height: 480px
+	margin-top: 20px
+
+#hidden_form,
+#form_back
+	max-width: 420px
+	margin: auto
+	position: relative
+	h2
+		text-align: center
+// s_contacts  = end
+
+// footer  = start
+footer
+	background-color: #fff
+	text-align: center	
+	padding: 10px 0 60px
+	h2
+		font: 50px "CleanvertisingLight", sans-serif
+		margin-bottom: 25px
+	p 
+		font-size: 18px 
+.bottom_phone 
+	margin: 55px 0 35px
+.bottom_phone .wrapper .tab
+	color: $red-color
+.bottom_phone .tab_item
+	color: $red-color	
+// footer  = end

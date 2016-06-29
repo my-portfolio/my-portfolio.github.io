@@ -1,0 +1,1039 @@
+@import "bourbon/bourbon"
+
+// color
+$accent-red-color: #ef5966
+
+html.js .loader
+	background: none repeat scroll 0 0 #ffffff
+	bottom: 0
+	height: 100%
+	left: 0
+	position: fixed
+	right: 0
+	top: 0
+	width: 100%
+	z-index: 9999
+	.loader_inner
+		background-image: url("../img/preloader.gif")
+		background-size: cover
+		background-repeat: no-repeat
+		background-position: center center
+		background-color: #fff
+		height: 60px
+		width: 60px
+		margin-top: -30px
+		margin-left: -30px
+		left: 50%
+		top: 50%
+		position: absolute
+
+body
+	font-family: "Lato-Regular", sans-serif
+	font-weight: normal
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.6
+	-webkit-font-smoothing: antialiased
+	overflow-x: hidden
+	background-color: #FFF
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: red
+body input:required:valid,
+body textarea:required:valid
+	color: green
+
+.hidden
+	display: none
+
+a, a:hover, a:active, a:focus
+	text-decoration: none
+	outline: none
+
+h1, .h1
+	font-family: "PlayfairDisplayRegular", serif 
+	font-size: 45px
+	font-weight: 700
+	margin: 0
+
+h3, .h3
+	font-size: 31px 
+	margin: 0
+
+h4, .h4
+	font-size: 25px
+	margin: 0
+	font-weight: normal
+
+h5, .h5
+	font-size: 16px
+	margin: 0
+	font-weight: normal
+
+.clearfix
+	clear: both
+
+/* header = main-head = start ======================================== */
+.main-head
+	position: relative
+	background-color: #fff
+	letter-spacing: 0.9px
+	padding-top: 15px
+	.top-line-menu
+		text-align: right
+		margin-bottom: 15px
+		ul
+			margin: 0
+			padding: 0
+			li 
+				list-style-type: none
+				margin: 0 15px
+				display: inline-block
+				&:nth-last-child(1)
+					margin-right: 0
+				a 
+					color: #434343
+					text-transform: capitalize
+					display: inline-block
+					&:hover
+						text-decoration: underline
+	.logo
+		display: inline-block
+		width: 100%
+		a 
+			position: relative
+			display: block
+			z-index: 2
+			img 
+				position: absolute
+				top: -40px
+				left: 20px
+				width: auto
+				height: 105px
+	.top-register-menu
+		background-color: #f6f6f6
+		text-align: right
+		width: 100%
+		display: inline-block
+		ul 
+			margin: 0
+			padding: 0
+		li 
+			list-style-type: none
+			display: inline-block
+			margin: 0 2px
+			background-color: #05aecc
+			transition: all 0.2s ease
+			&:nth-last-child(1)
+				margin-right: 0
+			a 
+				display: inline-block
+				padding: 25px 30px		
+				color: #fff
+				line-height: 1.7
+				img 
+					height: 25px
+					width: auto
+					vertical-align: top
+		li:hover
+			background-color: lighten(#05aecc, 10%)
+		li:nth-child(even)
+			background-color: #f0626e
+			&:hover
+				background-color: darken(#f0626e, 10%)
+a.menu-toggle 
+	display: none
+
+.top-menu-navigation
+	display: inline-block
+	text-align: center
+	margin: 25px 0
+	width: 100%
+	background-color: #05aecc
+	ul 
+		margin: 0
+		padding: 0
+	.sf-menu
+		float: none
+		display: inline-block
+		margin: 0 auto
+		vertical-align: middle
+		> li 
+			list-style-type: none
+			display: inline-block
+		li 
+			background-color: transparent
+			a 
+				color: #fff
+				border: none
+				text-transform: capitalize
+				padding: 25px
+				position: relative
+				transition: all 0.3s ease 
+				&:hover
+					background-color: #FFF
+					color: $accent-red-color
+				.fa
+					font-size: 14px
+			ul
+				box-shadow: 0 0 16px rgba(0, 0, 0, 0.33) 
+				text-align: left
+				background-color: rgba(255,255,255,0.9)
+				li 
+					margin: 20px 
+					padding-bottom: 20px
+					border-bottom: 1px solid #cacaca
+					&:nth-last-child(1)
+						padding-bottom: 0
+						border-bottom: none
+					img
+						display: inline-block
+						width: auto
+						height: 75px
+						vertical-align: top
+					.li-content
+						display: inline-block
+						vertical-align: top
+						margin-left: 10px
+						a 
+							padding: 3px 30px 
+							background-color: #05aecc
+							text-transform: capitalize
+							text-align: center
+							color: #fff
+							display: inline-block
+							&:hover
+								background-color: #007d9b
+								color: #fff
+								font-weight: normal
+						p 
+							font-size: 14px
+							color: #454545
+							line-height: 1.2
+							margin-bottom: 8px
+					a 
+						color: $accent-red-color
+						padding: 0
+						transition: all 0.15s ease
+						&:hover
+							font-weight: 600
+							background-color: transparent
+					h5
+						color: $accent-red-color
+						text-transform: capitalize
+						margin-bottom: 8px
+					
+// Moile Navigation Menu
+.toggle-mnu
+	display: block
+	width: 28px
+	height: 28px
+	float: right
+	span:after, span:before
+		content: ''
+		position: absolute
+		left: 0
+		top: 9px 
+	span:after
+		top: 18px
+	span
+		position: relative
+		display: block
+	span, span:after, span:before
+		width: 100%
+		height: 2px
+		background-color: #fff
+		transition: all 0.3s
+		backface-visibility: hidden
+		border-radius: 2px
+	&.on span
+		background-color: transparent
+	&.on span:before
+		transform: rotate(45deg) translate(-1px, 0px)
+	&.on span:after
+		transform: rotate(-45deg) translate(6px, -7px)
+		
+.mobile-mnu
+	background-color: #05aecc
+	cursor: pointer
+	display: inline-block
+	width: 100%
+	color: #fff
+	padding: 7px 15px 5px 15px
+	margin: 15px 0
+	text-transform: uppercase
+	b
+		display: block
+		font-size: em(15px)
+		text-align: center
+		font-weight: normal
+
+.mm-menu.mm-offcanvas
+	z-index: 5
+.mm-listview > li > span.li-content
+	display: inline-block
+.mm-menu.mm-theme-white .home-living-inside
+	li 
+		padding: 15px 0
+		&:nth-last-child(1)
+			padding: 0
+.mm-menu.mm-theme-white .mm-listview
+	text-align: left
+	li 
+		img
+			display: inline-block
+			width: auto
+			height: 75px
+			vertical-align: top
+			margin: 15px 0 0 20px
+		.li-content
+			display: inline-block
+			vertical-align: top
+			margin-left: 10px
+			a 
+				padding: 3px 30px 
+				background-color: #05aecc
+				text-transform: capitalize
+				text-align: center
+				color: #fff
+				display: inline-block
+				&:hover
+					background-color: #007d9b
+					color: #fff
+					font-weight: normal
+					padding-left: 30px
+			p 
+				font-size: 14px
+				color: #454545
+				line-height: 1.2
+				margin-bottom: 8px
+		a 
+			color: $accent-red-color
+			font-size: 16px
+			transition: all 0.3s ease
+			padding-top: 15px 
+			padding-bottom: 15px
+			&:hover
+				padding-left: 40px
+		h5
+			color: $accent-red-color
+			text-transform: capitalize
+			line-height: 1
+			margin-bottom: 8px
+		.fa 
+			display: none
+/* header = main-head = end ======================================== */
+
+
+/* section = main-content = start ======================================== */
+.main-content
+	position: relative
+
+.content-first-line,
+.content-second-line
+	.col-md-7
+		padding-right: 2px
+	.col-md-5
+		padding-left: 2px
+
+.content-top-line-left,
+.content-second-line-left
+	display: block
+
+.mens-wear,
+.womens-wear,
+.baby-wear,
+.crafts,
+.jewelry
+	transition: all 0.4s ease
+	position: relative
+	display: block
+	height: auto
+	&:hover 
+		background-color: rgba(0,0,0,0.4)
+	
+.mens-wear-bg,
+.womens-wear-bg,
+.baby-wear-bg,
+.crafts-bg,
+.jewelry-bg
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	z-index: -5
+	background-size: cover
+	background-position: center
+.womens-wear-bg
+	background-position: left center 
+
+.overlay-1,
+.overlay-2,
+.overlay-3
+	position: absolute
+	left: 0
+	top: 0
+	height: 100%
+	width: 100%
+	z-index: -2
+.overlay-1
+	opacity: 0.1
+	background-color: #142251
+.overlay-2
+	opacity: 0.1
+	background-color: #fc0
+.overlay-3
+	opacity: 0.02
+	background-color: #270f0f
+
+.mens-wear
+	height: 565px
+	&:hover
+		a
+			left: 28%
+	a
+		left: 0
+
+.mens-wear,
+.womens-wear
+	a
+		text-transform: uppercase
+		color: $accent-red-color
+		display: inline-block
+		position: absolute
+		bottom: 12px
+		transition: all .35s ease
+		
+.mens-h,
+.womens-h
+	display: block
+	background-color: rgba(54,42,79,0.8)
+	padding: 12px 20px
+	line-height: 1.2
+	p 
+		color: #fff
+		font-size: 13px
+		margin: 0
+
+.mens-descr
+	color: #fff
+	padding: 10px 20px
+	background-color: rgba(239,89,102,0.88)
+	font-family: "Times New Roman", serif 
+	font-size: 14px
+	letter-spacing: 0.9px
+	margin-top: 2px
+	display: block
+
+.womens-wear
+	height: 320px
+	margin-bottom: 4px
+	&:hover
+		a
+			right: 20%
+	.womens-h
+		.h1
+			font-size: 30px
+		p 
+			font-size: 12px
+	a
+		right: 0
+
+.baby-wear
+	height: 240px
+	&:hover
+		.hover-shop
+			right: 20%
+		
+.hover-shop
+	margin: 0
+	padding: 0
+	z-index: 2
+	display: inline-block
+	position: absolute
+	right: 0
+	bottom: 15px
+	transition: right .35s ease
+	li 
+		list-style-type: none
+		display: inline-block
+		color: #fff
+		text-transform: capitalize
+		margin: 0
+		float: left
+		padding: 0
+		a
+			color: #fff
+			display: inline-block
+			padding: 10px 12px
+			margin: 0
+			vertical-align: middle
+			img
+				display: block
+				height: 24px
+				width: auto
+		.button
+			display: inline-block
+			padding: 10px 12px
+			margin: 0
+			background-color: transparent
+			border: none
+	.fa-caret-down
+		position: absolute
+		top: -2px
+		left: 50%
+		transform: translate(-50%, 0)
+		font-size: 24px
+		line-height: 0
+		display: none
+	.shop
+		background-color: #05aecc
+	.present
+		background-color: #00a1be
+	.cart
+		background-color: #f0626e
+		position: relative
+		&:hover 
+			.add-to-cart,
+			.fa-caret-down
+				display: block
+	.shop,
+	.present,
+	.cart
+		&:hover 
+			background-color: rgba(239,89,102,0.8)
+	.price
+		background-color: #323232
+		display: inline-block
+		line-height: 3
+		padding: 0 10px
+.add-to-cart
+	position: absolute
+	display: inline-block
+	top: -25px
+	left: -25px
+	width: 100px
+	height: auto
+	border: 1px solid #f0626e
+	border-radius: 5px
+	background-color: white
+	font-size: 13px
+	color: #434343
+	text-align: center
+	text-transform: lowercase
+	display: none
+.search-line
+	display: block
+	margin: 4px 0
+	padding: 50px 60px
+	background-color: #f0626e
+	width: 100%
+	text-align: left
+
+.navbar-form
+	display: block
+	width: 100%
+	padding: 0
+	margin: 0
+	border: 0
+	box-shadow: none
+	.form-group
+		display: inline-block
+		margin: 0 15px 0 0
+		vertical-align: middle
+		width: 80%
+		input 
+			width: 100%
+
+.form-control
+	display: inline-block
+	width: auto
+	vertical-align: middle
+	padding: 20px 25px
+	color: #424242
+	border: 1px solid transparent
+	background-color: #fff
+.form-control,
+.btn 
+	outline: none
+	&:focus 
+		outline: none
+.btn 
+	display: inline-block
+	width: 15%
+	border: 1px solid transparent
+	white-space: nowrap
+	vertical-align: middle
+	touch-action: manipulation
+	cursor: pointer
+	user-select: none
+	img 
+		width: auto
+		height: 100%
+
+.btn-default
+	background-color: transparent
+
+.crafts
+	height: 335px
+	transition: all 0.4s ease
+	&:hover 
+		.hover-shop
+			right: 20%
+	.hover-shop
+		bottom: 0
+		.shop
+			background-color: rgba(20,34,81,0.75)
+			&:hover 
+				background-color: rgba(239,89,102,0.8)
+			a
+				text-transform: uppercase
+				padding: 0 40px
+				font-weight: normal
+				font-family: "OpenSansRegular", sans-serif
+				font-size: 30px
+		.price
+			padding: 0 20px
+
+.jewelry
+	height: 508px
+	margin-top: 3px
+	a 
+		color: #fff
+		display: block
+		position: absolute
+		right: 0
+		bottom: 0
+		width: 90px
+		height: auto
+		text-align: center
+		&:hover
+			.h1
+				color: $accent-red-color
+		.h1
+			text-transform: uppercase
+			padding: 20px 25px
+			line-height: 1.15
+			text-align: center
+			display: inline-block
+			transition: all .2s ease
+		.jewelry-h
+			position: relative
+			display: block
+			width: 100%
+			height: auto
+			padding-top: 30px
+			background-color: rgba(54,42,79,0.68)
+	.jewelry-descr
+		display: block
+		position: relative
+		vertical-align: top
+		.jewelry-descr-bg 
+			height: 86px
+			max-width: 105%
+			display: inline-block
+			position: absolute
+			left: -4px
+			top: -12px
+			right: 0
+			z-index: 2
+			opacity: 0.95
+		.arrow
+			height: 100%
+			width: auto
+			z-index: 3
+			position: relative
+			display: inline-block
+
+/* section = main-content = end ======================================== */
+
+
+/* section = new-products = start ======================================== */
+.new-products
+	padding: 25px 0
+.carousel-head
+	display: inline-block
+	border-bottom: 1px solid #b9b9b9
+	width: 100%
+	margin-bottom: 25px
+	a 
+		display: inline-block
+		float: left
+		margin: 28px 0 0 25px 
+		position: relative
+		line-height: 1.15
+		&:after
+			content: ''
+			position: absolute
+			height: 1px
+			width: 105%
+			background-color: #f0626e
+			bottom: -2px 
+			left: 0
+	.h3
+		color: #00a1be
+		text-transform: capitalize
+.carousel-nav-container
+	display: inline-block
+	float: right
+	.new-prev,
+	.new-next,
+	.featured-prev,
+	.featured-next
+		display: inline-block
+		padding: 20px
+		background-color: #3c3c3c
+		margin: 0 0
+		line-height: 0
+		&:hover
+			background-color: #05aecc
+			cursor: pointer
+		img 
+			height: auto 
+			width: 15px
+	.new-prev,
+	.featured-prev
+		margin-right: -2px
+.new-product-slider
+	overflow-x: hidden
+	display: block
+	.new-product-slide-wrap,
+	.new-product-slide
+		display: inline-block
+		float: left
+		width: 100%
+		min-height: 200px
+		position: relative
+	.new-product-slide
+		text-align: center
+		transition: all 0.3s ease
+		display: block
+		&:hover
+			background-color: rgba(54,42,79,0.75)
+			.hover-shop
+				margin-top: 80px
+				opacity: 1
+		.hover-shop
+			opacity: 0
+			position: relative
+			margin-top: 20px
+			transition: margin-top .4s ease
+	.new-product-slide-bg
+		background-size: cover
+		position: absolute
+		left: 0
+		top: 0
+		background-position: bottom center
+		width: 100%
+		height: 100%
+		z-index: -1
+		display: block
+/* section = new-products = end ======================================== */
+
+	
+/* section = featured-products = start ======================================== */
+.featured-products
+	position: relative
+	.carousel-nav-container
+		.featured-prev,
+		.featured-next
+			&:hover
+				background-color: #f0626e
+				cursor: pointer
+
+.featured-product-slider
+	width: 100%
+	overflow-x: hidden
+	display: inline-block
+	margin-top: 25px
+	.featured-product-slide
+		display: inline-block
+		float: left
+		width: 100%
+		position: relative
+		transition: all 0.2s ease
+	.image
+		height: 290px
+		width: 100%
+		position: relative
+		&:hover
+			a 
+				opacity: 0.7
+		a
+			min-height: 290px
+			width: 100%
+			position: absolute
+			top: 0
+			left: 0
+			background-size: auto
+			background-position: top center
+			transition: all .25s ease
+		.sale
+			padding: 5px 10px
+			font-size: 14px
+			text-transform: uppercase
+			color: #fff
+			background-color: #f0626e
+			position: absolute
+			top: 20px
+			left: 0
+		.new-product
+			padding: 5px 25px
+			font-size: 14px
+			text-transform: none
+			color: #fff
+			background-color: #05aecc
+			position: absolute
+			top: 20px
+			left: 0
+.product-meta
+	line-height: 1.2
+	padding: 12px
+	border: 1px solid #ddd
+	border-bottom: none
+	.name
+		color: #434343
+		font-size: 18px
+		&:hover
+			color: lighten(#434343, 10%)
+	.description
+		font-size: 14px
+		color: #f0626e
+	.new-description
+		font-size: 14px
+		color: #05aecc
+.action
+	border: 1px solid #ddd
+	display: inline-block
+	width: 100%
+	padding-left: 1px
+	margin-bottom: 1px
+	.btn-product,
+	.wishlist,
+	.gift,
+	.price,
+	.new-price
+		display: inline-block
+		a 
+			display: inline-block
+			padding: 12px 13px	
+		.fa 
+			color: #b9b9b9
+			font-size: 21px
+			transition: all 0.2s ease
+	.btn-product,
+	.wishlist,
+	.gift
+		&:hover 
+			.fa
+				color: #f0626e
+	.btn-product
+		outline: none
+		background-color: #fff
+		border: none
+		white-space: nowrap
+		touch-action: manipulation
+		cursor: pointer
+		user-select: none
+		padding: 12px 14px 12px 19px
+		position: relative
+		.fa-caret-down
+			display: none
+		.fa-shopping-cart
+			padding: 0
+			display: inline-block
+	.price,
+	.new-price
+		padding: 6px 19px
+		background-color: #f0626e
+		float: right
+		span 
+			color: #fff
+		.dollar
+			font-size: 18px
+		.number
+			font-size: 24px
+		sup
+			font-size: 15px
+			vertical-align: middle
+	.new-price
+		background-color: #05aecc
+/* section = featured-products = end ======================================== */
+
+
+/* section = who-we-are = start ======================================== */
+.who-we-are
+	position: relative
+	.carousel-head
+		display: inline-block
+		width: 100%
+	p 
+		color: #464646
+		display: block
+		padding-left: 25px
+	.item-we-are
+		padding: 35px 40px
+		display: inline-block
+		vertical-align: top
+		float: left
+		img
+			display: inline-block
+			width: auto
+			height: 160px
+		span
+			display: inline-block
+			color: #fff
+			font-size: 30px
+			text-transform: capitalize
+			margin-left: 20px
+			line-height: 1.2
+			vertical-align: middle
+	.chose-products
+		background-color: #414141
+	.register-login
+		background-color: #00B0CE
+	.checkout
+		background-color: #FF626F
+
+	a.register-now
+		display: block
+		background-color: #05aecc
+		width: 100%
+		text-transform: capitalize
+		color: #fff
+		font-size: 28px
+		text-align: center
+		margin-top: 30px
+		padding: 10px 0
+		transition: all 0.2s ease
+		&:hover
+			background-color: #FF626F
+.border-bottom
+	display: block
+	width: 100%
+	border-bottom: 1px solid #b9b9b9
+	margin-top: 30px
+/* section = who-we-are = end ======================================== */
+
+
+/* section = footer = start ======================================== */
+.footer
+	padding-top: 55px 
+	color: #676767
+	.box
+		display: inline-block
+		h4
+			color: #434343
+			text-transform: uppercase
+		ul,
+		li 
+			margin: 0
+			padding: 0
+			list-style-type: none
+		li 
+			margin: 5px 0
+			a 
+				color: #676767
+				text-transform: lowercase
+				&:hover 
+					color: #F45764
+	.box-heading
+		margin-bottom: 30px
+	.email-form
+		width: 300px
+		display: block
+		margin-top: 8px
+		.form-group
+			display: block
+			input 
+				width: 100%
+				font-size: 14px
+				text-transform: uppercase
+				color: #434343
+				line-height: 1.6
+				text-align: center
+				padding: 15px 0
+				border-radius: 0
+				border: 1px solid #dedede
+				&:focus 
+					outline: none
+		.button
+			display: block
+			background-color: #05aecc
+			text-align: center
+			width: 100%
+			font-size: 14px
+			text-transform: uppercase
+			color: #fff
+			line-height: 2
+			padding: 10px 0
+			border-radius: 0
+			border: 1px solid transparent
+			letter-spacing: 0.5px
+			transition: all 0.2s ease
+			&:hover 
+				background-color: #F45764
+	
+	.keep-in-touch
+		margin-top: 35px 
+		.box-heading
+			margin-bottom: 20px
+	.social-icons
+		ul
+			margin: 0
+			padding: 0
+			width: 100%
+			display: block
+		li 
+			list-style-type: none
+			display: inline-block
+			margin: 0 10px 0 0
+			&:hover
+				.rss
+					background-color: #f8bc2e
+				.facebook
+					background-color: #39599f
+				.twitter
+					background-color: #45b0e3
+				.flicker
+					background-color: #F45764
+				.google
+					background-color: #1872bf
+		a 
+			height: 55px
+			width: 55px
+			display: inline-block
+			text-align: center
+			padding-top: 12px
+			vertical-align: top
+			background-color: #6e8ed4
+			.fa 
+				font-size: 28px
+				color: #fff
+				line-height: 1.2
+				display: inline-block
+			img 
+				display: inline-block
+				vertical-align: middle
+				height: auto
+				width: auto
+.footer-bottom
+	display: inline-block
+	width: 100%
+	padding: 25px
+	margin-top: 55px
+	border-top: 1px solid #b9b9b9
+	color: #434343
+	font-size: 15px
+	.copyright
+		display: inline-block
+		float: left
+	.design
+		display: inline-block
+		float: right
+		a 
+			color: #F45764
+/* section = footer = end ======================================== */

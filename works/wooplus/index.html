@@ -1,0 +1,1982 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="ru"> <!--<![endif]-->
+
+<head>
+
+	<meta charset="utf-8">
+
+	<title>ClothShop</title>
+	<meta name="description" content="">
+
+	<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<link rel="stylesheet" href="libs/bootstrap/css/bootstrap-grid.min.css">
+	<link rel="stylesheet" href="libs/animate/animate.css">
+	<link rel="stylesheet" href="libs/font-awesome/css/font-awesome.css">
+	<link rel="stylesheet" href="libs/superfish/dist/css/superfish.css">
+	<link rel="stylesheet" href="libs/PlusSlider-master/css/plusslider.css">
+	<link rel="stylesheet" href="libs/BookBlock/css/bookblock.css">
+	<link rel="stylesheet" href="libs/IcoMoon-Free-master/Font/demo-files/demo.css">
+	<link rel="stylesheet" href="libs/jQuery.mmenu-master/dist/css/jquery.mmenu.css">
+
+	<link rel="stylesheet" href="css/fonts.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/media.css">
+
+	<script src="libs/modernizr/modernizr.js"></script>
+
+</head>
+
+<body>
+
+	<!-- site-header
+	========================================================================================== -->
+	<header class="site-header">
+		
+		<div class="header-top clearfix">
+			<div class="container">
+				<div class="row">
+
+					<div class="header-top-small-menu">
+						<ul class="wr-top-small-menu">
+							<li>
+								<a href="#" class="menu-item-link"> 
+									<i class="fa fa-heart"></i>
+									<span class="menu_title">Wishlist</span>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="menu-item-link"> 
+									<i class="fa fa-user"></i>
+									<span class="menu_title">My Account</span>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="menu-item-link">
+									<i class="fa fa-paper-plane"></i>
+									<span class="menu_title">Checkout</span>
+								</a>
+							</li>
+						</ul>
+					</div><!-- /header-top-small-menu -->
+
+					<div class="top-info">
+						<a href="#">
+							<i class="fa fa-language"></i>
+							English
+						</a>
+						<a href="#">
+							<i class="fa fa-money"></i>
+							USD
+						</a>
+					</div><!-- /top-info -->
+
+				</div><!-- /row -->
+			</div><!-- /container -->
+		</div><!-- /header-top -->
+
+		<div class="header-mid">
+			<div class="container">
+				<div class="row">
+
+					<div class="col-md-3 col-sm-3 ">
+						<div class="site-branding">
+							<a href="#" class="site-logo"><span>Woo</span>plus<sup>+</sup></a>
+						</div>
+					</div>
+
+					<div class="col-md-3 col-sm-3 col-md-push-6">
+						<div class="shop-cart">
+							<a class="cart-control" href="#" title="View your shopping cart">
+								<span class="p-cart-number">
+									<img src="img/cart.png" alt="Cart">
+									<span class="p-count">0</span>
+								</span>
+								<span class="p-cart-total">Cart: 
+									<span>
+										<span class="amount">$0.00</span>
+									</span>
+								</span>
+							</a>
+						</div>
+					</div>
+
+					<div class="col-md-6 col-sm-6 col-md-pull-3 clearfix768">
+						<div class="search-product">
+
+							<div class="yith-ajaxsearchform-container">
+								<form role="search" method="get" id="yith-ajaxsearchform" action="http://demo.woorockets.com/themes/wooplus/wordpress/">
+									<div class="search-cat">
+										<select id="search_cat" name="product_cat">
+											<option value="" selected="selected">All Categories</option>
+											<option value="men-accessories">Accessories</option>
+											<option value="women-accessories">Accessories</option>
+											<option value="beauty">Beauty</option>
+											<option value="dresses">Dresses</option>
+											<option value="electronics">Electronics</option>
+											<option value="entertainment">Entertainment</option>
+											<option value="fashion">Fashion</option>
+											<option value="flowers">Flowers</option>
+											<option value="furniture">Furniture</option>
+											<option value="groceries">Groceries</option>
+											<option value="home-garden">Home &amp; Garden</option>
+											<option value="men">Men</option>
+											<option value="musical-instruments">Musical Instruments</option>
+											<option value="office-products">Office Products</option>
+											<option value="pants">Pants</option>
+											<option value="pet-supplies">Pet Supplies</option>
+											<option value="sale">Sale</option>
+											<option value="software">Software</option>
+											<option value="sporting-goods">Sporting Goods</option>
+											<option value="men-tops">Tops</option>
+											<option value="women-tops">Tops</option>
+											<option value="toys-hobbies">Toys &amp; Hobbies</option>
+											<option value="women">Women</option>
+										</select>
+									</div>
+									<div class="yith-ajaxsearchform-inner">
+										<input autocomplete="off" value="" name="s" id="yith-s" class="yith-s placeholder" placeholder="Search for products" data-loader-icon="" data-min-chars="3" type="search">
+
+										<div class="search-sicon">
+											<button type="submit" id="yith-searchsubmit">
+												<i class="fa fa-search"></i>
+											</button>
+										</div>
+
+										<input name="post_type" value="product" type="hidden">
+									</div>
+								</form>
+								<div style="position: absolute; display: none; max-height: 300px; z-index: 9999;" class="autocomplete-suggestions"></div>
+							</div>		
+						</div>
+					</div>					
+
+				</div><!-- /row -->
+			</div><!-- /container -->
+		</div><!-- /header-mid -->
+
+		<div class="header-bot">
+			<div class="container">
+				<div class="row">
+					
+					<div class="col-md-4 col-sm-6">
+						<nav class="left-navigation clearfix">
+							<button class="menu-trigger">Shop by category</button>
+
+							<ul class="sf-menu sf-vertical left-nav-menu clearfix">
+
+								<li class="menu-item menu-item-type-custom level-0">
+									<a class="menu-item-link" href="#">
+										<i class="fa fa-paint-brush"></i>
+										<span class="menu_title">Beauty</span>
+									</a>
+									<ul class="sub-menu sub-menu-1 clearfix">
+										<li class="menu-item menu-item-type-custom level-1">
+											<a href="#" class="menu-item-link">
+												<span class="menu_title">Bath &amp; Body</span>
+											</a>
+										</li>
+										<li class="menu-item menu-item-type-custom level-1">
+											<a href="#" class="menu-item-link">
+												<span class="menu_title">Skin Care</span>
+											</a>
+											<ul class="sub-menu sub-menu-1">
+												<li class="menu-item menu-item-type-custom level-2">
+													<a href="#" class="menu-item-link">
+														<span class="menu_title">Cleanser</span>
+													</a>
+												</li>
+												<li class="menu-item menu-item-type-custom level-2">
+													<a href="#" class="menu-item-link">
+														<span class="menu_title">Toner</span>
+													</a>
+												</li>
+												<li class="menu-item menu-item-type-custom level-2">
+													<a href="#" class="menu-item-link">
+														<span class="menu_title">Serum</span>
+													</a>
+												</li>
+												<li class="menu-item menu-item-type-custom level-2">
+													<a href="#" class="menu-item-link">
+														<span class="menu_title">Moisturizer</span>
+													</a>
+												</li>
+												<li class="menu-item menu-item-type-custom level-2">
+													<a href="#" class="menu-item-link">
+														<span class="menu_title">Cream</span>
+													</a>
+												</li>
+												<li class="menu-item menu-item-type-custom level-2">
+													<a href="#" class="menu-item-link">
+														<span class="menu_title">Masks</span>
+													</a>
+												</li>
+											</ul>
+										</li>
+										<li class="menu-item menu-item-type-custom level-1">
+											<a href="#" class="menu-item-link">
+												<span class="menu_title">Hair Care</span>
+											</a>
+											<ul class="sub-menu sub-menu-1">
+												<li class="menu-item menu-item-type-custom level-2">
+													<a href="#" class="menu-item-link">
+														<span class="menu_title">Shampoo</span>
+													</a>
+												</li>
+												<li class="menu-item menu-item-type-custom level-2">
+													<a href="#" class="menu-item-link">
+														<span class="menu_title">Conditioner</span>
+													</a>
+												</li>
+												<li class="menu-item menu-item-type-custom level-2">
+													<a href="#" class="menu-item-link">
+														<span class="menu_title">Spray</span>
+													</a>
+												</li>
+												<li class="menu-item menu-item-type-custom level-2">
+													<a href="#" class="menu-item-link">
+														<span class="menu_title">Treatment</span>
+													</a>
+												</li>
+												<li class="menu-item menu-item-type-custom level-2">
+													<a href="#" class="menu-item-link">
+														<span class="menu_title">Styling Products</span>
+													</a>
+												</li>
+											</ul>
+										</li>
+										<li class="menu-item menu-item-type-custom level-1">
+											<a href="#" class="menu-item-link">
+												<span class="menu_title">Makeup</span>
+											</a>
+											<ul class="sub-menu sub-menu-1">
+												<li class="menu-item menu-item-type-custom level-2">
+													<a href="#" class="menu-item-link">
+														<span class="menu_title">Foundation</span>
+													</a>
+												</li>
+												<li class="menu-item menu-item-type-custom level-2">
+													<a href="#" class="menu-item-link">
+														<span class="menu_title">Lipstick</span>
+													</a>
+												</li>
+												<li class="menu-item menu-item-type-custom level-2">
+													<a href="#" class="menu-item-link">
+														<span class="menu_title">Eye Shadows</span>
+													</a>
+												</li>
+											</ul>
+										</li>
+										<li class="menu-item menu-item-type-custom level-1">
+											<a href="#" class="menu-item-link">
+												<span class="menu_title">Fragrance</span>
+											</a>
+										</li>
+										<li class="menu-item menu-item-type-custom level-1">
+											<a href="#" class="menu-item-link">
+												<span class="menu_title">Nails</span>
+											</a>
+										</li>
+										<li class="menu-item menu-item-type-custom level-1">
+											<a href="#" class="menu-item-link">
+												<span class="menu_title">Tools &amp; Accessories</span>
+											</a>
+										</li>
+									</ul>
+								</li>
+
+								<li class="menu-item menu-item-type-custom level-0">
+									<a href="#" class="menu-item-link">
+										<i class="fa fa-cogs"></i>
+										<span class="menu_title">Electronics</span>
+									</a>
+								</li>
+
+								<li class="menu-item menu-item-type-custom level-0">
+									<a href="#" class="menu-item-link">
+										<i class="fa fa-headphones"></i>
+										<span class="menu_title">Entertainment</span>
+									</a>
+								</li>
+
+								<li class="menu-item menu-item-type-custom level-0">
+									<a href="#" class="menu-item-link">
+										<i class="fa fa-camera-retro"></i>
+										<span class="menu_title">Fashion</span>
+									</a>
+								</li>
+
+								<li class="menu-item menu-item-type-custom level-0">
+									<a href="#" class="menu-item-link">
+										<i class="fa fa-male"></i>
+										<span class="menu_title">Men</span>
+									</a>
+									<ul class="sub-menu sub-menu-1">
+										<li class="menu-item menu-item-type-custom level-1">
+											<a href="#" class="menu-item-link">
+												<span class="menu_title">Bags &amp; Wallets</span>
+											</a>
+										</li>
+										<li class="menu-item menu-item-type-custom level-1">
+											<a href="#" class="menu-item-link">
+												<span class="menu_title">Blazers</span>
+											</a>
+										</li>
+										<li class="menu-item menu-item-type-custom level-1">
+											<a href="#" class="menu-item-link">
+												<span class="menu_title">Pants</span>
+											</a>
+										</li>
+										<li class="menu-item menu-item-type-custom level-1">
+											<a href="#" class="menu-item-link">	
+												<span class="menu_title">Shirts</span>
+											</a>
+										</li>
+									</ul>
+								</li>
+
+								<li class="menu-item menu-item-type-custom level-0">
+									<a href="#" class="menu-item-link">
+										<i class="fa fa-female"></i>
+										<span class="menu_title">Women</span>
+									</a>
+									<ul class="sub-menu sub-menu-1">
+										<li class="menu-item menu-item-type-custom level-1">
+											<a href="#" class="menu-item-link">
+												<span class="menu_title">Accessories</span>
+											</a>
+										</li>
+										<li class="menu-item menu-item-type-custom level-1">
+											<a href="#" class="menu-item-link">
+												<span class="menu_title">Dresses</span>
+											</a>
+										</li>
+										<li class="menu-item menu-item-type-custom level-1">
+											<a href="#" class="menu-item-link">
+												<span class="menu_title">Tops</span>
+											</a>
+										</li>
+									</ul>
+								</li>
+
+								<li class="menu-item menu-item-type-custom level-0">
+									<a href="#" class="menu-item-link">
+										<i class="fa fa-asterisk"></i>
+										<span class="menu_title">Flowers</span>
+									</a>
+								</li>
+
+								<li class="menu-item menu-item-type-custom level-0">
+									<a href="#" class="menu-item-link">
+										<i class="fa fa-dashboard"></i>
+										<span class="menu_title">Groceries</span>
+									</a>
+								</li>
+
+								<li class="menu-item menu-item-type-custom level-0">
+									<a href="#" class="menu-item-link">
+										<i class="fa fa-home"></i>
+										<span class="menu_title">Home &amp; Garden</span>
+									</a>
+								</li>
+
+								<li class="menu-item menu-item-type-custom level-0">
+									<a href="#" class="menu-item-link">
+										<i class="fa fa-music"></i>
+										<span class="menu_title">Musical Instruments</span>
+									</a>
+								</li>
+
+							</ul>
+						</nav>
+					</div>
+
+					<div class="col-md-8 col-sm-6">
+						
+						<div class="mobile-mnu hidden-lg hidden-md">
+							<a href="#" class="toggle-mnu"><span></span></a>
+						</div>
+						<div class="header-bot-right-nav">
+							<ul class="sf-menu right-nav-menu">
+								<li class="right-nav-menu-item">
+									<a class="right-nav-link" href="#">
+										<i class="fa fa-home"></i>
+										<span>Home</span>
+									</a>
+								</li>
+								<li class="right-nav-menu-item"><a href="#" class="right-nav-link"><span>Best sellers</span></a></li>
+								<li class="right-nav-menu-item"><a href="#" class="right-nav-link"><span>New arrivals</span></a></li>
+								<li class="right-nav-menu-item"><a href="#" class="right-nav-link"><span>On sale</span></a></li>
+								<li class="right-nav-menu-item">
+									<a href="#" class="right-nav-link nav-link-with-arrow">
+										<span>Pages</span>
+									</a>
+									<ul class="sub-menu sub-menu-1">
+										<li class="menu-item level-1">
+											<a href="#" class="menu-item-link">
+												<span class="menu_title">Features</span>
+											</a>
+										</li>
+										<li class="menu-item level-1">
+											<a href="#" class="menu-item-link">
+												<span class="menu_title">Promotion</span>
+											</a>
+											<ul class="sub-menu">
+												<li class="menu-item">
+													<a href="#" class="menu-item-link">
+														<span>Promotion Landing page</span>
+													</a>
+												</li>
+												<li class="menu-item">
+													<a href="#" class="menu-item-link">
+														<span>Promotion popup</span>
+													</a>
+												</li>
+												<li class="menu-item">
+													<a href="#" class="menu-item-link">
+														<span>Promotion TopBar</span>
+													</a>
+												</li>
+											</ul>
+										</li>
+										<li class="menu-item level-1">
+											<a href="#" class="menu-item-link">
+												<span class="menu_title">F.A.Q</span>
+											</a>
+										</li>
+										<li class="menu-item level-1">
+											<a href="#" class="menu-item-link">
+												<span class="menu_title">Services</span>
+											</a>
+										</li>
+										<li class="menu-item level-1">
+											<a href="#" class="menu-item-link">
+												<span class="menu_title">Testimonials</span>
+											</a>
+										</li>
+										<li class="menu-item level-1">
+											<a href="#" class="menu-item-link">
+												<span class="menu_title">About Us</span>
+											</a>
+										</li>
+										<li class="menu-item level-1">
+											<a href="#" class="menu-item-link">
+												<span class="menu_title">Activity</span>
+											</a>
+										</li>
+										<li class="menu-item level-1">
+											<a href="#" class="menu-item-link">
+												<span class="menu_title">Blog &amp; News</span>
+											</a>
+										</li>
+									</ul>
+								</li>
+								<li class="right-nav-menu-item"><a href="#" class="right-nav-link"><span>Contact</span></a></li>
+							</ul><!-- /sf-menu right-nav-menu -->
+
+						</div><!-- /header-bot-right-nav-->
+
+					</div><!-- /col-md-8 -->
+
+				</div><!-- /row -->
+			</div><!-- /container -->
+		</div><!-- /header-bot -->
+
+	</header> <!-- site-header -->
+
+	<!-- top-slider
+	================================================================================================== -->
+	<section class="top-slider">
+
+		<div class="slider-container clearfix">
+				
+			<!-- slide start -->
+			<div class="top-slide-item">
+				<span class="top-slide-item-bg" style="background-image: url(img/bg-slide-full-01.jpg);"></span>
+				<div class="container">
+					<div class="row">
+						<div class="col-md-6 col-sm-6 col-xs-8 clearfix">
+							<div class="top-slide-item-content first-item-content">
+								<span class="slide-top-descr">Shockmansion</span>
+								<h3>Best leather <span>accessories</span></h3>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat obcaecati, ullam tempore placeat autem.</p>
+								<a href="#" class="a-tomato">View collections</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- slide end -->
+			
+			<!-- slide start -->
+			<div class="top-slide-item">
+				<span class="top-slide-item-bg" style="background-image: url(img/bg-slide3-01.jpg);"></span>
+				<div class="container">
+					<div class="row">
+						<div class="col-md-6 col-sm-6 col-xs-8 clearfix">
+							<div class="top-slide-item-content top-slide-item-white">
+								<span class="slide-top-descr">Hypebeats</span>
+								<h3>Spring<span>collection</span></h3>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat obcaecati, ullam tempore placeat autem.</p>
+								<a href="#" class="a-tomato">View collections</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- slide end -->
+
+			<!-- slide start -->
+			<div class="top-slide-item">
+				<span class="top-slide-item-bg" style="background-image: url(img/bg-slide-full-03.jpg);"></span>
+				<div class="container">
+					<div class="row">
+						<div class="col-md-6 col-sm-6 col-xs-8 clearfix">
+							<div class="top-slide-item-content top-slide-item-white">
+								<span class="slide-top-descr">I love ugly</span>
+								<h3>Lookbook 2016</h3>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat obcaecati, ullam tempore placeat autem.</p>
+								<a href="#" class="a-white">View collections</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- slide end -->
+
+		</div><!-- /plusslider-container -->
+		
+	</section><!-- /site-header -->
+	
+	<!-- social-line
+	===================================================================================================== -->
+	<section class="social-subscribe-line clearfix">
+		
+		<div class="container">
+			<div class="row">
+
+				<div class="col-md-6 col-sm-6 col-xs-12">
+					<div class="social clearfix">
+						<p class="custom-text">Follow us on :</p>
+						<ul class="social-icons">
+							<li><a target="_blank" title="Facebook" href="https://www.facebook.com/woorockets"><i class="fa fa-facebook"></i></a></li>
+							<li><a target="_blank" title="Twitter" href="https://twitter.com/woorockets"><i class="fa fa-twitter"></i></a></li>
+							<li><a target="_blank" title="Dribbble" href="https://dribbble.com/woorockets"><i class="fa fa-dribbble"></i></a></li>
+							<li><a target="_blank" title="Googleplus" href="https://plus.google.com/u/0/111984051165567587486/about"><i class="fa fa-google-plus"></i></a></li>
+							<li><a target="_blank" title="Vimeo" href="http://vimeo.com/woorockets"><i class="fa fa-vimeo"></i></a></li>
+							<li><a target="_blank" title="Wordpress" href="http://profiles.wordpress.org/woorockets"><i class="fa fa-wordpress"></i></a></li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="col-md-6 col-sm-6 col-xs-12">
+					<div class="subscription clearfix">
+
+						<div class="newsletter newsletter-subscription">
+							<form method="post" action="non-empty" onsubmit="return newsletter_check(this)">
+								<table border="0" cellpadding="3" cellspacing="0">
+									<!-- email -->
+									<tbody>
+										<tr>
+											<td align="left"><input class="newsletter-email" name="emale" size="30" required="" type="email" placeholder="your email"></td>
+										</tr>
+
+										<tr>
+											<td colspan="2" class="newsletter-td-submit">
+												<button class="newsletter-submit" value="subscribe" type="submit">Subscribe</button>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</form>
+						</div>
+
+						<p class="custom-text alignright">Or Subscribe :</p>
+
+					</div>
+				</div>
+
+			</div><!-- /row -->
+		</div><!-- /container -->
+
+	</section><!-- /social-subscribe-line -->
+
+	<!-- content-column
+	================================================================================================== -->
+	<section class="content-column">
+		<div class="container">
+			<div class="row">
+
+				<div class="col-md-4 col-sm-4 col-xs-12">
+					<a href="#" class="content-column-item">
+						<span class="content-column-item-bg" style="background-image: url(img/banner_70.jpg);"></span>
+						<span>Men's</span> clothings
+					</a>
+				</div>
+
+				<div class="col-md-4 col-sm-4 col-xs-12">
+					<a href="#" class="content-column-item">
+						<span class="content-column-item-bg" style="background-image: url(img/banner_71.jpg);"></span>
+						<span>Women's</span> clothings
+					</a>
+				</div>
+
+				<div class="col-md-4 col-sm-4 col-xs-12">
+					<a href="#" class="content-column-item">
+						<span class="content-column-item-bg" style="background-image: url(img/banner_82.jpg);"></span>
+						<span>Men's</span> accesories
+					</a>
+				</div>
+
+			</div><!-- /row -->
+		</div><!-- /container -->
+	</section><!-- /content-column -->
+
+	<!-- summer-sale
+	==================================================================================================== -->
+	<section class="summer-sale">
+		<div class="container">
+			<div class="row">
+
+				<div class="col-md-3 col-sm-6">
+					<div class="name-sale-item">
+						<h5>Flash deal</h5>
+						<h4>Summer sale</h4>
+						<p>Up to 50% <span>off</span></p>
+						<p>Offer ends in 3 days!</p>
+						<a href="#">Shop now</a>
+					</div>
+				</div>
+				
+				<!-- product-item start-->
+				<div class="col-md-3 col-sm-6">
+					<div class="product-item">
+						<span class="p-image">
+							<img src="img/4_hmprod-268x268.jpeg" alt="alt">
+							<span class="p-mask">
+								<a href="#" class="zoom"><i class="fa fa-search"></i></a>
+								<a href="#" class="add-to-wishlist">
+									<i class="fa fa-heart-o"></i>
+								</a>
+								<a href="#" class="p-quickview"><i class="fa fa-send-o"></i></a>
+							</span>
+						</span>
+						<div class="p-info">
+							<a href="#" class="h6">Printed desighn t-shirt</a>
+							<span class="price">$29.00</span>
+							<a href="#" class="add-to-cart">
+								<i class="fa fa-shopping-cart"></i>
+								<span>Add to cart</span>
+							</a>
+						</div>
+					</div>
+				</div><!-- product-item end-->
+				
+				<!-- product-item start-->
+				<div class="col-md-3 col-sm-6">
+					<div class="product-item">
+						<span class="p-image">
+							<img src="img/8_hmprod-268x268.jpeg" alt="alt">
+							<span class="p-mask">
+								<a href="#" class="zoom"><i class="fa fa-search"></i></a>
+								<a href="#" class="add-to-wishlist">
+									<i class="fa fa-heart-o"></i>
+								</a>
+								<a href="#" class="p-quickview"><i class="fa fa-send-o"></i></a>
+							</span>
+						</span>
+						<div class="p-info">
+							<a href="#" class="h6">T-shirt with printed design</a>
+							<span class="price">$39.00</span>
+							<a href="#" class="add-to-cart">
+								<i class="fa fa-shopping-cart"></i>
+								<span>Add to cart</span>
+							</a>
+						</div>
+					</div>
+				</div><!-- product-item end-->
+				
+				<!-- product-item start-->
+				<div class="col-md-3 col-sm-6">
+					<div class="product-item sale-item">
+						<span class="p-image">
+							<img src="img/9_hmprod-268x268.jpeg" alt="alt">
+							<span class="p-mask">
+								<a href="#" class="zoom"><i class="fa fa-search"></i></a>
+								<a href="#" class="add-to-wishlist">
+									<i class="fa fa-heart-o"></i>
+								</a>
+								<a href="#" class="p-quickview"><i class="fa fa-send-o"></i></a>
+							</span>
+							<span class="onsale">Sale!</span>
+						</span>
+						<div class="p-info">
+							<a href="#" class="h6">Suede biker jacket</a>
+							<span class="price"><del>$125.00</del>$55.00</span>
+							<a href="#" class="add-to-cart">
+								<i class="fa fa-shopping-cart"></i>
+								<span>Add to cart</span>
+							</a>
+						</div>
+					</div>
+				</div><!-- product-item end-->
+
+			</div><!-- /row -->
+		</div><!-- /container -->
+	</section><!-- /summer-sale -->
+
+	<!-- new-arrivals
+	=================================================================================================== -->
+	<section class="new-arrivals">
+		<div class="container">
+			<div class="row">
+
+				<div class="tab-block clearfix" id="tab-block">
+
+					<div class="h4">New arrivals</div>
+
+					<ul class="tab-mnu">
+						<li class="active">Men</li>
+						<li>Women</li>
+						<li>Home &amp; garden</li>
+						<li>Beauty</li>
+					</ul>
+
+					<div class="tab-cont">
+						
+						<!-- tab-pane-men ===================================-->	
+						<div class="tab-pane">
+
+							<div class="col-md-3 col-sm-6">
+								<div class="product-item">
+									<span class="p-image">
+										<img src="img/2_WP_side_havana_main-268x268.jpg" alt="alt">
+										<span class="p-mask">
+											<a href="#" class="zoom"><i class="fa fa-search"></i></a>
+											<a href="#" class="add-to-wishlist">
+												<i class="fa fa-heart-o"></i>
+											</a>
+											<a href="#" class="p-quickview"><i class="fa fa-send-o"></i></a>
+										</span>
+									</span>
+									<div class="p-info">
+										<a href="#" class="h6">Printed desighn t-shirt</a>
+										<span class="price">$29.99</span>
+										<a href="#" class="add-to-cart">
+											<i class="fa fa-shopping-cart"></i>
+											<span>Add to cart</span>
+										</a>
+									</div>
+								</div><!-- /product-item -->
+							</div>
+
+							<div class="col-md-3 col-sm-6">
+								<div class="product-item">
+									<span class="p-image">
+										<img src="img/8_hmprod-268x268.jpeg" alt="alt">
+										<span class="p-mask">
+											<a href="#" class="zoom"><i class="fa fa-search"></i></a>
+											<a href="#" class="add-to-wishlist">
+												<i class="fa fa-heart-o"></i>
+											</a>
+											<a href="#" class="p-quickview"><i class="fa fa-send-o"></i></a>
+										</span>
+									</span>
+									<div class="p-info">
+										<a href="#" class="h6">T-shirt with printed design</a>
+										<span class="price">$39.99</span>
+										<a href="#" class="add-to-cart">
+											<i class="fa fa-shopping-cart"></i>
+											<span>Add to cart</span>
+										</a>
+									</div>
+								</div><!-- /product-item -->
+							</div>
+
+							<div class="col-md-3 col-sm-6">
+								<div class="product-item sale-item">
+									<span class="p-image">
+										<img src="img/3_gn_wx_denim_folded1-268x268.jpg" alt="alt">
+										<span class="p-mask">
+											<a href="#" class="zoom"><i class="fa fa-search"></i></a>
+											<a href="#" class="add-to-wishlist">
+												<i class="fa fa-heart-o"></i>
+											</a>
+											<a href="#" class="p-quickview"><i class="fa fa-send-o"></i></a>
+										</span>
+										<span class="onsale">Sale!</span>
+									</span>
+									<div class="p-info">
+										<a href="#" class="h6">Suede biker jacket</a>
+										<span class="price"><del>$125.99</del>$55.99</span>
+										<a href="#" class="add-to-cart">
+											<i class="fa fa-shopping-cart"></i>
+											<span>Add to cart</span>
+										</a>
+									</div>
+								</div><!-- /product-item -->
+							</div>
+
+							<div class="col-md-3 col-sm-6">
+								<div class="product-item">
+									<span class="p-image">
+										<img src="img/7_hmprod-268x268.jpeg" alt="alt">
+										<span class="p-mask">
+											<a href="#" class="zoom"><i class="fa fa-search"></i></a>
+											<a href="#" class="add-to-wishlist">
+												<i class="fa fa-heart-o"></i>
+											</a>
+											<a href="#" class="p-quickview"><i class="fa fa-send-o"></i></a>
+										</span>
+									</span>
+									<div class="p-info">
+										<a href="#" class="h6">T-shirt with printed design</a>
+										<span class="price">$39.99</span>
+										<a href="#" class="add-to-cart">
+											<i class="fa fa-shopping-cart"></i>
+											<span>Add to cart</span>
+										</a>
+									</div>
+								</div><!-- /product-item -->
+							</div>
+
+							<div class="col-md-3 col-sm-6">
+								<div class="product-item">
+									<span class="p-image">
+										<img src="img/3_bifold_main_low-268x268.jpg" alt="alt">
+										<span class="p-mask">
+											<a href="#" class="zoom"><i class="fa fa-search"></i></a>
+											<a href="#" class="add-to-wishlist">
+												<i class="fa fa-heart-o"></i>
+											</a>
+											<a href="#" class="p-quickview"><i class="fa fa-send-o"></i></a>
+										</span>
+									</span>
+									<div class="p-info">
+										<a href="#" class="h6">Printed desighn t-shirt</a>
+										<span class="price">$29.99</span>
+										<a href="#" class="add-to-cart">
+											<i class="fa fa-shopping-cart"></i>
+											<span>Add to cart</span>
+										</a>
+									</div>
+								</div><!-- /product-item -->
+							</div>
+
+							<div class="col-md-3 col-sm-6">
+								<div class="product-item">
+									<span class="p-image">
+										<img src="img/2_goodbookslim_tan_open-268x268.jpg" alt="alt">
+										<span class="p-mask">
+											<a href="#" class="zoom"><i class="fa fa-search"></i></a>
+											<a href="#" class="add-to-wishlist">
+												<i class="fa fa-heart-o"></i>
+											</a>
+											<a href="#" class="p-quickview"><i class="fa fa-send-o"></i></a>
+										</span>
+									</span>
+									<div class="p-info">
+										<a href="#" class="h6">Printed desighn t-shirt</a>
+										<span class="price">$14.99</span>
+										<a href="#" class="add-to-cart">
+											<i class="fa fa-shopping-cart"></i>
+											<span>Add to cart</span>
+										</a>
+									</div>
+								</div><!-- /product-item -->
+							</div>
+
+							<div class="col-md-3 col-sm-6">
+								<div class="product-item">
+									<span class="p-image">
+										<img src="img/1_prescott_bag_havana_front-268x268.jpg" alt="alt">
+										<span class="p-mask">
+											<a href="#" class="zoom"><i class="fa fa-search"></i></a>
+											<a href="#" class="add-to-wishlist">
+												<i class="fa fa-heart-o"></i>
+											</a>
+											<a href="#" class="p-quickview"><i class="fa fa-send-o"></i></a>
+										</span>
+									</span>
+									<div class="p-info">
+										<a href="#" class="h6">Printed desighn t-shirt</a>
+										<span class="price">$19.99</span>
+										<a href="#" class="add-to-cart">
+											<i class="fa fa-shopping-cart"></i>
+											<span>Add to cart</span>
+										</a>
+									</div>
+								</div><!-- /product-item -->
+							</div>
+
+							<div class="col-md-3 col-sm-6">
+								<div class="product-item">
+									<span class="p-image">
+										<img src="img/4_bb_nw_side-268x268.jpg" alt="alt">
+										<span class="p-mask">
+											<a href="#" class="zoom"><i class="fa fa-search"></i></a>
+											<a href="#" class="add-to-wishlist">
+												<i class="fa fa-heart-o"></i>
+											</a>
+											<a href="#" class="p-quickview"><i class="fa fa-send-o"></i></a>
+										</span>
+									</span>
+									<div class="p-info">
+										<a href="#" class="h6">Printed desighn t-shirt</a>
+										<span class="price">$29.99</span>
+										<a href="#" class="add-to-cart">
+											<i class="fa fa-shopping-cart"></i>
+											<span>Add to cart</span>
+										</a>
+									</div>
+								</div><!-- /product-item -->
+							</div>
+
+						</div><!-- /tab-pane-men -->	
+						
+						<!-- tab-pane-women ===================================-->	
+						<div class="tab-pane">
+
+							<div class="col-md-3 col-sm-6">
+								<div class="product-item">
+									<span class="p-image">
+										<img src="img/4_hmprod1-268x268.jpeg" alt="alt">
+										<span class="p-mask">
+											<a href="#" class="zoom"><i class="fa fa-search"></i></a>
+											<a href="#" class="add-to-wishlist">
+												<i class="fa fa-heart-o"></i>
+											</a>
+											<a href="#" class="p-quickview"><i class="fa fa-send-o"></i></a>
+										</span>
+									</span>
+									<div class="p-info">
+										<a href="#" class="h6">Wrapped leather belt</a>
+										<span class="price">$24.99</span>
+										<a href="#" class="add-to-cart">
+											<i class="fa fa-shopping-cart"></i>
+											<span>Add to cart</span>
+										</a>
+									</div>
+								</div><!-- /product-item -->
+							</div>
+
+							<div class="col-md-3 col-sm-6">
+								<div class="product-item">
+									<span class="p-image">
+										<img src="img/2_82606_2-268x268.jpg" alt="alt">
+										<span class="p-mask">
+											<a href="#" class="zoom"><i class="fa fa-search"></i></a>
+											<a href="#" class="add-to-wishlist">
+												<i class="fa fa-heart-o"></i>
+											</a>
+											<a href="#" class="p-quickview"><i class="fa fa-send-o"></i></a>
+										</span>
+									</span>
+									<div class="p-info">
+										<a href="#" class="h6">Classic suede belt</a>
+										<span class="price">$39.99</span>
+										<a href="#" class="add-to-cart">
+											<i class="fa fa-shopping-cart"></i>
+											<span>Add to cart</span>
+										</a>
+									</div>
+								</div><!-- /product-item -->
+							</div>
+
+							<div class="col-md-3 col-sm-6">
+								<div class="product-item">
+									<span class="p-image">
+										<img src="img/5hmprod-268x268.jpeg" alt="alt">
+										<span class="p-mask">
+											<a href="#" class="zoom"><i class="fa fa-search"></i></a>
+											<a href="#" class="add-to-wishlist">
+												<i class="fa fa-heart-o"></i>
+											</a>
+											<a href="#" class="p-quickview"><i class="fa fa-send-o"></i></a>
+										</span>
+									</span>
+									<div class="p-info">
+										<a href="#" class="h6">Little black dress</a>
+										<span class="price">$49.99</span>
+										<a href="#" class="add-to-cart">
+											<i class="fa fa-shopping-cart"></i>
+											<span>Add to cart</span>
+										</a>
+									</div>
+								</div><!-- /product-item -->
+							</div>
+
+							<div class="col-md-3 col-sm-6">
+								<div class="product-item">
+									<span class="p-image">
+										<img src="img/3_450860-433-flat-fv-1-268x268.jpg" alt="alt">
+										<span class="p-mask">
+											<a href="#" class="zoom"><i class="fa fa-search"></i></a>
+											<a href="#" class="add-to-wishlist">
+												<i class="fa fa-heart-o"></i>
+											</a>
+											<a href="#" class="p-quickview"><i class="fa fa-send-o"></i></a>
+										</span>
+									</span>
+									<div class="p-info">
+										<a href="#" class="h6">Printed desighn t-shirt</a>
+										<span class="price">$29.00</span>
+										<a href="#" class="add-to-cart">
+											<i class="fa fa-shopping-cart"></i>
+											<span>Add to cart</span>
+										</a>
+									</div>
+								</div><!-- /product-item -->
+							</div>
+
+							<div class="col-md-3 col-sm-6">
+								<div class="product-item">
+									<span class="p-image">
+										<img src="img/5_hmprod2-268x268.jpeg" alt="alt">
+										<span class="p-mask">
+											<a href="#" class="zoom"><i class="fa fa-search"></i></a>
+											<a href="#" class="add-to-wishlist">
+												<i class="fa fa-heart-o"></i>
+											</a>
+											<a href="#" class="p-quickview"><i class="fa fa-send-o"></i></a>
+										</span>
+									</span>
+									<div class="p-info">
+										<a href="#" class="h6">Baseball tee</a>
+										<span class="price">$14.99</span>
+										<a href="#" class="add-to-cart">
+											<i class="fa fa-shopping-cart"></i>
+											<span>Add to cart</span>
+										</a>
+									</div>
+								</div><!-- /product-item -->
+							</div>
+
+							<div class="col-md-3 col-sm-6">
+								<div class="product-item sale-item">
+									<span class="p-image">
+										<img src="img/6_hmprod-268x268.jpeg" alt="alt">
+										<span class="p-mask">
+											<a href="#" class="zoom"><i class="fa fa-search"></i></a>
+											<a href="#" class="add-to-wishlist">
+												<i class="fa fa-heart-o"></i>
+											</a>
+											<a href="#" class="p-quickview"><i class="fa fa-send-o"></i></a>
+										</span>
+										<span class="onsale">Sale!</span>
+									</span>
+									<div class="p-info">
+										<a href="#" class="h6">Rose band</a>
+										<span class="price"><del>$30.99</del>$19.99</span>
+										<a href="#" class="add-to-cart">
+											<i class="fa fa-shopping-cart"></i>
+											<span>Add to cart</span>
+										</a>
+									</div>
+								</div><!-- /product-item -->
+							</div>
+
+							<div class="col-md-3 col-sm-6">
+								<div class="product-item">
+									<span class="p-image">
+										<img src="img/4_hmprod2-268x268.jpeg" alt="alt">
+										<span class="p-mask">
+											<a href="#" class="zoom"><i class="fa fa-search"></i></a>
+											<a href="#" class="add-to-wishlist">
+												<i class="fa fa-heart-o"></i>
+											</a>
+											<a href="#" class="p-quickview"><i class="fa fa-send-o"></i></a>
+										</span>
+									</span>
+									<div class="p-info">
+										<a href="#" class="h6">Pleated silk dress</a>
+										<span class="price">$219.99</span>
+										<a href="#" class="add-to-cart">
+											<i class="fa fa-shopping-cart"></i>
+											<span>Add to cart</span>
+										</a>
+									</div>
+								</div><!-- /product-item -->
+							</div>
+
+							<div class="col-md-3 col-sm-6">
+								<div class="product-item">
+									<span class="p-image">
+										<img src="img/6_hmprod1-268x268.jpeg" alt="alt">
+										<span class="p-mask">
+											<a href="#" class="zoom"><i class="fa fa-search"></i></a>
+											<a href="#" class="add-to-wishlist">
+												<i class="fa fa-heart-o"></i>
+											</a>
+											<a href="#" class="p-quickview"><i class="fa fa-send-o"></i></a>
+										</span>
+									</span>
+									<div class="p-info">
+										<a href="#" class="h6">Sleeveless dress</a>
+										<span class="price">$125.00</span>
+										<a href="#" class="add-to-cart">
+											<i class="fa fa-shopping-cart"></i>
+											<span>Add to cart</span>
+										</a>
+									</div>
+								</div><!-- /product-item -->
+							</div>
+
+						</div><!-- /tab-pane-women ===================================-->	
+
+						<!-- tab-pane-home & garden ==================================-->	
+						<div class="tab-pane">
+
+							<div class="col-md-3 col-sm-6">
+								<div class="product-item">
+									<span class="p-image">
+										<img src="img/2_PD_12609_MAIN1-268x268.jpeg" alt="alt">
+										<span class="p-mask">
+											<a href="#" class="zoom"><i class="fa fa-search"></i></a>
+											<a href="#" class="add-to-wishlist">
+												<i class="fa fa-heart-o"></i>
+											</a>
+											<a href="#" class="p-quickview"><i class="fa fa-send-o"></i></a>
+										</span>
+									</span>
+									<div class="p-info">
+										<a href="#" class="h6">Red chair</a>
+										<span class="price">$79.99</span>
+										<a href="#" class="add-to-cart">
+											<i class="fa fa-shopping-cart"></i>
+											<span>Add to cart</span>
+										</a>
+									</div>
+								</div><!-- /product-item -->
+							</div>
+
+							<div class="col-md-3 col-sm-6">
+								<div class="product-item">
+									<span class="p-image">
+										<img src="img/4_PD_25860_MAIN1-268x268.jpeg" alt="alt">
+										<span class="p-mask">
+											<a href="#" class="zoom"><i class="fa fa-search"></i></a>
+											<a href="#" class="add-to-wishlist">
+												<i class="fa fa-heart-o"></i>
+											</a>
+											<a href="#" class="p-quickview"><i class="fa fa-send-o"></i></a>
+										</span>
+									</span>
+									<div class="p-info">
+										<a href="#" class="h6">Table clock</a>
+										<span class="price">$29.00</span>
+										<a href="#" class="add-to-cart">
+											<i class="fa fa-shopping-cart"></i>
+											<span>Add to cart</span>
+										</a>
+									</div>
+								</div><!-- /product-item -->
+							</div>
+
+							<div class="col-md-3 col-sm-6">
+								<div class="product-item sale-item">
+									<span class="p-image">
+										<img src="img/3_51CgQ4mgg3L-268x268.jpg" alt="alt">
+										<span class="p-mask">
+											<a href="#" class="zoom"><i class="fa fa-search"></i></a>
+											<a href="#" class="add-to-wishlist">
+												<i class="fa fa-heart-o"></i>
+											</a>
+											<a href="#" class="p-quickview"><i class="fa fa-send-o"></i></a>
+										</span>
+										<span class="onsale">Sale!</span>
+									</span>
+									<div class="p-info">
+										<a href="#" class="h6">Rose flowers</a>
+										<span class="price"><del>$125.00</del>$55.00</span>
+										<a href="#" class="add-to-cart">
+											<i class="fa fa-shopping-cart"></i>
+											<span>Add to cart</span>
+										</a>
+									</div>
+								</div><!-- /product-item -->
+							</div>
+
+							<div class="col-md-3 col-sm-6">
+								<div class="product-item">
+									<span class="p-image">
+										<img src="img/13_PD_19202_ALT15-268x268.jpeg" alt="alt">
+										<span class="p-mask">
+											<a href="#" class="zoom"><i class="fa fa-search"></i></a>
+											<a href="#" class="add-to-wishlist">
+												<i class="fa fa-heart-o"></i>
+											</a>
+											<a href="#" class="p-quickview"><i class="fa fa-send-o"></i></a>
+										</span>
+									</span>
+									<div class="p-info">
+										<a href="#" class="h6">Stamet pendant in pink</a>
+										<span class="price">$15.99</span>
+										<a href="#" class="add-to-cart">
+											<i class="fa fa-shopping-cart"></i>
+											<span>Add to cart</span>
+										</a>
+									</div>
+								</div><!-- /product-item -->
+							</div>
+
+							<div class="col-md-3 col-sm-6">
+								<div class="product-item">
+									<span class="p-image">
+										<img src="img/12_PD_19202_MAIN-268x268.jpeg" alt="alt">
+										<span class="p-mask">
+											<a href="#" class="zoom"><i class="fa fa-search"></i></a>
+											<a href="#" class="add-to-wishlist">
+												<i class="fa fa-heart-o"></i>
+											</a>
+											<a href="#" class="p-quickview"><i class="fa fa-send-o"></i></a>
+										</span>
+									</span>
+									<div class="p-info">
+										<a href="#" class="h6">Stamet pendant in blue</a>
+										<span class="price">$299.00</span>
+										<a href="#" class="add-to-cart">
+											<i class="fa fa-shopping-cart"></i>
+											<span>Add to cart</span>
+										</a>
+									</div>
+								</div><!-- /product-item -->
+							</div>
+
+							<div class="col-md-3 col-sm-6">
+								<div class="product-item">
+									<span class="p-image">
+										<img src="img/11_PD_19630_MAIN-268x268.jpeg" alt="alt">
+										<span class="p-mask">
+											<a href="#" class="zoom"><i class="fa fa-search"></i></a>
+											<a href="#" class="add-to-wishlist">
+												<i class="fa fa-heart-o"></i>
+											</a>
+											<a href="#" class="p-quickview"><i class="fa fa-send-o"></i></a>
+										</span>
+									</span>
+									<div class="p-info">
+										<a href="#" class="h6">Pelican chai</a>
+										<span class="price">$29.00</span>
+										<a href="#" class="add-to-cart">
+											<i class="fa fa-shopping-cart"></i>
+											<span>Add to cart</span>
+										</a>
+									</div>
+								</div><!-- /product-item -->
+							</div>
+
+							<div class="col-md-3 col-sm-6">
+								<div class="product-item">
+									<span class="p-image">
+										<img src="img/1_51JXtNXGSQL-268x268.jpg" alt="alt">
+										<span class="p-mask">
+											<a href="#" class="zoom"><i class="fa fa-search"></i></a>
+											<a href="#" class="add-to-wishlist">
+												<i class="fa fa-heart-o"></i>
+											</a>
+											<a href="#" class="p-quickview"><i class="fa fa-send-o"></i></a>
+										</span>
+									</span>
+									<div class="p-info">
+										<a href="#" class="h6">Flowers</a>
+										<span class="price">$35.00</span>
+										<a href="#" class="add-to-cart">
+											<i class="fa fa-shopping-cart"></i>
+											<span>Add to cart</span>
+										</a>
+									</div>
+								</div><!-- /product-item -->
+							</div>
+
+							<div class="col-md-3 col-sm-6">
+								<div class="product-item">
+									<span class="p-image">
+										<img src="img/4_71UzsS-xSdL._SL1000_-268x268.jpg" alt="alt">
+										<span class="p-mask">
+											<a href="#" class="zoom"><i class="fa fa-search"></i></a>
+											<a href="#" class="add-to-wishlist">
+												<i class="fa fa-heart-o"></i>
+											</a>
+											<a href="#" class="p-quickview"><i class="fa fa-send-o"></i></a>
+										</span>
+									</span>
+									<div class="p-info">
+										<a href="#" class="h6">Pink flowersr</a>
+										<span class="price">$54.99</span>
+										<a href="#" class="add-to-cart">
+											<i class="fa fa-shopping-cart"></i>
+											<span>Add to cart</span>
+										</a>
+									</div>
+								</div><!-- /product-item -->
+							</div>
+
+						</div><!-- /tab-pane-home & garden -->	
+						
+						<!-- tab-pane-beauty =====================================-->	
+						<div class="tab-pane">
+
+							<div class="col-md-3 col-sm-6">
+								<div class="product-item">
+									<span class="p-image">
+										<img src="img/1_1925043_fpx-268x268.jpeg" alt="alt">
+										<span class="p-mask">
+											<a href="#" class="zoom"><i class="fa fa-search"></i></a>
+											<a href="#" class="add-to-wishlist">
+												<i class="fa fa-heart-o"></i>
+											</a>
+											<a href="#" class="p-quickview"><i class="fa fa-send-o"></i></a>
+										</span>
+									</span>
+									<div class="p-info">
+										<a href="#" class="h6">Pink flowers</a>
+										<span class="price">$29.00</span>
+										<a href="#" class="add-to-cart">
+											<i class="fa fa-shopping-cart"></i>
+											<span>Add to cart</span>
+										</a>
+									</div>
+								</div><!-- /product-item -->
+							</div>
+
+							<div class="col-md-3 col-sm-6">
+								<div class="product-item">
+									<span class="p-image">
+										<img src="img/3_2132734_fpx-268x268.jpeg" alt="alt">
+										<span class="p-mask">
+											<a href="#" class="zoom"><i class="fa fa-search"></i></a>
+											<a href="#" class="add-to-wishlist">
+												<i class="fa fa-heart-o"></i>
+											</a>
+											<a href="#" class="p-quickview"><i class="fa fa-send-o"></i></a>
+										</span>
+									</span>
+									<div class="p-info">
+										<a href="#" class="h6">T-shirt with printed design</a>
+										<span class="price">$39.00</span>
+										<a href="#" class="add-to-cart">
+											<i class="fa fa-shopping-cart"></i>
+											<span>Add to cart</span>
+										</a>
+									</div>
+								</div><!-- /product-item -->
+							</div>
+
+							<div class="col-md-3 col-sm-6">
+								<div class="product-item sale-item">
+									<span class="p-image">
+										<img src="img/4_2093850_fpx-268x268.jpeg" alt="alt">
+										<span class="p-mask">
+											<a href="#" class="zoom"><i class="fa fa-search"></i></a>
+											<a href="#" class="add-to-wishlist">
+												<i class="fa fa-heart-o"></i>
+											</a>
+											<a href="#" class="p-quickview"><i class="fa fa-send-o"></i></a>
+										</span>
+										<span class="onsale">Sale!</span>
+									</span>
+									<div class="p-info">
+										<a href="#" class="h6">Suede biker jacket</a>
+										<span class="price"><del>$125.00</del>$55.00</span>
+										<a href="#" class="add-to-cart">
+											<i class="fa fa-shopping-cart"></i>
+											<span>Add to cart</span>
+										</a>
+									</div>
+								</div><!-- /product-item -->
+							</div>
+
+							<div class="col-md-3 col-sm-6">
+								<div class="product-item">
+									<span class="p-image">
+										<img src="img/6_2450186_fpx-268x268.jpeg" alt="alt">
+										<span class="p-mask">
+											<a href="#" class="zoom"><i class="fa fa-search"></i></a>
+											<a href="#" class="add-to-wishlist">
+												<i class="fa fa-heart-o"></i>
+											</a>
+											<a href="#" class="p-quickview"><i class="fa fa-send-o"></i></a>
+										</span>
+									</span>
+									<div class="p-info">
+										<a href="#" class="h6">T-shirt with printed design</a>
+										<span class="price">$39.00</span>
+										<a href="#" class="add-to-cart">
+											<i class="fa fa-shopping-cart"></i>
+											<span>Add to cart</span>
+										</a>
+									</div>
+								</div><!-- /product-item -->
+							</div>
+
+							<div class="col-md-3 col-sm-6">
+								<div class="product-item">
+									<span class="p-image">
+										<img src="img/2548400_fpx-268x268.jpeg" alt="alt">
+										<span class="p-mask">
+											<a href="#" class="zoom"><i class="fa fa-search"></i></a>
+											<a href="#" class="add-to-wishlist">
+												<i class="fa fa-heart-o"></i>
+											</a>
+											<a href="#" class="p-quickview"><i class="fa fa-send-o"></i></a>
+										</span>
+									</span>
+									<div class="p-info">
+										<a href="#" class="h6">Printed desighn t-shirt</a>
+										<span class="price">$29.00</span>
+										<a href="#" class="add-to-cart">
+											<i class="fa fa-shopping-cart"></i>
+											<span>Add to cart</span>
+										</a>
+									</div>
+								</div><!-- /product-item -->
+							</div>
+
+							<div class="col-md-3 col-sm-6">
+								<div class="product-item">
+									<span class="p-image">
+										<img src="img/5_2694792_fpx-268x268.jpeg" alt="alt">
+										<span class="p-mask">
+											<a href="#" class="zoom"><i class="fa fa-search"></i></a>
+											<a href="#" class="add-to-wishlist">
+												<i class="fa fa-heart-o"></i>
+											</a>
+											<a href="#" class="p-quickview"><i class="fa fa-send-o"></i></a>
+										</span>
+									</span>
+									<div class="p-info">
+										<a href="#" class="h6">Printed desighn t-shirt</a>
+										<span class="price">$29.00</span>
+										<a href="#" class="add-to-cart">
+											<i class="fa fa-shopping-cart"></i>
+											<span>Add to cart</span>
+										</a>
+									</div>
+								</div><!-- /product-item -->
+							</div>
+
+							<div class="col-md-3 col-sm-6">
+								<div class="product-item">
+									<span class="p-image">
+										<img src="img/2_198180_fpx-268x268.jpeg" alt="alt">
+										<span class="p-mask">
+											<a href="#" class="zoom"><i class="fa fa-search"></i></a>
+											<a href="#" class="add-to-wishlist">
+												<i class="fa fa-heart-o"></i>
+											</a>
+											<a href="#" class="p-quickview"><i class="fa fa-send-o"></i></a>
+										</span>
+									</span>
+									<div class="p-info">
+										<a href="#" class="h6">Printed desighn t-shirt</a>
+										<span class="price">$29.00</span>
+										<a href="#" class="add-to-cart">
+											<i class="fa fa-shopping-cart"></i>
+											<span>Add to cart</span>
+										</a>
+									</div>
+								</div><!-- /product-item -->
+							</div>
+
+							<div class="col-md-3 col-sm-6">
+								<div class="product-item">
+									<span class="p-image">
+										<img src="img/1681473_fpx-268x268.jpeg" alt="alt">
+										<span class="p-mask">
+											<a href="#" class="zoom"><i class="fa fa-search"></i></a>
+											<a href="#" class="add-to-wishlist">
+												<i class="fa fa-heart-o"></i>
+											</a>
+											<a href="#" class="p-quickview"><i class="fa fa-send-o"></i></a>
+										</span>
+									</span>
+									<div class="p-info">
+										<a href="#" class="h6">Printed desighn t-shirt</a>
+										<span class="price">$29.00</span>
+										<a href="#" class="add-to-cart">
+											<i class="fa fa-shopping-cart"></i>
+											<span>Add to cart</span>
+										</a>
+									</div>
+								</div><!-- /product-item -->
+							</div>
+
+						</div><!-- /tab-pane-beauty -->
+
+					</div><!-- /tab-cont -->
+
+				</div><!-- /tab-block -->				
+
+			</div><!-- /row -->
+		</div><!-- /container -->
+	</section><!-- /new-arrivals -->
+	
+	<!-- new-arrivals
+	===================================================================================== -->
+	<section class="book-slider">
+		<div class="container">
+			<div class="row">
+
+				<div class="col-md-12">
+					<div id="bb-bookblock" class="bb-bookblock bb-vertical">
+						
+						<div class="bb-item clearfix">
+							<div class="book-left-side">
+								<div class="left-side-content-wrap">
+									<span class="cat-links">Lookbook</span>
+									<h2 class="entry-title"> Must-have Items for Spring 2016</h2>
+									<a class="add-to-cart" href="#">View More</a>
+								</div>
+							</div>
+							<div class="book-right-side">
+								<img src="img/blog_05.jpg" alt="alt">
+							</div>
+						</div>
+
+						<div class="bb-item clearfix">
+							<div class="book-left-side">
+								<div class="left-side-content-wrap">
+									<span class="cat-links">Lookbook</span>
+									<h2 class="entry-title">Top collections from paris fashion week</h2>
+									<a class="add-to-cart" href="#">View More</a>
+								</div>
+							</div>
+							<div class="book-right-side">
+								<img src="img/blog_04.jpg" alt="alt">
+							</div>
+						</div>
+
+						<div class="book-navigation">
+							<a id="bb-nav-prev" class="book-arrow-left">
+								<i class="fa fa-angle-left"></i>
+							</a>
+							<a id="bb-nav-next" class="book-arrow-right">
+								<i class="fa fa-angle-right"></i>
+							</a>
+						</div>
+
+					</div>
+				</div>
+
+			</div><!-- /row -->
+		</div><!-- /container -->
+	</section><!-- /book-slider -->
+
+	<!-- featured-latest-products
+	===================================================================================== -->
+	<section class="featured-latest-products">
+		<div class="container">
+			<div class="row">
+				
+				<!-- featured-products = start==================================-->
+				<div class="col-md-6 col-sm-12">
+					<div class="featured-products">
+						<div class="h6">Featured products</div>
+
+						<div class="products clearfix">
+
+							<div class="product-item clearfix">
+								<div class="p-image">
+									<img src="img/15_PD_0305_MAIN-268x268.jpeg" alt="alt">
+								</div>
+								<div class="p-info">
+									<a class="p-title" href="#">Ball clock</a>
+									<span class="price">$79.00</span>
+									<a href="#" class="add-to-cart product-button">
+										<i class="fa fa-shopping-cart"></i>
+										<span>View products</span>
+									</a>
+								</div>
+							</div><!-- /product-item -->
+
+							<div class="product-item">
+								<div class="p-image">
+									<img src="img/16_PD_15383_MAIN-268x268.jpeg" alt="alt">
+								</div>
+								<div class="p-info">
+									<a class="p-title" href="#">Eames house bird</a>
+									<span class="price">$15.00</span>
+									<a href="#" class="add-to-cart product-button">
+										<i class="fa fa-shopping-cart"></i>
+										<span>Add to cart</span>
+									</a>	
+								</div>
+							</div><!-- /product-item -->
+
+							<div class="product-item">
+								<div class="p-image">
+									<img src="img/11_PD_19630_MAIN-268x268.jpeg" alt="alt">
+								</div>
+								<div class="p-info">
+									<a class="p-title" href="#">Butterfly cheir</a>
+									<span class="price">$69.00</span>
+									<a href="#" class="add-to-cart product-button">
+										<i class="fa fa-shopping-cart"></i>
+										<span>Add to cart</span>
+									</a>	
+								</div>
+							</div><!-- /product-item -->
+
+							<div class="product-item">
+								<div class="p-image">
+									<img src="img/3_gn_wx_denim_folded1-268x268.jpg" alt="alt">
+								</div>
+								<div class="p-info">
+									<a class="p-title" href="#">Grouped product</a>
+									<span class="price">$29.00</span>
+									<a href="#" class="add-to-cart product-button">
+										<i class="fa fa-shopping-cart"></i>
+										<span>Add to cart</span>
+									</a>	
+								</div>
+							</div><!-- /product-item -->
+
+							<div class="product-item">
+								<div class="p-image">
+									<img src="img/1_PD_43741_ALT21-268x268.jpeg" alt="alt">
+								</div>
+								<div class="p-info">
+									<a class="p-title" href="#">Some cheir</a>
+									<span class="price">$79.00</span>
+									<a href="#" class="add-to-cart product-button">
+										<i class="fa fa-shopping-cart"></i>
+										<span>Add to cart</span>
+									</a>	
+								</div>
+							</div><!-- /product-item -->
+
+							<div class="product-item">
+								<div class="p-image">
+									<img src="img/9_hmprod-268x268.jpeg" alt="alt">
+								</div>
+								<div class="p-info">
+									<a class="p-title" href="#">Grouped product</a>
+									<span class="price">$49.00</span>
+									<a href="#" class="add-to-cart product-button">
+										<i class="fa fa-shopping-cart"></i>
+										<span>Add to cart</span>
+									</a>	
+								</div>
+							</div><!-- /product-item -->
+
+						</div><!-- /products -->
+
+					</div><!-- /featured-products -->
+				</div><!-- /col-md-6 col-sm-6-->
+				
+				<!-- latest-products = start==================================-->
+				<div class="col-md-6 col-sm-12">
+					<div class="latest-products">
+						<div class="h6">Latest products</div>
+
+						<div class="products">
+
+							<div class="product-item sale-item">
+								<div class="p-image">
+									<img src="img/4_hmprod2-268x268.jpeg" alt="alt">
+								</div>
+								<div class="p-info">
+									<a class="p-title" href="#">Silk dress</a>
+									<span class="price"><del>$220.99</del>$189.99</span>
+									<a href="#" class="add-to-cart product-button">
+										<i class="fa fa-shopping-cart"></i>
+										<span>Add to cart</span>
+									</a>
+									<span class="onsale">Sale!</span>	
+								</div>
+							</div><!-- /product-item -->
+
+							<div class="product-item sale-item">
+								<div class="p-image">
+									<img src="img/7_hmprod-268x268.jpeg" alt="alt">
+								</div>
+								<div class="p-info">
+									<a class="p-title" href="#">Jacket</a>
+									<span class="price"><del>$110.99</del>$79.99</span>
+									<a href="#" class="add-to-cart product-button">
+										<i class="fa fa-shopping-cart"></i>
+										<span>View products</span>
+									</a>
+									<span class="onsale">Sale!</span>	
+								</div>
+							</div><!-- /product-item -->
+
+							<div class="product-item">
+								<div class="p-image">
+									<img src="img/2_82606_2-268x268.jpg" alt="alt">
+								</div>
+								<div class="p-info">
+									<a class="p-title" href="#">Classic suede belt</a>
+									<span class="price">$39.99</span>
+									<a href="#" class="add-to-cart product-button">
+										<i class="fa fa-shopping-cart"></i>
+										<span>Add to cart</span>
+									</a>
+								</div>
+							</div><!-- /product-item -->
+
+							<div class="product-item">
+								<div class="p-image">
+									<img src="img/4_71UzsS-xSdL._SL1000_-268x268.jpg" alt="alt">
+								</div>
+								<div class="p-info">
+									<a class="p-title" href="#">Rose buqiet</a>
+									<span class="price">$24.00</span>
+									<a href="#" class="add-to-cart product-button">
+										<i class="fa fa-shopping-cart"></i>
+										<span>Add to cart</span>
+									</a>	
+								</div>
+							</div><!-- /product-item -->
+
+							<div class="product-item">
+								<div class="p-image">
+									<img src="img/2_WP_side_havana_main-268x268.jpg" alt="alt">
+								</div>
+								<div class="p-info">
+									<a class="p-title" href="#">Grouped product</a>
+									<span class="price">$30.00</span>
+									<a href="#" class="add-to-cart product-button">
+										<i class="fa fa-shopping-cart"></i>
+										<span>Add to cart</span>
+									</a>	
+								</div>
+							</div><!-- /product-item -->
+
+							<div class="product-item">
+								<div class="p-image">
+									<img src="img/8_hmprod-268x268.jpeg" alt="alt">
+								</div>
+								<div class="p-info">
+									<a class="p-title" href="#">T-hirt design</a>
+									<span class="price">$39.00</span>
+									<a href="#" class="add-to-cart product-button">
+										<i class="fa fa-shopping-cart"></i>
+										<span>Add to cart</span>
+									</a>	
+								</div>
+							</div><!-- /product-item -->
+
+						</div><!-- /products -->
+
+					</div><!-- /latest-products -products -->
+				</div><!-- /col-md-6 col-sm-6-->
+
+			</div><!-- /row -->
+		</div><!-- /container -->
+	</section><!-- /featured-latest-products -->
+	
+	<!-- advantages
+	===================================================================================== -->
+	<section class="advantages">
+		<div class="container">
+			<div class="row">
+
+				<div class="col-md-4 col-sm-4 col-xs-6">
+					<div class="advantage-item">
+						<div class="img-wrap">
+							<i class="icon-lightning"></i>
+						</div>
+						<div class="h4">3-day <span>shipping guarantee</span></div>
+					</div>
+				</div>
+
+				<div class="col-md-4 col-sm-4 col-xs-6">
+					<div class="advantage-item">
+						<div class="img-wrap">
+							<i class="icon-mobile"></i>
+						</div>
+						<div class="h4">Hotline: <span>+123 456 789</span></div>
+					</div>
+				</div>
+
+				<div class="col-md-4 col-sm-4 col-xs-12">
+					<div class="advantage-item">
+						<div class="img-wrap">
+							<i class="icon-star-2"></i>
+						</div>
+						<div class="h4">15-day <span>money-back policy</span></div>
+					</div>
+				</div>
+
+			</div><!-- /row -->
+		</div><!-- /container -->
+	</section><!-- /advantages -->
+	
+	<!-- site-footer
+	===================================================================================== -->
+	<footer class="site-footer">
+		<div class="footer-top">
+			<div class="container">
+				<div class="row">
+
+					<div class="col-md-6 col-sm-12">
+						<div class="row">
+							<div class="footer-top-left">
+
+								<div class="col-md-6 col-sm-6">
+									<div class="widget">
+										<a href="#" class="site-logo"><span>Woo</span>plus<sup>+</sup></a>
+										<p>WooPlus is an American retailing company, founded in June 2010 and headquartered in New York City.</p>
+										<p>As of 2016, WooPlus carries over 800 products offerings across 40 categories.</p>
+									</div>
+								</div>
+
+								<div class="col-md-6 col-sm-6">
+									<div class="widget">
+										<div class="h6">Contact info</div>
+										<ul class="widget-text clearfix">
+											<li>
+												<i class="fa fa-map-marker"></i>
+												8901 Marmora Road, Glasgow D04 89 GR, New York
+											</li>
+											<li>
+												<i class="fa fa-phone"></i>
+												<span>Mobile : +1-234-567-890 <br>Phone : +1-234-567-890</span>
+											</li>
+											<li>
+												<i class="fa fa-envelope-o"></i>
+												E-mail: <a href="mailto:" class="mailto">support@domain.com</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-6 col-sm-12 col-xs-12">
+						<div class="row">
+							<div class="footer-top-right">
+
+								<div class="col-md-4 col-sm-4 col-xs-4">
+									<div class="widget">
+										<div class="h6">About</div>
+										<ul class="widget-text">
+											<li><a href="#">News &amp; blog</a></li>
+											<li><a href="#">Affiliates</a></li>
+											<li><a href="#">Press Room</a></li>
+											<li><a href="#">For Investors</a></li>
+											<li><a href="#">Contact Us</a></li>
+										</ul>
+									</div>
+								</div>
+
+								<div class="col-md-4 col-sm-4 col-xs-4">
+									<div class="widget">
+										<div class="h6">Our stores</div>
+										<ul class="widget-text">
+											<li><a href="#">Location</a></li>
+											<li><a href="#">Events</a></li>
+											<li><a href="#">Catalogs</a></li>
+											<li><a href="#">Clearance</a></li>
+											<li><a href="#">Find a store</a></li>
+										</ul>
+									</div>
+								</div>
+
+								<div class="col-md-4 col-sm-4 col-xs-4">
+									<div class="widget">
+										<div class="h6">Help</div>
+										<ul class="widget-text">
+											<li><a href="#">FAQs</a></li>
+											<li><a href="#">Size Charts</a></li>
+											<li><a href="#">Store Pickup</a></li>
+											<li><a href="#">Return Policy</a></li>
+											<li><a href="#">Shipping Policy</a></li>
+										</ul>
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+
+				</div><!-- /row -->
+			</div><!-- /container -->
+		</div><!-- /footer-top -->
+
+		<div class="footer-mid">
+			<div class="container">
+				<div class="row">
+					<img src="img/credit-card.png" alt="alt">
+				</div>
+			</div>
+		</div><!-- /footer-mid -->
+
+		<div class="footer-bot">
+			<div class="container">
+				<div class="row">
+
+					<nav class="footer-navigation">
+						<ul class="footer-menu">
+							<li lass="footer-menu-item"><a href="#">Contact us</a></li>
+							<li lass="footer-menu-item"><a href="#">About us</a></li>
+							<li lass="footer-menu-item"><a href="#">Our blog</a></li>
+							<li lass="footer-menu-item"><a href="#">Become an affiliate</a></li>
+							<li lass="footer-menu-item"><a href="#">Faq</a></li>
+							<li lass="footer-menu-item"><a href="#">Security &amp; privacy</a></li>
+							<li lass="footer-menu-item"><a href="#">Help</a></li>
+							<li lass="footer-menu-item"><a href="#">Customer services</a></li>
+							<li lass="footer-menu-item"><a href="#">Term of use</a></li>
+							<li lass="footer-menu-item"><a href="#">Site map</a></li>
+						</ul>
+					</nav>
+
+					<div class="site-info">
+						©2016 WooPlus · Made with ♥ by 
+						<a href="#">SomeStudios</a>
+						team using <strong>WordPress</strong>.<br>
+						All stock photos used on this WooPlus demo site are only for demo purposes and not included in the template package.					
+					</div>
+
+				</div><!-- /row -->
+			</div><!-- /container -->
+		</div><!-- /footer-bot -->
+
+	</footer><!-- /site-footer -->
+
+	<div class="btn-up" title="Up">
+		<i class="fa fa-angle-up"></i>
+	</div>
+
+	<div class="hidden"></div>
+
+	<div class="loader">
+		<div class="loader_inner"></div>
+	</div>
+
+	<!--[if lt IE 9]>
+	<script src="libs/html5shiv/es5-shim.min.js"></script>
+	<script src="libs/html5shiv/html5shiv.min.js"></script>
+	<script src="libs/html5shiv/html5shiv-printshiv.min.js"></script>
+	<script src="libs/respond/respond.min.js"></script>
+	<![endif]-->
+	
+	<script src="libs/jquery/jquery-1.12.4.min.js"></script>
+	<script src="libs/waypoints/waypoints.min.js"></script>
+	<script src="libs/animate/animate-css.js"></script>
+	<script src="libs/plugins-scroll/plugins-scroll.js"></script>
+	<script src="libs/superfish/dist/js/superfish.min.js"></script>
+	<script src="libs/PlusSlider-master/js/jquery.plusslider-min.js"></script>
+	<script src="libs/equalHeights/equalheights.js"></script>
+	<script src="libs/garand-sticky/jquery.sticky.js"></script>
+	<script src="libs/BookBlock/js/jquery.bookblock.min.js"></script>
+	<script src="libs/jQuery.mmenu-master/dist/js/jquery.mmenu.min.js"></script>
+	<script src="libs/owl.carousel/dist/owl.carousel.min.js"></script>
+	
+	<script src="js/common.js"></script>
+	
+</body>
+</html>
