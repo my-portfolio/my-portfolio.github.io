@@ -1,0 +1,847 @@
+@import "bourbon/bourbon"
+@import "../css/reset.css"
+
+html.js .loader
+	background: none repeat scroll 0 0 #ffffff
+	bottom: 0
+	height: 100%
+	left: 0
+	position: fixed
+	right: 0
+	top: 0
+	width: 100%
+	z-index: 9999
+	.loader_inner
+		background-image: url("../img/preloader.gif")
+		background-size: cover
+		background-repeat: no-repeat
+		background-position: center center
+		background-color: #fff
+		height: 60px
+		width: 60px
+		margin-top: -30px
+		margin-left: -30px
+		left: 50%
+		top: 50%
+		position: absolute
+
+body
+	font-family: "DroidSerif", sans-serif
+	font-weight: normal
+	font-size: 14px
+	min-width: 320px
+	position: relative
+	line-height: 1.6
+	-webkit-font-smoothing: antialiased
+	overflow-x: hidden
+	color: #646464
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: red
+body input:required:valid,
+body textarea:required:valid
+	color: #6e6e6e
+
+
+.hidden
+	display: none
+
+$accent-color: #d6aa74
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6
+	font-family: "RobotoSlabRegular", sans-serif
+	text-transform: uppercase
+h2, .h2
+	font-size: em(33px)
+h3, .h3
+	font-size: em(29px)
+h5, .h5
+	font-size: em(22px)
+.clearfix::before
+	clear: both
+	display: block
+	content: ''
+.section-padding
+	padding: 80px 0
+.margin-left
+	margin-left: 200px
+	
+// main-head === start ======================================
+.main-head
+	z-index: 777
+	display: block
+	width: 100%
+	padding: 25px 0 
+	text-transform: uppercase
+	position: fixed
+	top: 0
+	.content-logo
+		margin-top: -35px
+.top-line
+	position: relative
+.header-scroll
+	background: #303030
+	box-shadow: 0 2px 10px rgba(204, 204, 204, 0.2)
+.main-head.header-scroll
+	padding: 0
+	.site-navigator
+		transform: translateY(70%)
+	.content-logo
+		a
+			img
+				max-width: 90px
+				max-height: 93px
+	a.menu-toggle
+		top: 38%
+.site-navigator.mobile
+	transform: none
+.site-navigator
+	display: block
+	transform: translateY(35px)
+	font-family: "RobotoSlabRegular", sans-serif
+	text-align: center
+	.site-nav-item
+		display: inline-block
+		&:hover
+			> .site-nav-item-link::after
+				width: calc(100% - 25px)
+		.site-nav-item-link
+			padding: 10px 15px
+			display: block
+			color: #fff
+			position: relative
+			transition: all .3s
+			&:hover
+				color: $accent-color
+			&::after
+				content: ''
+				height: 1px
+				background-color: $accent-color
+				transition: all 0.3s ease-out
+				position: absolute
+				bottom: 0px
+				left: 50%
+				transform: translate(-50%, 0)
+				width: 0
+.content-logo
+	text-align: center
+	a
+		display: inline-block
+		position: relative
+		img
+			max-width: 150px
+			max-height: auto
+.menu-toggle
+	display: none
+// main-head === end
+
+// fixed-card === start ======================================
+.fixed-cart
+	right: 50px
+	position: fixed
+	top: 35%
+	z-index: 99995
+	transition: all .3s
+	padding: 10px
+.cart-control
+	display: inline-block
+	position: relative
+	cursor: pointer
+	i
+		color: $accent-color
+		font-size: em(28px)
+.count
+	color: #ffffff
+	background-color: #FF7B7B
+	border-radius: 100px
+	display: block
+	position: absolute
+	left: calc(100% - 5px)
+	text-align: center
+	top: -10px
+	font-size: 11px
+	min-width: 19px
+	padding: 0px 4px
+	line-height: 19px
+// fixed-card === end
+
+// top-sect === start ======================================
+.top-sect
+	padding-top: 200px
+	margin-bottom: 200px
+	background-size: cover
+	background-position: top center
+	background-repeat: no-repeat
+	text-align: center
+.head-for-section
+	margin-bottom: 15px
+	text-align: center
+	.descr
+		font-family: "MrsSaintDelafield", sans-serif
+		font-weight: 400
+		color: $accent-color
+		text-transform: none
+		font-size: em(36px)
+.heading
+	font-weight: 400
+	color: #eeeeee
+	margin: 20px 0
+	line-height: 1.1
+	letter-spacing: 0.5px
+.heading-dark
+	color: #434343
+.welcome-bottom-img
+	margin-bottom: -170px
+	img
+		max-width: 47%
+// top-sect === end
+
+// advantages-items === start ======================================
+.advantages-item
+	text-align: center
+	display: block
+	img
+		margin-bottom: 20px
+	h5
+		color: $accent-color
+		margin-bottom: 25px
+		line-height: 1.4
+		vertical-align: top
+	p
+		margin: 0
+// advantages-items === end
+
+// devider === start ======================================
+.devider
+	text-align: center
+	img
+		background-color: #fff
+		padding: 0 18px
+	.dev
+		position: relative
+		&::before
+			content: ''
+			position: absolute
+			height: 1px
+			width: 100%
+			top: 13px
+			left: 0
+			background-color: #eaeaea
+			z-index: -1
+// devider === end
+
+// cook-welcome === start ======================================
+.cook-welcome
+	.head-for-section
+		transform: translate(0, 200px)
+		padding-left: 100px
+		text-align: left
+		h2
+			color: #434343
+			margin-bottom: 15px
+		.signature
+			margin-top: 20px
+			vertical-align: bottom
+.cook-welcome.section-padding
+	padding-bottom: 0
+// cook-welcome === end
+
+// our-special-menu === start ======================================
+.our-special-menu
+	background-size: cover
+	.head-for-section
+		margin-bottom: 60px
+		.heading
+			color: #fff
+.icon-top-for-sect
+	margin-bottom: 10px
+.special-menu-content
+	background-color: #fff
+	padding: 40px 25px 65px
+.special-menu-content-head
+	margin-bottom: 20px
+	text-align: center
+	.descr
+		text-transform: uppercase
+		color: #aeaeae
+		font-size: em(15px)
+		margin: 15px 0
+.special-menu-product
+	padding: 20px 0
+	border-bottom: 1px solid #ebebeb
+	.product-img
+		display: inline-block
+		width: 12.5%
+		height: 62px
+		float: left
+		margin-right: 10px
+.product-info
+	display: inline-block
+	width: 85%
+.product-meta
+	margin: 8px 0 0
+	a.h6
+		text-transform: none
+		color: #434343
+		transition: all .25s
+		&:hover
+			color: $accent-color
+	.price
+		float: right
+.price
+	margin: 0
+	font-size: em(20px)
+	line-height: 1.2
+	color: $accent-color
+	font-family: "DroidSerif", serif
+	span
+		font-size: em(15px)
+// our-special-menu === end
+
+// products === start ======================================
+.products
+	padding: 50px 0
+.product-item
+	padding: 30px 0
+	position: relative
+	display: block
+	a
+		color: #434343
+	&:hover
+		.product-btn
+			transform: translateX(0)
+			opacity: 1
+.product-img-wrap
+	position: relative
+	overflow: hidden
+	text-align: center
+	img
+		transform: scale(1.2)
+.product-action
+	position: absolute
+	top: 19px
+	right: 12px
+	z-index: 1
+	text-align: center
+	> :first-child 
+		transition-delay: .025s
+	> :nth-child(2)
+		transition-delay: .05s
+	> :nth-child(3)
+		transition-delay: .1s
+.product-btn
+	position: relative
+	display: block
+	width: 40px
+	height: 40px
+	line-height: 40px
+	background: #fff
+	margin-bottom: 2px
+	opacity: 0
+	transform: translateX(30px)
+	transition: all .25s
+	&:hover
+		color: $accent-color
+		box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1)
+		> .tooltip
+			right: calc(100% + 10px)
+			opacity: 1
+			visibility: visible
+.tooltip,
+.hart-tooltip
+	display: block
+	background: rgba(0,0,0, .8)
+	padding: 6px 15px
+	color: #fff
+	position: absolute
+	border-radius: 2px
+	display: block
+	line-height: 1.6
+	font-size: 12px
+	white-space: pre
+	opacity: 0
+	visibility: hidden
+	transition: all .2s
+.tooltip
+	top: 5px
+	right: calc(100% + 20px)
+	&::before 
+		content: ''
+		position: absolute
+		border: 5px solid transparent
+		border-left: 5px solid rgba(0, 0, 0, 0.8)
+		top: 10px
+		height: 5px
+		right: -10px
+.product-item-meta
+	margin-bottom: 10px
+	.h6
+		text-transform: none
+		transition: all .2s
+		&:hover
+			color: $accent-color
+.hart
+	float: right
+	cursor: pointer
+	position: relative
+	&:hover
+		color: $accent-color
+		.hart-tooltip
+			top: calc(-100% - 16px)
+			opacity: 1
+			visibility: visible
+.hart-tooltip
+	right: 0
+	top: calc(-100% - 10px)
+	&::before 
+		content: ''
+		position: absolute
+		border: 5px solid transparent
+		border-top: 5px solid rgba(0, 0, 0, 0.8)
+		bottom: -10px
+		height: 5px
+		right: 2px
+.product-price-star
+	.price
+		display: inline-block
+.product-star-rating
+	font-family: "FontAwesome"
+	font-size: 10px
+	line-height: 20px
+	letter-spacing: 3px
+	position: relative
+	height: 20px
+	width: 6.2em
+	overflow: hidden
+	float: right
+	&::before
+		content: "\f005\f005\f005\f005\f005"
+		left: 0
+		top: 0
+		position: absolute
+	span
+		position: absolute
+		height: 20px
+		width: 6.2em
+		overflow: hidden
+		left: 0
+		&::before
+			content: "\f005\f005\f005\f005\f005"
+			left: 0
+			top: 0
+			position: absolute
+			color: #d6aa74
+.show-more
+	text-align: center
+	display: block
+	margin-top: 30px
+	background: transparent
+	.h6
+		padding: 15px 30px
+		font-size: em(15px)
+		color: darken($accent-color, 25%)
+		border: 1px solid #e1e1e1
+		border-radius: 25px
+		transition: all .2s
+		cursor: pointer
+		display: inline-block
+		&:hover
+			color: #fff
+			background: darken($accent-color, 5%)
+			border-color: transparent
+// products === end
+
+// reviews-slider === start ======================================
+.reviews
+	padding-top: 30px
+.reviews-slider
+	position: relative
+	.owl-dots
+		position: absolute
+		bottom: 0
+		left: 50%
+		transform: translate(-50%, 0)
+		.owl-dot
+			display: inline-block
+		span
+			display: inline-block
+			height: 10px
+			width: 10px
+			border-radius: 50%
+			margin-right: 4px
+			border: 1px solid $accent-color
+			background: #fff
+			transition: .2s
+			&:hover
+				background: $accent-color
+		.owl-dot.active
+			span
+				background: $accent-color
+.reviews-slide
+	text-align: center
+	padding-bottom: 50px
+	.avatar
+		margin-bottom: 30px
+		display: inline-block
+		img
+			border-radius: 50%
+			width: 80px
+	.review
+		margin-bottom: 20px
+	.h6
+		text-transform: none
+		color: #434343
+		font-size: em(18px)
+		line-height: 2
+	.job
+		letter-spacing: 0.5px
+// reviews-slider === end
+
+// opening-hours === start ======================================
+.opening-hours
+	text-align: center
+	background-size: cover
+	background-position: top center
+	.head-for-section
+		.heading
+			color: #fff
+.opening-hours-content
+	margin-top: 15px
+	border: 1px dashed #646464
+	border-top: none
+	border-radius: 2px
+	display: inline-block
+	padding: 0 0 50px
+	.img-wrap
+		margin: -5px 0 60px
+	.h5
+		color: #fff
+	.h2
+		font-family: "Adamina", serif
+		color: $accent-color
+		line-height: 1.5
+		margin: 15px 0
+.weekend
+	margin-top: 60px
+// opening-hours === end
+
+// why-choose-us === start ======================================
+.why-choose-us
+	background-size: cover
+	background-position: top center
+	background-repeat: no-repeat
+	.head-for-section
+		text-align: left
+		.descr
+			margin-bottom: 0
+.why-us-list,
+.why-us-item
+	list-style-type: none
+	text-align: left
+.why-us-list
+	margin-top: 30px
+.why-us-item
+	padding: 5px 5px 5px 30px
+	position: relative
+	.fa
+		color: rgb(172, 205, 55)
+		position: absolute
+		left: 0
+		top: 8px
+.video-poster
+	display: inline
+	position: relative
+	svg
+		z-index: 3
+		position: absolute
+		left: 50%
+		top: 50%
+		transform: translate(-50%, -50%)
+.video-poster-wrap
+	display: block
+	margin: 60px
+	text-align: center
+.why-us-video
+	position: relative
+	max-width: 900px
+	margin: 0 auto
+	min-height: 300px
+	padding-top: 37.5%
+	iframe
+		position: absolute
+		display: block
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		box-shadow: 0 0 8px rgba(0, 0, 0, 0.6)
+		background: #000
+		overflow: hidden
+iframe
+	border: 0
+.mfp-close-btn-in .mfp-close
+	color: #fff
+	text-align: right
+	width: 100%
+	top: -40px
+	&:hover
+		color: $accent-color
+// why-choose-us === end
+
+// our-blog === start ======================================
+.our-blog
+	.head-for-section
+		margin-bottom: 60px
+	.show-more
+		margin-top: 60px
+.blog-item
+	width: 100%
+	.h6
+		color: #434343
+		text-transform: none
+		margin-top: 15px
+		display: block
+		font-size: em(19px)
+		text-overflow: ellipsis
+		overflow: hidden
+		white-space: nowrap
+	a
+		transition: all .3s
+		&:hover
+			color: #646464
+			.read-more-arrow
+				opacity: 1
+				padding-left: 0
+.blog-item-img:hover
+	img
+		transition: all .3s
+		filter: grayscale(100%)
+.entry-meta
+	color: #ababab
+	font-size: em(14px)
+	margin-bottom: 10px
+	> div
+		display: inline-block
+		margin-right: 20px
+		&:last-child
+			margin-right: 0
+	.fa
+		margin-right: 3px
+	a
+		color: #ababab
+.read-more-link
+	color: $accent-color
+	&:focus
+		color: $accent-color
+.read-more-arrow
+	opacity: 0
+	display: inline-block
+	padding-left: 10px
+	transition: all .3s
+// our-blog === end
+
+// reservation === start ======================================
+.reservation
+	text-align: center
+	background-size: 130%
+	background-position: right bottom
+	background-repeat: no-repeat
+	padding-top: 0
+	.head-for-section
+		margin-bottom: 50px
+	.working-hours,
+	.address
+		color: #434343
+.reservation-form-wrapper
+	margin-top: 60px
+.reservation-form
+	background: #fff
+	padding: 50px
+	margin: 0 auto
+	box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1)
+	text-align: left
+	.res-text,
+	.res-textarea
+		display: inline-block
+		width: calc(100%/3)
+		padding: 0 15px
+		vertical-align: middle
+		float: left
+		margin-top: 1em
+	select
+		background: url(../img/arrow_down.png) no-repeat calc(100% - 5px)
+	.picker-input
+		display: block
+		width: 100%
+		color: #6e6e6e
+		border: 1px solid #ebebeb
+		background-color: #f9f9f9
+		height: 40px
+		border-radius: 2px
+		padding: 10px
+		box-shadow: none
+		&:focus
+			border-color: #ebebeb
+	.res-textarea
+		width: 100%
+		display: block
+		margin-bottom: 40px
+		textarea
+			min-height: 6.4em
+	.show-more
+		margin: 0 auto
+		&:hover
+			.h6
+				color: #fff
+				background: darken($accent-color, 5%)
+				border-color: transparent
+.xdsoft_datetimepicker .xdsoft_timepicker
+	width: 200px
+	margin-left: 0
+	height: 100%
+.xdsoft_datetimepicker
+	padding: 5px
+	.xdsoft_calendar
+		td
+			height: 35px
+			color: #434343
+			font-size: em(15px)
+			font-family: "Adamina", sans-serif
+	.xdsoft_datepicker
+		width: 400px
+		margin-left: 0
+	.xdsoft_timepicker 
+		.xdsoft_prev,
+		.xdsoft_next
+			margin-left: 50%
+			transform: translateX(-50%)
+		.xdsoft_prev
+			margin-bottom: 5px
+		.xdsoft_next
+			margin-top: 5px
+		.xdsoft_time_box
+			height: 260px
+			> div 
+				> div
+					height: 40px
+					line-height: 40px
+					font-size: em(15px)
+					color: #434343
+					font-family: "Adamina", sans-serif
+					letter-spacing: 0.5px
+					text-align: left
+					padding-left: 18px
+// reservation === end
+
+// google-maps === start ======================================
+#map 
+	width: 100%
+	height: 450px	
+// google-maps === end
+
+// talk-with-us === start ======================================
+.talk-with-us 
+	background-size: cover
+	background-position: top center
+	background-repeat: no-repeat
+	position: relative
+	.head-for-section
+		.heading
+			margin-top: 0
+		.descr
+			line-height: 1.4
+	&::before
+		content: ''
+		position: absolute
+		width: 100%
+		height: 100%
+		left: 0
+		top: 0
+		background: rgba(0,0,0, .8)
+	.head-for-section
+		margin-bottom: 60px
+.contact-item
+	color: #959595
+	margin-bottom: 30px
+	&:last-child
+		margin-bottom: 0
+	.h6
+		color: #eee
+		text-transform: capitalize
+		font-size: em(20px)
+		letter-spacing: 0.3px
+	ul
+		margin: 20px 0 0 10px
+	li
+		line-height: 1.8
+		list-style-type: none
+		i
+			margin-right: 15px
+			width: 20px
+		a
+			color: #959595
+			transition: all .2s
+		.adress:hover
+			color: #ccc
+		.email:hover
+			text-decoration: underline
+.contacts-form
+	.contact-input
+		background: transparent
+		border: 1px solid #5F5F5F
+		width: 100%
+		margin-bottom: 25px
+		height: 40px
+		padding: 10px
+		color: #eee!important
+		box-shadow: none
+		border-radius: 2px
+	textarea.contact-input
+		height: 150px
+	button
+		float: right
+		padding: 10px 30px
+		display: inline-block
+		background: transparent
+		text-transform: uppercase
+		border: 1px solid #5F5F5F
+		color: #959595
+		border-radius: 2px
+		transition: all .3s
+		letter-spacing: 0.5px
+		&:hover
+			color: $accent-color
+// talk-with-us  === end
+
+// main-footer === start ======================================
+.main-footer 
+	text-align: center
+	color: #646464
+	padding-bottom: 20px
+	a
+		color: #646464
+		transition: all .25s
+		padding: 0 5px
+		&:hover
+			color: $accent-color
+.footer-menu
+	margin-top: 40px
+	display: block
+	margin-bottom: 25px
+.footer-menu-item
+	list-style-type: none
+	display: inline-block
+	border-right: 1px solid #646464
+	line-height: 1
+	&:last-child
+		border: none
+.bottom-info
+	padding: 25px 0
+	position: relative
+	font-size: em(14px)
+	border-top: 1px solid rgba(255, 255, 255, 0.1)
+	a
+		font-size: em(17px)
+// main-footer  === end
+

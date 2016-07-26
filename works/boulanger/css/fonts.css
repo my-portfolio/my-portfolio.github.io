@@ -1,0 +1,34 @@
+@font-face {
+  font-family: "RobotoRegular";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/RobotoRegular/RobotoRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/RobotoRegular/RobotoRegular.woff") format("woff"), url("../fonts/RobotoRegular/RobotoRegular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Adamina";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/Adamina/Adamina.eot?#iefix") format("embedded-opentype"), url("../fonts/Adamina/Adamina.woff") format("woff"), url("../fonts/Adamina/Adamina.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "MrsSaintDelafield";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/MrsSaintDelafield/MrsSaintDelafield.eot?#iefix") format("embedded-opentype"), url("../fonts/MrsSaintDelafield/MrsSaintDelafield.woff") format("woff"), url("../fonts/MrsSaintDelafield/MrsSaintDelafield.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "RobotoSlabRegular";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/RobotoSlabRegular/RobotoSlabRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/RobotoSlabRegular/RobotoSlabRegular.woff") format("woff"), url("../fonts/RobotoSlabRegular/RobotoSlabRegular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "DroidSerif";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/DroidSerif/DroidSerif.eot?#iefix") format("embedded-opentype"), url("../fonts/DroidSerif/DroidSerif.woff") format("woff"), url("../fonts/DroidSerif/DroidSerif.ttf") format("truetype");
+}
