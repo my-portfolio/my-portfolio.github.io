@@ -1,5 +1,9 @@
 $(function() {
 
+	$('.overlay-map').click(function() {
+		$(this).remove();
+	});
+
 	// Scroll2id
 	$(".site-navigator a").mPageScroll2id();
 
