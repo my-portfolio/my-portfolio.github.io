@@ -1,0 +1,638 @@
+@import "bourbon/bourbon"
+@import "_colors"
+
+body
+	font-family: "OpenSansRegular", sans-serif
+	font-weight: normal
+	font-size: 14px
+	min-width: 320px
+	position: relative
+	line-height: 1.42857
+	-webkit-font-smoothing: antialised
+	color: $text-color
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #F87289
+body input:required:valid,
+body textarea:required:valid
+	color: green
+
+.hidden
+	display: none
+
+.clear
+	clear: both
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+	line-height: 1.5em
+	text-align: center
+	text-transform: uppercase
+	font-family: "OpenSansSemiBold", sans-serif	
+
+h1
+	font-size: 45px
+
+h2
+	font-size: 36px
+
+h4
+	font-size: 24px
+
+h5
+	font-size: 16px
+
+
+
+/*//////////////////
+		loader 
+//////////////////*/
+.loader
+	background: #fff no-repeat center center
+	bottom: 0
+	left: 0
+	right: 0
+	top: 0
+	height: 100%
+	width: 100%
+	position: fixed
+	z-index: 999
+	.loader_inner
+		height: 60px
+		width: 60px
+		margin-top: -30px
+		margin-left: -30px
+		left: 50%
+		top: 50%
+		position: absolute
+
+
+/*//////////////////
+		header 
+//////////////////*/
+.my_header
+	padding: 20px 0
+	color: $main-color
+	p 
+		padding: 10px 0 0
+		margin: 0
+		font-size: 13px
+		font-family: "OpenSansSemiBold", sans-serif
+
+.logo_wrap
+	float: left
+	margin-right: 10px
+	padding-right: 10px
+	border-right: 2px solid $main-color
+
+.head_nav
+	text-align: right
+	ul,
+	li,
+		list-style-type: none
+		padding: 0
+		margin: 0
+	li 
+		display: inline-block
+		padding: 10px 15px
+		font-size: 22px
+	a 
+		color: $main-color
+		font-family: "OpenSansBold", sans-serif
+		transition: all .4s ease
+		outline: none 
+		&:hover
+			opacity: .5
+
+//btn_menu
+/*//////////////////
+	btn_mnu
+//////////////////*/
+.btn_mnu
+	position: absolute
+	top: 30px 
+	right: 50px
+
+a.menu-trigger
+	cursor: pointer
+	display: inline-block
+	position: relative
+	width: 40px
+	height: 40px
+	text-indent: -9999em
+
+a.menu-trigger span,
+a.menu-trigger span:before,
+a.menu-trigger span:after
+	transition: all, 0.4s ease
+	background-color: $main-color
+	display: block
+	position: absolute
+	width: 40px
+	height: 5px
+	left: 0
+  
+a.menu-trigger span:before,
+a.menu-trigger span:after
+	content: ""
+  
+a.menu-trigger span
+	top: 16px
+  
+a.menu-trigger span::before
+	+transform-origin(47%)
+	top: -10px
+	z-index: 10
+  
+a.menu-trigger span:after
+	+transform-origin(40%)
+	top: 10px
+  
+a.menu-trigger.active span,
+a.menu-trigger.active span::before,
+a.menu-trigger.active span::after
+	background-color: transparent
+	 
+a.menu-trigger.active span::before
+	+transform(translateY(8px) translateX(1px) rotate(45deg))
+	background-color: $main-color
+
+	 
+a.menu-trigger.active span::after
+	+transform(translateY(-8px) translateX(1px) rotate(-45deg))
+	background-color: $main-color
+
+
+
+
+
+/*//////////////////
+		section_gray
+//////////////////*/
+.section_gray
+	background-color: $gray-bg-color
+	padding: 60px 0
+
+.info_wrap
+	margin-bottom: 70px
+	&:last-child
+		margin-bottom: 0
+	h1
+		text-align: left
+	p
+		font-size: 24px
+		font-family: "OpenSansSemiBold", sans-serif
+		span 
+			font-family: "OpenSansLight", sans-serif
+			font-weight: normal
+		strong
+			font-size: 30px
+
+/*//////////////////
+		button
+//////////////////*/
+.btn_wrap
+	text-align: center
+	margin-top: 50px
+	a 
+		outline: none
+
+.btn
+	display: inline-block
+	color: #fff
+	background-color: $main-color
+	border-radius: 4px 
+	padding: 15px 25px
+	font-size: 18px
+	text-transform: uppercase
+	font-family: "OpenSansSemiBold", sans-serif
+	transition: all .5s ease
+	outline: none
+	&:hover
+		opacity: .85
+		box-shadow: 0 0 5px 0 rgba(0,0,0, .9)
+
+
+
+// блок sale
+.sale_wrap
+	text-align: center
+	position: relative
+	.sale_right
+		position: absolute
+		top: 48%
+		left: 0
+		width: 100%
+		p 
+			display: inline-block
+			color: $red-color
+			background-color: rgba(255,255,255, .5)
+			padding: 10px 40px
+			font-size: 34px
+			font-family: "OpenSansBold", sans-serif
+			margin: 0 0 5px
+		b
+			display: block
+			padding-left: 80px 
+			margin: 0
+			text-align: left
+			font-size: 26px
+			font-family: "OpenSansBold", sans-serif
+
+
+/*//////////////////
+	section_white
+//////////////////*/
+.section_white
+	padding: 70px 0
+
+.inscription
+	text-align: center
+	margin-bottom: 50px
+	img
+		width: 100%
+	p 
+		font-size: 30px
+		font-family: "OpenSansSemiBold", sans-serif
+	a 
+		color: $main-color
+		text-decoration: none
+		border-bottom: 2px solid transparent
+		transition: all .4s ease
+		outline: none
+		&:hover
+			border-bottom: 2px solid $main-color
+
+
+.protection_item
+	margin-bottom: 50px
+	img
+		float: left 
+
+.protection_item_info
+	padding-left: 80px
+	h5
+		color: $main-color
+		margin: 0
+		padding: 0
+		text-align: left
+
+
+/*//////////////////
+	section_parallax
+//////////////////*/
+#parallax
+	background-image: url("../img/parallax/family_tablets.jpg")
+
+.section_parallax 
+	background: transparent
+	background-attachment: fixed
+	background-position: 50% 0
+	background-repeat: no-repeat
+	background-size: cover
+	min-height: 550px
+	width: 100%
+	color: #f6f6f6
+	text-align: center 
+	padding: 80px 0
+
+
+
+.section_content
+	background-color: rgba(255,255,255, .7)
+	width: 100%
+
+.parallax_list
+	color: $text-color
+	text-align: left
+	ul 
+		padding: 50px 0
+		margin: 0
+		list-style-type: none
+	li 
+		font-style: italic
+		font-size: 25px
+		font-family: "OpenSansBold", sans-serif
+		padding: 15px 0
+		margin: 0
+	
+.parallax_img_wrap
+	padding-top: 30px
+
+
+/*//////////////////
+	section_discount
+//////////////////*/
+.disc_padd
+	padding: 0 40px
+
+.discount_item
+	border: 3px solid #d0d0d0 
+	text-align: center
+	font-family: "OpenSansBold", sans-serif
+	padding: 20px 0
+	transition: all .4s ease
+	h4
+		padding: 0 30px 20px
+		margin: 0
+	img 
+		transition-delay: 0s
+		transition-duration: 1s
+		transition-property: all
+		transition-timing-function: ease
+	.price
+		color: $red-color
+		font-size: 32px
+		margin-top: 10px
+		span 
+			color: $text-color
+			font-size: 18px
+			margin-right: 30px
+	.btn_wrap
+		margin-top: 25px
+		padding: 0 30px
+		.btn
+			width: 100%
+	&:hover
+		box-shadow: 0 0 5px 0 rgba(0,0,0, .5)
+		img 
+			transform: scale(1.05)
+
+
+/*//////////////////////////
+	section info_carousel
+//////////////////////////*/
+.info_carousel
+	padding: 50px 0 90px
+
+.carousel_img_wrapper
+	position: relative
+	.owl-dots
+		position: absolute
+		top: 0
+		left: 0
+		z-index: 2
+	.owl-dot
+		margin: 10px 0
+		cursor: pointer
+		img 
+			width: 65px
+			opacity: 1
+			transition: all .4s ease
+		&:hover,
+		&.active
+			img 
+				opacity: .6
+
+.img_items
+	padding-left: 80px
+	padding-top: 30px
+	.img_item
+		width: 100%
+		img 
+			width: 100%
+			height: 340px
+
+.carousel_img_info
+	ul
+		list-style-type: none
+		margin: 0
+		padding: 15px 0 0 20px
+	li 
+		padding: 10px 0
+		font-size: 22px
+		font-family: "OpenSansSemiBold", sans-serif
+	 
+
+/*//////////////////////////
+	section_blue
+//////////////////////////*/
+.section_blue
+	background-color: $blue-bg-color
+	padding: 70px 0
+
+.container_head
+	text-align: center
+	background-color: #29ABE2
+	h2
+		display: inline-block
+		color: #fff
+		font-size: 28px
+		
+// carousel clients
+.carousel_clients_wrapper
+	margin-top: 40px
+	position: relative
+
+.carousel_clients_items
+	.owl-dots
+		text-align: center
+		padding-top: 10px
+		.owl-dot
+			display: inline-block
+			border: 1px solid #fff
+			border-radius: 50%
+			width: 13px
+			height: 13px
+			background-color: rgba(255,255,255, .4)
+			margin-right: 10px
+			&:hover,
+			&.active
+				background-color: #FFF
+	.owl-nav
+		.owl-prev,
+		.owl-next
+			position: absolute
+			top: 40%
+			z-index: 2
+			display: inline-block
+			border-radius: 50%
+			border: 2px solid #fff
+			width: 50px
+			height: 50px
+			background-color: rgba(255,255,255, .4)
+			text-align: center
+			line-height: 3.2em
+			transition: all .5s ease
+			&::before
+				font-family: FontAwesome
+				height: 100%
+				width: 100%
+				color: #fff 
+				font-size: 33px
+			&:hover
+				background-color: rgba(255,255,255, .65)
+				border: 2px solid transparent
+		.owl-prev
+			left: -75px
+			&::before
+				content: "\f104"
+		.owl-next
+			right: -75px
+			&::before
+				content: "\f105"
+
+.clients_item
+	background-color: #fff
+	border-radius: 2px
+	padding: 20px 30px
+	span
+		display: block
+		font-size: 30px
+		margin: 0
+		padding: 0
+		color: #EAEAEA
+	p 
+		margin: 0 
+		color: #7F8C8D
+		padding: 30px 30px 0
+		font-size: 16px
+	.img_wrap
+		width: 170px
+		display: inline-block
+		float: left
+		text-align: center
+		margin: 0 40px
+		h5
+			margin: 10px 0
+			padding: 0
+			color: #212434
+	
+
+
+/*//////////////////////////
+	section	payment
+//////////////////////////*/
+.payment_wrap
+	text-align: center
+	width: 100%
+	font-size: 24px
+	margin-bottom: 30px
+
+
+/*//////////////////////////
+	section	form
+//////////////////////////*/
+.section_form
+	h2
+		font-size: 42px
+		margin-bottom: 60px
+		font-family: "OpenSansSemiBold" ,sans-serif
+		a,
+		strong
+			font-family: "OpenSansBold" ,sans-serif
+
+.form_contacts_wrap
+	padding-top: 15px
+	max-width: 360px
+	margin: 0 auto
+
+.form_contacts
+	border: 3px solid $main-color
+	margin: auto
+	position: relative
+	background-color: $gray-bg-color
+	padding: 30px 30px 75px
+	h4
+		margin-top: 10px
+	input
+		width: 100%
+		margin: 10px 0
+		padding: 15px
+		border: 2px solid  #C4C4C4
+	p 
+		color: #F87289
+		padding: 0
+		margin: 0
+		font-size: 11px
+		ul
+			margin: 0
+			padding: 0
+			list-style-type: none
+	.btn_wrap
+		margin: 25px 0
+		.btn
+			border: none
+			width: 100%
+
+.number
+	margin: 0
+	border-top: 3px solid $main-color
+	position: absolute
+	bottom: 0
+	left: 0
+	width: 100%
+	h4
+		margin: 0
+		padding: 15px 0
+		color: $main-color
+
+
+
+/*//////////////////////////
+		form hidden
+//////////////////////////*/
+#hidden_form
+	max-width: 360px
+	background-color: #DEE1E2
+	padding: 30px
+	h4
+		font-size: 18px
+		font-weight: normal
+	input
+		margin: 5px 0
+	span
+		display: block 
+		color: #7F8C8D
+		font-size: 11px
+		margin-top: 15px
+		i 
+			font-size: 14px
+			padding-right: 3px
+	.btn_wrap
+		margin-top: 20px
+	.btn
+		background-color: #FCBD49
+		border-bottom: 3px solid #F39C12
+		color: $text-color
+	
+
+
+
+/*//////////////////////////
+		footer
+//////////////////////////*/
+.my_footer
+	padding: 40px 0
+	color: $main-color
+	p 
+		padding: 10px 0 0
+		margin: 0
+		font-size: 13px
+		font-family: "OpenSansSemiBold", sans-serif
+
+
+
+
+/*//////////////////////////
+		button_Up
+//////////////////////////*/
+.btn-up
+	display: none
+	height: 35px
+	width: 35px
+	position: fixed 
+	right: 30px
+	bottom: 40px
+	cursor: pointer
+	color: $main-color
+	font-size: 32px
+	transition: all .5s ease
+	&:hover
+		opacity: .7

@@ -1,0 +1,220 @@
+/*==========  Desktop First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+	.head_nav li {
+		padding: 10px;
+		font-size: 18px;
+	}
+	.parallax_list li {
+		font-size: 20px;
+	}
+	.disc_padd {
+		padding: 0 15px;
+	}
+	
+}
+
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+	.my_header p {
+		font-size: 10px;
+	}
+	.info_wrap {
+		margin-bottom: 40px;
+	}
+	.info_wrap p, .payment_wrap {
+		font-size: 20px;
+	}
+	.info_wrap p strong {
+		font-size: 26px;
+	}
+	.discount_item {
+		max-width: 290px;
+		margin-bottom: 30px;
+	}
+	.discount_item h4 {
+		font-size: 22px;
+		padding: 0 30px 10px;
+	}
+	.carousel_img_info {
+		margin-top: 50px;
+	}
+	.clients_item p {
+		padding: 0 20px;
+	}
+	.section_white {
+		padding: 40px 0;
+	}
+	.section_form {
+		padding: 30px 0 50px;
+	}
+	.section_form h2 {
+		font-size: 36px;
+		margin-bottom: 30px;
+	}
+
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+	.head_nav {
+		display: none;
+		position: relative;
+		top: 22px;
+		left: 0;
+		width: 100%;
+		text-align: left;
+		z-index: 3;
+		background-color: #fff;
+	}
+	.head_nav li {
+		display: block;
+		padding: 0;
+	}
+	.head_nav li a {
+		padding: 10px 20px;
+		display: block;
+	}
+	.head_nav li a:hover {
+		background-color: #e5e5e5;
+	}
+	.sale_wrap {
+		margin-top: 40px;
+	}
+	.sale_wrap .sale_right b {
+		padding-left: 100px;
+	}
+	.protection_item {
+		margin-bottom: 30px;
+	}
+	.parallax_list {
+		text-align: center;
+	}
+	.parallax_img_wrap {
+		padding-top: 0;
+	}
+	#discount .inscription h2 {
+		font-size: 32px;
+	}
+	.discount_item {
+		margin: 20px auto; 
+	}
+	.carousel_img_info li {
+		font-size: 18px;
+	}
+	.info_carousel {
+		padding: 50px 0;
+	}
+	.clients_item  {
+		padding: 10px 15px;
+	}
+	.clients_item span {
+		font-size: 24px;
+	}
+	.clients_item p {
+		font-size: 14px;
+	}
+	.clients_item .img_wrap {
+		margin: 0 15px 0 0;
+	}
+	.section_form h2 {
+		font-size: 32px;
+		padding: 0 10px;
+	}
+	.my_footer {
+		padding: 40px 20px;
+	}
+	
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+	.btn_mnu {
+		right: 20px;
+	}
+	.sale_wrap .sale_right b {
+		padding-left: 40px;
+	}
+	.sale_wrap img {
+		width: 100%;
+	}
+	.info_wrap h1 {
+		font-size: 40px;
+		margin-top: 0;
+	}
+	.info_wrap p {
+		font-size: 16px;
+	}
+	.info_wrap p strong {
+		font-size: 18px;
+	}
+	.protection_item {
+		margin-bottom: 15px;
+	}
+	.parallax_img_wrap img {
+		width: 100%;
+	}
+	.parallax_list  li{
+		padding: 10px 0;
+		font-size: 16px;
+	}
+	#discount .inscription h2 {
+		font-size: 28px;
+	}
+	.img_items .img_item img {
+		height: 250px; 
+	}
+	.carousel_img_wrapper .owl-dot {
+		display: inline-block;
+		margin: 0;
+	}
+	.img_items {
+		padding-left: 0;
+		padding-top: 100px;
+	}
+	.carousel_img_info li {
+		font-size: 15px;
+	}
+	.carousel_img_info ul {
+		padding: 0;
+	}
+	.clients_item .img_wrap {
+		display: block;
+		float: none;
+		text-align: center;
+		width: 100%;
+	}
+	.clients_item .img_wrap img{
+		width: 170px;
+		margin: 0 auto;
+	}
+	.carousel_clients_wrapper .btn {
+		padding: 10px 17px;
+	}
+	#delivery .inscription h2 {
+		font-size: 30px;
+	}
+	.section_form h2 {
+		font-size: 26px;
+	}
+	.payment_wrap {
+		font-size: 16px;
+	}
+
+
+}
+
+
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+	.head_nav {
+		display: block !important;
+	}
+
+}
+
