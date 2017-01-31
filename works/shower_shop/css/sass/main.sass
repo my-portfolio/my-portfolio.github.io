@@ -1,0 +1,761 @@
+@import "bourbon/bourbon"
+@import "_colors"
+
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: red
+body input:required:valid,
+body textarea:required:valid
+	color: green
+
+.hidden
+	display: none
+
+.clear
+	clear: both
+
+
+
+body
+	font-family: "OpenSansRegular", sans-serif
+	font-weight: normal
+	font-size: 14px
+	min-width: 320px
+	position: relative
+	line-height: 1.42857
+	-webkit-font-smoothing: antialised
+
+
+/*///////////////////////
+			loader
+///////////////////////*/	
+.loader
+	background: none repeat scroll 0 0 #fff
+	bottom: 0
+	left: 0
+	right: 0
+	top: 0
+	height: 100%
+	width: 100%
+	position: fixed
+	z-index: 9999
+	.loader_inner
+		background-image: url('../img/loading.gif')
+		background-repeat: no-repeat
+		background-position: center center
+		background-color: #FFF
+		height: 60px
+		width: 60px
+		margin-top: -30px
+		margin-left: -30px
+		left: 50%
+		top: 50%
+		position: absolute
+
+
+
+
+/*//////////////////
+		header
+/////////////////*/	
+
+// блок top line
+.top_line
+	background-color: $bg-dark-color
+
+.phone
+	color: $footer-color
+	padding: 5px 0
+	vertical-align: middle
+	.fa 
+		color: $main-color
+		font-size: 24px	
+	strong
+		font-size: 26px
+		color: #F0F0F0
+		margin-right: 5px
+	span
+		vertical-align: middle
+		padding-bottom: 10px
+
+.account
+	text-align: right
+	.my_account 
+		a
+			color: $main-color
+			text-transform: uppercase
+			font-size: 14px
+			font-weight: bold
+			outline: none
+			padding-right: 10px
+			transition: all .5s ease
+			&:hover
+				color: $white-color
+	ul,
+	li 
+		margin: 0
+		padding: 0
+		list-style-type: none
+	li 
+		display: inline-block
+		padding-top: 8px
+	.fa 
+		font-size: 22px
+		color: $white-color
+
+.btn-login
+	color: $white-color
+	background-color: $main-color
+	width: 68px
+	height: 42px
+	text-align: center
+	border-radius: 0 0 4px 4px
+	position: relative
+	transition: all .4s ease
+	backface-visibility: hidden
+	transform: translateZ(0px)
+	transition-duration: .4s
+	transition-property: color
+	&::before
+		content: ""
+		height: 100%
+		width: 100%
+		position: absolute
+		top: 0
+		left: 0
+		background-color: rgba(0,0,0, .3)
+		transform: scaleY(0)
+		transform-origin: 50% 0 0
+		transition-duration: .5s
+		transition-timing-function: ease-out
+		z-index: -1
+	&:hover:focus::before,
+	&:hover::before
+		transform: scaleY(1)
+		transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66)
+	a 
+		display: block
+		width: 100%
+		height: 100%
+		outline: none
+		&:hover
+			color: $white-color
+// end top line
+
+
+// блок  free
+.free
+	background-color: $bg-header-color
+	padding: 30px 0 50px
+
+.shipping
+	.fa,
+	a 
+		color: $main-color  
+		font-size: 34px
+		text-transform: uppercase
+	a 
+		font-weight: bold
+		padding-left: 10px
+		position: relative
+		outline: none
+		&::after
+			content: "\f08e"
+			font-family: FontAwesome
+			padding: 10px 10px 0 4px 
+			display: inline-block
+			color: #64C82A
+			font-size: 12px
+			vertical-align: top
+			font-weight: bold
+	span
+		display: block
+		color: $main-color
+	p 
+		color: #595959
+		margin: 0
+		padding: 0 0 5px 40px
+
+/*//////////////////
+	form search
+//////////////////*/	
+.search-wrap
+	display: inline-block
+	padding: 0 5px 0 0
+.search
+	position: relative
+	margin-bottom: 10px
+	.input_sech
+		padding: 14px 70px 14px 15px  
+		width: 100%
+		-moz-box-sizing: border-box
+		box-sizing: border-box
+		background-color:  $bg-header-color
+		color: #777
+		font-size: 16px
+		outline: none
+		border: 1px solid #8D9496
+		border-radius: 4px
+	.btn_sub
+		position: absolute
+		top: 0
+		right: 0
+		width: 60px
+		height: 100%
+		background: $bg-header-color  
+		box-shadow: none
+		border: 1px solid #8D9496
+		border-left: none
+		border-radius: 0 4px 4px 0
+		cursor: pointer
+		transition: all .5s ease
+		color: $main-color
+		font-size: 18px
+		&:hover
+			background: $main-color
+			color: $white-color
+// end search
+
+// shopping-cart
+.shopping-cart
+	display: inline-block
+	padding: 0 5px 0 0 
+	position: relative
+	.shop-box-wrap
+		width: 100%
+		padding: 14px 20px 14px 15px  
+		background-color: $bg-header-color
+		color: $text-color
+		font-size: 16px
+		border: 1px solid #8D9496
+		border-radius: 4px
+		cursor: pointer
+		span 
+			color: $main-color
+			display: inline-block
+		strong
+			color: #344145
+			font-size: 14px
+			text-transform: uppercase
+			padding-right: 10px
+		.cart_arrow
+			float: right
+			color: #344145
+			transition: all .5s ease
+		&:hover
+			.cart_arrow
+				color: $main-color
+
+.shopp-cart-content
+	display: none
+	width: 100%
+	padding: 14px 20px 14px 15px 
+	background-color: #fff 
+	color: $text-color
+	font-size: 14px
+	border: 1px solid #8D9496
+	border-radius: 4px
+	cursor: pointer
+	position: absolute
+	top: 60px
+	left: 0
+	z-index: 17
+// end shopping-cart
+
+
+/*///////////////////////
+			menu
+///////////////////////*/	
+.main-menu-wrapper
+	background-color: $bg-header-color
+
+.main-mnu-rel
+	position: relative
+
+.main-mnu-abs
+	position: absolute
+	top: -30px
+	left: 0
+	z-index: 15
+	width: 100%
+	background-color: $bg-dark-color
+	border-radius: 8px
+	padding-left: 10px
+	border-bottom: 3px solid $main-color
+	ul,
+	li 
+		list-style-type: none 
+		margin: 0
+		padding: 0
+	.sf-menu
+		> li 
+			float: left
+			background-color: $bg-dark-color
+			border: none
+			position: relative
+			white-space: normal
+		a 
+			border: none
+			display: block
+			padding: 20px
+			color: $white-color
+			margin: 0
+			text-transform: uppercase
+			font-size: 16px
+			font-family: 'OpenSansSemiBold', sans-serif
+			font-weight: 600
+			outline: none
+			white-space: normal
+			transition: all .5s ease
+			&:hover
+				color: $main-color
+				.sale 
+					color: #fff
+		.sale
+			background-color: $main-color
+			font-size: 8px
+			font-family: "OpenSansBold",sans-serif
+			padding: 2px 4px 
+			text-transform: uppercase
+			text-shadow: 0 1.5px  rgba(0,0,0, .5)
+			position: absolute
+			top: 0
+			right: 0
+			color: #fff 
+			font-size: 11px
+
+.main-mnu-abs
+	.menu-in	
+		background-color: $bg-dark-color
+		border-radius: 0 0 8px 8px
+		padding: 20px 
+		min-width: 260px
+		border-bottom: 3px solid $main-color 
+		margin: 3px 0 0
+		h4
+			text-transform: uppercase
+			color: #6e6e6e
+			font-weight: normal
+			margin-bottom: 5px
+			font-size: 16px
+		ul
+			display: block
+			background-color: $bg-dark-color
+			margin-left: 20px
+			padding: 0 10px
+			border: 1px solid #333333
+			border-radius: 4px 
+			border-bottom: 3px solid $main-color 
+			li 
+				border-bottom: 1px solid #000
+			a 
+				font-size: 13px
+		li 
+			background-color: $bg-dark-color
+			border-bottom: 1px solid #000
+			display: block
+			&:last-child
+				border-bottom: none
+		a 
+			font-size: 14px
+			color: #999999
+			text-transform: none
+			padding: 10px
+			display: block
+			position: relative
+			img 
+				width: 100%
+				transition: all .5s ease
+			&:hover
+				img 
+					opacity: .7
+		.text_width
+			width: 100%
+			white-space: normal
+			p 
+				color: #fff 
+				font-size: 13px
+
+.main-mnu-abs
+	.text-wrap
+		width: 460px		
+	.menu-info
+		padding-top: 0
+		h4
+			margin-top: 25px
+		a 
+			padding: 5px 0
+			
+
+/*///////////////////////
+			кнопка меню (hamburger)
+///////////////////////*/
+.menu-btn-wrapper
+	margin: 0 
+	overflow: hidden
+	cursor: pointer
+	-webkit-touch-callout: none
+	-webkit-user-select: none
+	-khtml-user-select: none
+	-moz-user-select: none
+	-ms-user-select: none
+	user-select: none
+	h4
+		float: left
+		letter-spacing: 3px
+		color: $white-color
+
+.menu-btn 
+	padding: 0 20px
+	.hamburger
+		list-style: none
+		float: right
+		margin-top: 8px
+		padding: 10px 0
+		position: relative
+		top: 0
+		right: 10px
+		@include transition(all 233ms cubic-bezier(0.5, 0, 0, 1))
+	
+	li
+		width: 24px
+		height: 3px
+		background: #fff
+		margin: 3px 0 0
+		padding: 0
+		@include transform(translate3d(0, 0, 0))
+		@include transition(all 333ms cubic-bezier(0.5, 0, 0, 1))
+	 
+.checked
+	.hamburger
+		li.first
+			@include transform( rotate( -135deg ) translateY( -8.5px ) )
+		li.second
+			opacity: 0
+		li.third
+			@include transform( rotate( 135deg ) translateY( 8.5px ))
+		
+
+
+/*///////////////////////
+			slide
+///////////////////////*/		 
+.nivoSlider
+	height: 100%
+	width: 100%
+	img 
+		min-width: 740px
+	.nivoSlider a.nivo-imageLink 
+		border: 0 none
+		display: none
+		height: 100%
+		left: 0
+		margin: 0
+		padding: 0
+		position: absolute
+		top: 0
+		width: 100%
+		z-index: 6
+
+.nivo-main-image,
+.nivo-box
+	display: block
+	height: 100%
+	position: absolute
+	top: 0
+	z-index: 5
+
+.theme-default
+	.nivo-directionNav
+		position: absolute
+		top: 40%
+		width: 100%
+		text-align: center
+
+.nivo-prevNav,
+.nivo-nextNav
+	position: absolute
+	top: 0
+	font-size: 40px
+	color: $white-color
+	transition: all .5s ease
+	&::before
+		font-weight: normal
+		display: inline-block
+		font-family: FontAwesome
+		font-size: inherit
+		padding-right: 5px
+	&:hover
+		color: $main-color
+
+.nivo-prevNav
+	left: 18%
+	&::before
+		content: "\f100" 
+		
+.nivo-nextNav
+	right: 18%
+	&::before
+		content: "\f101" 
+// end slide
+
+
+
+/*///////////////////////
+		section > content
+///////////////////////*/	
+.content-wrapper
+	background: #fff url(../img/content_bg.gif) repeat-x top left
+
+// блок баннеры
+.banners
+	position: relative
+	margin: -50px 0 20px
+	overflow: hidden
+	width: 100%
+	z-index: 11
+
+
+.banner-content
+	.img-wrap
+		border-radius: 8px 8px 0 0
+		overflow: hidden
+		img 
+			width: 100%
+	.text-wrap
+		color: $white-color
+		padding: 20px 20px 25px
+		border-top: 3px solid $main-color
+		h2
+			text-transform: uppercase
+			font-size: 32px
+			padding: 0
+			margin: 0
+			span
+				color: $main-color
+				transition: all .5s ease
+		p 
+			margin: 0
+			padding: 0
+			position: relative
+			&::after
+				content: "\f138"
+				font-family: FontAwesome
+				font-size: inherit
+				padding: 10px 10px 0 4px 
+				display: inline-block
+				color: #fff 
+				position: absolute
+				right: 0
+				bottom: 0
+	&:hover
+		h2
+			span
+				color: #000
+
+.banner-content
+	.text-wrap
+		display: block
+		width: 100%
+		height: 100%
+		position: relative
+		background-color: $bg-dark-color
+		border-radius: 0 0 8px 8px
+		transition: all .5s ease
+		backface-visibility: hidden
+		transform: translateZ(0px)
+		transform-duration: .5s
+		transition-property: color 
+		&::before
+			content: ""
+			position: absolute
+			height: 100%
+			width: 100%
+			top: 0
+			left: 0
+			background-color: $main-color
+			border-radius: 0 0 8px 8px
+			transform: scaleY(0)
+			transform-origin: 50% 0 0
+			transition-duration: .5s
+			transition-timing-function: ease-out
+			z-index: -1
+	&:hover .text-wrap:before
+		transform: scaleY(1)
+		transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66)
+// end banners
+
+
+
+
+/*///////////////////////
+		section > products
+///////////////////////*/	
+.products
+	padding: 50px 0
+
+// products item
+.product-item
+	position: relative
+	vertical-align: top
+	margin-bottom: 40px
+	border: 1px solid #ccc
+	padding: 0
+	border-radius: 4px
+	&:hover .buttons_item
+		transform: scaleY(1)
+		transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66)
+	> a 
+		display: block
+		text-align: center
+		padding: 10px 15px 0
+		margin: 0 0 20px
+		color: $text-color
+		transition: all .5s ease
+		width: 100%
+		overflow: hidden
+		&:hover
+			color: $main-color
+	.img_wrap
+		padding: 0  
+		img
+			width: 100%
+			height: 100%
+			transition: all 1s ease
+			padding: 0 25px 50px
+	.price
+		position: absolute 
+		right: 0
+		bottom: 0
+		padding: 10px 15px
+		border-radius: 4px 0 0 0
+		font-size: 22px
+		background-color: $main-color
+		color: $white-color
+		span 
+			display: inline-block
+			float: right
+			vertical-align: middle
+		.price_discount
+			color: $text-color
+			text-decoration: line-through
+			padding: 0 8px
+		.discount
+			font-size: 14px
+			padding-top: 5px
+		
+	&:hover
+		box-shadow: 0 -3px 5px rgba(0,0,0, .1),5px -2px 5px rgba(0,0,0, .1),-5px -2px 5px rgba(0,0,0, .1),0 0 0 
+		.img_wrap
+			img 
+				transform: scale(1.05)
+
+// buttons_item
+.buttons_item
+	display: block
+	position: absolute
+	bottom: -83px
+	left: 0
+	padding: 20px
+	width: 100%
+	border: 1px solid #e5e5e5
+	border-radius: 0 0 3px 3px
+	transition: all .5s ease
+	background: #fff linear-gradient(to bottom, #f6f6f6 12%, white 29%) repeat scroll 0 0
+	box-shadow: 0 0 0,0px 10px 10px rgba(0,0,0, .2),-2px 10px 10px rgba(0,0,0, .1)
+	background-color: #fff
+	transform: scaleY(0)
+	transform-origin: 50% 0 0
+	transform-property: transform
+	backface-visibility: hidden
+	transition-duration: all .5s ease 
+	transition-timing-function: ease-out
+	z-index: 12
+
+.btn_item	
+	display: inline-block
+	border-image: none
+	-moz-border-bottom-colors: none
+	-moz-border-left-colors: none
+	-moz-border-right-colors: none
+	-moz-border-top-colors: none
+	background: rgba(0, 0, 0, 0) linear-gradient(to bottom, #f7f7f7 0%, #d5d5d5 100%) repeat scroll 0 0 / 100% 200%
+	border-color: #f5f5f5 #e6e6e6 #2d2d2d
+	padding: 10px 15px
+	color: $text-color
+	border-radius: 4px
+	border: 1px solid #e5e5e5
+	border-bottom: 1px solid #000
+	transition: all .4s ease
+	&:hover
+		border-color: #2d2d2d #cdcdcd #d8d8d8
+		background-position: 0 100%
+		
+
+/*///////////////////////
+		footer
+///////////////////////*/
+.my_footer
+	background-color: $bg-dark-color
+	color: $footer-color
+	padding: 20px 0 0
+	.bottom_line
+		padding: 20px
+		background-color: #000
+		a 
+			color: $footer-color
+			transition: all .5s ease
+			&:hover
+				color: $main-color
+	
+.footer-menu	
+	h4
+		color: $white-color
+		text-transform: uppercase
+		font-size: 16px	
+	ul,
+	li 
+		list-style-type: none
+		margin: 0
+		padding: 0
+	li 
+		padding: 5px 0
+	a 
+		color: $footer-color
+		transition: all .5s ease
+		&:hover
+			color: $main-color
+	.contacts
+		span 
+			color: $main-color
+
+
+// кнопка вверх
+.btn-up
+	display: none
+	height: 50px
+	width: 50px
+	background-color: $main-color
+	color: #fff 
+	position: fixed 
+	right: 25px
+	bottom: 50px
+	border-radius: 50%
+	border: 2px solid #fff 
+	transition: all .4s ease
+	cursor: pointer
+	&::before
+		content: "\f106"
+		font-family: FontAwesome 
+		font-size: 30px
+		display: block
+		height: 100%
+		width: 100%
+		position: absolute
+		top: 0
+		left: 13px
+	&:hover
+		background-color: #FFF
+		color: $main-color
+		border: 2px solid $main-color
