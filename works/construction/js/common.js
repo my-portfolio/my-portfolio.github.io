@@ -1,18 +1,16 @@
 $(function() {
 
-	function initSize() {
-		$(".box_ul .panel-heading").each(function() {
-		var ph = $(this).height() + 3 ;
-		var pdt =$(this).find(".dropdown-toggle");
-		pdt.height(ph);
-	});
+	function initSize(){
+		$(".box_mnu .panel-heading").each(function() {
+			var ph = $(this).height() + 3;
+			var pdt = $(this).find(".dropdown-toggle");
+			pdt.height(ph);
+		});
 
-	$(".till_item .tc").each(function() {
-		var parh = $(this).parent().height();
-		$(this).height(parh);
-		var parw = $(this).parent().width();
-		$(this).width(parw);
-	});
+		$(".till_item .tc").each(function() {
+			var parh = $(this).parent().height();
+			$(this).height(parh);
+		});
 	};
 
 	initSize();
@@ -20,28 +18,6 @@ $(function() {
 	$(window).resize(function() {
 		initSize();
 	});
-
-//Высота блоков	
-	function setEqualHeight(columns)
-	{
-		var tallestcolumn = 0;
-		columns.each(
-			function()
-			{
-				currentHeight = $(this).height();
-				if(currentHeight > tallestcolumn)
-				{
-					tallestcolumn = currentHeight;
-				}
-			}
-			);
-		columns.height(tallestcolumn);
-	}
-	$(document).ready(function() {
-		setEqualHeight($(".widget_news > .row > .news_item"));
-	});
-
-
 
 	//SVG Fallback
 	if(!Modernizr.svg) {
